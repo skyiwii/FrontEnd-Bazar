@@ -33,72 +33,83 @@
 
 
         <main>
-            <!-- Sección Inicial de Bienvenida (Hero) -->
-
+            <!-- 1. SECCIÓN INICIO (HERO) -->
             <section id="Inicio">
-                <h1>Vura</h1>
-                <h2>Esencia Natural</h2>
-                <p>Conectando la esencia de la tierra con tu bienestar diario.</p>
-
-                <button><a href="./paginas/productos.html">Explorar todos los productos</a></button>
-            </section>
-
-            <!-- Sección Destacado - Carrusel/Slideshow -->
-
-            <section id="Destacados">
-
-                <h2>Lo más comprado</h2>
-
-                <!-- Maqueta de Productos -->
-
-                <div class="contenedor-productos">
-
-                    <article>
-                        <img src="producto.jpg" alt="Producto Ejemplo">
-                        <h3>Ejemplo Producto</h3>
-                        <p>Precio Producto</p>
-                        <button><a href="./product/producto1.html">Ver más detalles</a></button>
-                    </article>
-
-                    <article>
-                        <img src="producto.jpg" alt="Producto Ejemplo">
-                        <h3>Ejemplo Producto 2</h3>
-                        <p>Precio Producto 2</p>
-                        <button><a href="./product/producto2.html">Ver más detalles</a></button>
-                    </article>
-
-                    <article>
-                        <img src="producto.jpg" alt="Producto Ejemplo">
-                        <h3>Ejemplo Producto 3</h3>
-                        <p>Precio Producto 3</p>
-                        <button><a href="./product/producto3.html">Ver más detalles</a></button>
-                    </article>
+                <div class="capa-fondo"> <!-- Aquí irá el video o imagen principal -->
+                    <h1>Vura</h1>
+                    <h2>Esencia Natural</h2>
+                    <p>Conectando la esencia de la tierra con tu bienestar diario.</p>
+                    <button><a href="./paginas/productos.html">Explorar todos los productos</a></button>
                 </div>
             </section>
 
-            <section id="nuestro-blog">
-                <h2>Recetas del Día</h2>
+            <!-- 2. PRODUCTOS DESTACADOS (CARRUSEL) -->
+            <section id="Destacados">
+                <h2>Lo más comprado</h2>
+                <!-- Contenedor preparado para Swiper.js o similar -->
+                <div class="contenedor-productos-carrusel">
+                    <article>
+                        <img src="producto.jpg" alt="Producto Ejemplo">
+                        <h3>Ejemplo Producto 1</h3>
+                        <p>Precio Producto</p>
+                        <button><a href="./productos/producto1.html">Ver más detalles</a></button>
+                    </article>
+                    <!-- Repetir artículos... -->
 
-                <article>
-                    <h3>Cómo preparar queques saludables</h3>
-                    <p>Descubre cómo hacer...</p>
-                    <a href="#">Leer más</a>
-                </article>
+                                        <article>
+                        <img src="producto.jpg" alt="Producto Ejemplo">
+                        <h3>Ejemplo Producto 2</h3>
+                        <p>Precio Producto</p>
+                        <button><a href="./productos/producto3.html">Ver más detalles</a></button>
+                    </article>
 
-                <article>
-                    <h3>Cómo preparar queques saludables 2</h3>
-                    <p>Descubre cómo hacer...</p>
-                    <a href="#">Leer más</a>
-                </article>
+                                        <article>
+                        <img src="producto.jpg" alt="Producto Ejemplo">
+                        <h3>Ejemplo Producto 3</h3>
+                        <p>Precio Producto</p>
+                        <button><a href="./productos/producto2.html">Ver más detalles</a></button>
+                    </article>
 
-                <article>
-                    <h3>Cómo preparar queques saludables 3</h3>
-                    <p>Descubre cómo hacer...</p>
-                    <a href="#">Leer más</a>
-                </article>
-
+                </div>
             </section>
 
+            <!-- 3. VIAJE POR LAS ZONAS DE CHILE (PORTALES) -->
+            <section id="Zonas-Chile">
+                <h2>Explora por Origen</h2>
+                
+                <!-- Bloque Norte -->
+                <div class="zona-portal norte">
+                    <div class="info-zona">
+                        <h3>Norte Arido</h3>
+                        <p>Frutos secos y sales ancestrales.</p>
+                        <a href="./paginas/productos.html?zona=norte" class="btn-zona">Ver productos del Norte</a>
+                    </div>
+                </div>
+
+                <!-- Bloque Metropolitano -->
+                <div class="zona-portal centro">
+                    <div class="info-zona">
+                        <h3>Valle Central</h3>
+                        <p>Cosmética natural y lectura consciente.</p>
+                        <a href="./paginas/productos.html?zona=centro" class="btn-zona">Ver zona Metropolitana</a>
+                    </div>
+                </div>
+
+                <!-- Bloque Sur -->
+                <div class="zona-portal sur">
+                    <div class="info-zona">
+                        <h3>Sur Nativo</h3>
+                        <p>Mieles e infusiones del bosque lluvioso.</p>
+                        <a href="./paginas/productos.html?zona=sur" class="btn-zona">Ver productos del Sur</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 4. BLOG / RECETAS -->
+            <section id="nuestro-blog">
+                <h2>Recetas del Día</h2>
+                <!-- Tus artículos de blog aquí -->
+            </section>
         </main>
 
 
