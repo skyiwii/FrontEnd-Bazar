@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Vura - Bazar Natural</title>
+        <meta name="description" content="Bazar Natural de Origen Chileno">
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+
+    <!-- Contenido de la Página -->
+    <body>
+
+        <!-- Encabezado -->
+        <header>
+            <!-- Acá va el logo -->
+            <div class="logo">
+                <img src="logo.png" alt="Logo de Vura"> 
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="./index.html">Inicio</a></li>
+                    <li><a href="./paginas/productos.html">Productos</a></li>
+                    <li><a href="./paginas/nosotros.html">Nosotros</a></li>
+                    <li><a href="./paginas/contacto.html">Contacto</a></li>
+                    <li><a href="./paginas/blogs.html">Blogs</a></li>
+                </ul>
+            </nav>
+        </header>
+
+
+        <main>
+            <!-- 1. SECCIÓN INICIO (HERO) -->
+            <section id="Inicio">
+                <div class="capa-fondo"> <!-- Aquí irá el video o imagen principal -->
+                    <h1>Vura</h1>
+                    <h2>Esencia Natural</h2>
+                    <p>Conectando la esencia de la tierra con tu bienestar diario.</p>
+                    <button><a href="./paginas/productos.html">Explorar todos los productos</a></button>
+                </div>
+            </section>
+
+            <!-- 2. PRODUCTOS DESTACADOS (CARRUSEL) -->
+            <section id="Destacados">
+                <h2>Lo más comprado</h2>
+                <!-- Contenedor preparado para Swiper.js o similar -->
+                <div class="contenedor-productos-carrusel">
+                    <article>
+                        <img src="producto.jpg" alt="Producto Ejemplo">
+                        <h3>Ejemplo Producto 1</h3>
+                        <p>Precio Producto</p>
+                        <button><a href="./productos/producto1.html">Ver más detalles</a></button>
+                    </article>
+                    <!-- Repetir artículos... -->
+
+                                        <article>
+                        <img src="producto.jpg" alt="Producto Ejemplo">
+                        <h3>Ejemplo Producto 2</h3>
+                        <p>Precio Producto</p>
+                        <button><a href="./productos/producto3.html">Ver más detalles</a></button>
+                    </article>
+
+                                        <article>
+                        <img src="producto.jpg" alt="Producto Ejemplo">
+                        <h3>Ejemplo Producto 3</h3>
+                        <p>Precio Producto</p>
+                        <button><a href="./productos/producto2.html">Ver más detalles</a></button>
+                    </article>
+
+                </div>
+            </section>
+
+            <!-- 3. VIAJE POR LAS ZONAS DE CHILE (PORTALES) -->
+            <section id="Zonas-Chile">
+                <h2>Explora por Origen</h2>
+                
+                <!-- Bloque Norte -->
+                <div class="zona-portal norte">
+                    <div class="info-zona">
+                        <h3>Norte Arido</h3>
+                        <p>Frutos secos y sales ancestrales.</p>
+                        <a href="./paginas/productos.html?zona=norte" class="btn-zona">Ver productos del Norte</a>
+                    </div>
+                </div>
+
+                <!-- Bloque Metropolitano -->
+                <div class="zona-portal centro">
+                    <div class="info-zona">
+                        <h3>Valle Central</h3>
+                        <p>Cosmética natural y lectura consciente.</p>
+                        <a href="./paginas/productos.html?zona=centro" class="btn-zona">Ver zona Metropolitana</a>
+                    </div>
+                </div>
+
+                <!-- Bloque Sur -->
+                <div class="zona-portal sur">
+                    <div class="info-zona">
+                        <h3>Sur Nativo</h3>
+                        <p>Mieles e infusiones del bosque lluvioso.</p>
+                        <a href="./paginas/productos.html?zona=sur" class="btn-zona">Ver productos del Sur</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 4. BLOG / RECETAS (Los más reaccionados) -->
+            <section id="nuestro-blog">
+                <h2>Historias y Recetas Destacadas</h2>
+                <p>Lo más leído de nuestra comunidad natural</p>
+
+                <div class="contenedor-blog-destacados">
+                    <!-- Entrada de Blog 1 (Más visto) -->
+                    <article class="blog-card">
+                        <div class="badge-vistas">👁️ 1.2k</div>
+                        <img src="img/blog-miel.jpg" alt="Receta Miel">
+                        <h3>Queques de avena y Miel de Ulmo</h3>
+                        <p>Aprende a preparar este clásico saludable que ha encantado a todos...</p>
+                        <div class="reacciones-preview">😍 45 | 🙂 12</div>
+                        <a href="./blogs/post1.html" class="btn-leer">Leer entrada</a>
+                    </article>
+
+                    <!-- Entrada de Blog 2 (Más reaccionado) -->
+                    <article class="blog-card">
+                        <div class="badge-vistas">👁️ 950</div>
+                        <img src="img/blog-piel.jpg" alt="Cuidado Piel">
+                        <h3>Rutina nocturna con Rosa Mosqueta</h3>
+                        <p>El secreto mejor guardado para regenerar tu piel de forma natural...</p>
+                        <div class="reacciones-preview">😍 89 | 🙂 20</div>
+                        <a href="./blogs/post2.html" class="btn-leer">Leer entrada</a>
+                    </article>
+
+                    <!-- Entrada de Blog 3 -->
+                    <article class="blog-card">
+                        <div class="badge-vistas">👁️ 800</div>
+                        <img src="img/blog-hierbas.jpg" alt="Infusiones">
+                        <h3>3 Infusiones para tus defensas</h3>
+                        <p>Sabiduría herbolaria para mantenerte fuerte durante todo el año...</p>
+                        <div class="reacciones-preview">😍 30 | 🙂 15</div>
+                        <a href="./blogs/post3.html" class="btn-leer">Leer entrada</a>
+                    </article>
+                </div>
+
+                <div class="ver-mas-blog">
+                    <button><a href="./paginas/blogs.html">Ver todos los Blogs</a></button>
+                </div>
+            </section>
+
+        </main>
+
+
+
+            <!-- Notificación para contacto -->
+
+        <aside id="notificacion-contacto">
+            <div>
+                <p>¿Tienes dudas? Escríbenos directamente</p>
+                <form>
+                    <input type="text" placeholder="Tu nombre">
+                    <input type="email" placeholder="Tu email">
+                    <textarea placeholder="¿En qué te ayudamos?"></textarea>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </aside>
+
+        <footer>
+                <p>&copy; 2024 Vura Bazar Natural - Hecho en Chile</p>
+                <ul>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">WhatsApp</a></li>
+                </ul>
+        </footer>
+    </body>
+</html>

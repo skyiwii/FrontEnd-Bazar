@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <header class="hero"></header>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vura - Contacto</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <meta name="description" content="Ponte en contacto con Vura Bazar Natural">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo de Vura"> 
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html" class="active">Contacto</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contenedor-contacto">
+        
+        <section class="contacto-intro">
+            <h1>Ponte en contacto con nosotros</h1>
+            <p>¿Tienes dudas sobre un producto o quieres saber más sobre nuestro origen? Escríbenos.</p>
+        </section>
+
+        <div class="fila-contacto">
+            <section class="seccion-formulario">
+                <h2>Envíanos un mensaje</h2>
+                <form action="#">
+                    <div class="campo">
+                        <label for="nombre">Nombre Completo</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan Pérez" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="email">Correo Electrónico</label>
+                        <input type="email" id="email" name="email" placeholder="correo@ejemplo.com" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="asunto">Asunto</label>
+                        <select id="asunto" name="asunto">
+                            <option value="consulta">Consulta de Producto</option>
+                            <option value="envio">Estado de Envío</option>
+                            <option value="mayorista">Venta Mayorista</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+
+                    <div class="campo">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-enviar">Enviar Formulario</button>
+                </form>
+            </section>
+
+            <aside class="info-directa">
+                <div class="bloque-info">
+                    <h3>Vura Bazar Natural</h3>
+                    <p><strong>Ubicación:</strong> Copiapó, Atacama, Chile</p>
+                    <p><strong>Horario de atención:</strong> Lunes a Viernes, 09:00 - 18:00 hrs.</p>
+                </div>
+
+                <div class="bloque-info">
+                    <h3>Canales Directos</h3>
+                    <p>📧 Email: <a href="mailto:contacto@vura.cl">contacto@vura.cl</a></p>
+                    <p>📞 Teléfono: +56 9 1234 5678</p>
+                </div>
+
+                <div class="redes-sociales-contacto">
+                    <h3>Síguenos</h3>
+                    <p>Encuéntranos en Instagram como @VuraBazar.</p>
+                </div>
+            </aside>
+        </div>
+
+        <!-- MAPA -->
+        <section class="mapa-ubicacion">
+            <hr> <!-- Línea para separar -->
+            <h2 style="text-align: center; margin-top: 30px;">Visítanos en nuestra tienda</h2>
+            <div class="contenedor-mapa" style="margin-top: 20px;">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!4v1775888903721!6m8!1m7!1slm1T1Bug7ttdtABJ0w0PxQ!2m2!1d-27.37325056928993!2d-70.3230668236798!3f125.26825256874693!4f-12.695729682761922!5f0.7820865974627469" 
+                    width="100%" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+
+                <p style="text-align: center; font-size: 0.9em; color: #666;">Av. Francisco de Aguirre, Copiapó, Región de Atacama.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Vura Bazar Natural - Hecho en Chile</p>
+        <ul>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">WhatsApp</a></li>
+        </ul>
+    </footer>
+
+</body>
+</html>
