@@ -6,8 +6,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Vura - Bazar Natural</title>
         <meta name="description" content="Bazar Natural de Origen Chileno">
-        <!-- Acá se exportan los links a CSS y elementos externos -->
 
+        <!-- CSS de Bootstrap 5 -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        
+        <!-- CSS Propio -->
+        <link rel="stylesheet" href="css/styles.css">
+        
+        <!-- Iconos de Bootstrap -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     </head>
 
     <!-- Contenido de la Página -->
@@ -15,162 +22,242 @@
 
         <!-- Encabezado -->
         <header>
-            <!-- Acá va el logo -->
-            <div class="logo">
-                <img src="logo.png" alt="Logo de Vura"> 
-            </div>
+            <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm navbar-custom">
+                <div class="container">
 
-            <nav>
-                <ul>
-                    <li><a href="./index.html">Inicio</a></li>
-                    <li><a href="./paginas/productos.html">Productos</a></li>
-                    <li><a href="./paginas/nosotros.html">Nosotros</a></li>
-                    <li><a href="./paginas/contacto.html">Contacto</a></li>
-                    <li><a href="./paginas/blogs.html">Blogs</a></li>
-                </ul>
+                    <!-- Logo -->
+                    <a class="navbar-brand d-flex align-items-center fw-bold" href="index.html">
+                        <img src="../imagenes/logo.png" width="40" height="40" class="me-2">
+                        VURA
+                    </a>
+
+                    <!-- Botón móvil -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <!-- Menú -->
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto text-uppercase small align-items-lg-center">
+
+                            <li class="nav-item">
+                                <a class="nav-link active" href="index.html">Inicio</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="paginas/productos.html">Productos</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="paginas/nosotros.html">Nosotros</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="paginas/contacto.html">Contacto</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="paginas/blogs.html">Blogs</a>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                </div>
             </nav>
         </header>
 
+        
 
-        <main>
-            <!-- 1. SECCIÓN INICIO (HERO) -->
-            <section id="Inicio">
-                <div class="capa-fondo"> <!-- Aquí irá el video o imagen principal -->
-                    <h1>Vura</h1>
-                    <h2>Esencia Natural</h2>
-                    <p>Conectando la esencia de la tierra con tu bienestar diario.</p>
-                    <button><a href="./paginas/productos.html">Explorar todos los productos</a></button>
-                </div>
-            </section>
 
-            <!-- 2. PRODUCTOS DESTACADOS (CARRUSEL) -->
-            <section id="Destacados">
-                <h2>Lo más comprado</h2>
-                <!-- Contenedor preparado para Swiper.js o similar -->
-                <div class="contenedor-productos-carrusel">
-                    <article>
-                        <img src="producto.jpg" alt="Producto Ejemplo">
-                        <h3>Ejemplo Producto 1</h3>
-                        <p>Precio Producto</p>
-                        <button><a href="./productos/producto1.html">Ver más detalles</a></button>
-                    </article>
-                    <!-- Repetir artículos... -->
+    <main>
 
-                                        <article>
-                        <img src="producto.jpg" alt="Producto Ejemplo">
-                        <h3>Ejemplo Producto 2</h3>
-                        <p>Precio Producto</p>
-                        <button><a href="./productos/producto3.html">Ver más detalles</a></button>
-                    </article>
+        <!-- HERO -->
+        <section id="Inicio" class="hero-video d-flex align-items-center position-relative overflow-hidden">
 
-                                        <article>
-                        <img src="producto.jpg" alt="Producto Ejemplo">
-                        <h3>Ejemplo Producto 3</h3>
-                        <p>Precio Producto</p>
-                        <button><a href="./productos/producto2.html">Ver más detalles</a></button>
-                    </article>
+            <!-- VIDEO DE FONDO -->
+            <video autoplay muted loop playsinline class="video-bg">
+                <source src="video/fondo.mp4" type="video/mp4">
+                Tu navegador no soporta videos HTML5
+            </video>
 
-                </div>
-            </section>
+            <!-- OVERLAY (oscurece + estilo) -->
+            <div class="overlay-video"></div>
 
-            <!-- 3. VIAJE POR LAS ZONAS DE CHILE (PORTALES) -->
-            <section id="Zonas-Chile">
-                <h2>Explora por Origen</h2>
-                
-                <!-- Bloque Norte -->
-                <div class="zona-portal norte">
-                    <div class="info-zona">
-                        <h3>Norte Arido</h3>
-                        <p>Frutos secos y sales ancestrales.</p>
-                        <a href="./paginas/productos.html?zona=norte" class="btn-zona">Ver productos del Norte</a>
+            <!-- CONTENIDO -->
+            <div class="container text-center text-white contenido-hero">
+                <div class="row justify-content-center">
+                    <div class="col-md-8 p-4 hero-box">
+                        <h1 class="display-1 fw-bold">Vura</h1>
+                        <h2 class="display-5">Esencia Natural</h2>
+                        <p class="lead mb-4">Conectando la esencia de la tierra con tu bienestar diario.</p>
+                        <a href="./paginas/productos.html" class="btn btn-outline-light btn-lg px-5 shadow">Explorar Catálogo</a>
                     </div>
                 </div>
+            </div>
 
-                <!-- Bloque Metropolitano -->
-                <div class="zona-portal centro">
-                    <div class="info-zona">
-                        <h3>Valle Central</h3>
-                        <p>Cosmética natural y lectura consciente.</p>
-                        <a href="./paginas/productos.html?zona=centro" class="btn-zona">Ver zona Metropolitana</a>
-                    </div>
+        </section>
+
+        <!-- PRODUCTOS -->
+        <section id="Destacados" class="seccion-animada">
+            <h2>Lo más comprado</h2>
+
+            <div class="contenedor-productos-carrusel">
+
+                <article class="producto-card">
+                    <img src="producto.jpg" alt="Producto Ejemplo">
+                    <h3>Ejemplo Producto 1</h3>
+                    <p>Precio Producto</p>
+                    <a href="./productos/producto.html?id=1" class="btn btn-primary">Ver más detalles</a>
+                </article>
+
+                <article class="producto-card">
+                    <img src="producto.jpg" alt="Producto Ejemplo">
+                    <h3>Ejemplo Producto 2</h3>
+                    <p>Precio Producto</p>
+                    <a href="./productos/producto.html?id=2" class="btn btn-primary">Ver más detalles</a>
+                </article>
+
+                <article class="producto-card">
+                    <img src="producto.jpg" alt="Producto Ejemplo">
+                    <h3>Ejemplo Producto 3</h3>
+                    <p>Precio Producto</p>
+                    <a href="./productos/producto.html?id=3" class="btn btn-primary">Ver más detalles</a>
+                </article>
+
+            </div>
+        </section>
+
+
+        <!-- ZONAS -->
+        <section id="Zonas-Chile">
+
+            <!-- NORTE -->
+            <div class="zona-full norte">
+                <div class="overlay"></div>
+
+                <div class="contenido-zona">
+                    <h2>Norte Árido</h2>
+                    <p>Frutos secos y sales ancestrales del desierto.</p>
+                    <a href="./paginas/productos.html?zona=norte" class="btn btn-light">Explorar Norte</a>
                 </div>
+            </div>
 
-                <!-- Bloque Sur -->
-                <div class="zona-portal sur">
-                    <div class="info-zona">
-                        <h3>Sur Nativo</h3>
-                        <p>Mieles e infusiones del bosque lluvioso.</p>
-                        <a href="./paginas/productos.html?zona=sur" class="btn-zona">Ver productos del Sur</a>
-                    </div>
+            <!-- CENTRO -->
+            <div class="zona-full centro">
+                <div class="overlay"></div>
+
+                <div class="contenido-zona">
+                    <h2>Valle Central</h2>
+                    <p>Cosmética natural y lectura consciente.</p>
+                    <a href="./paginas/productos.html?zona=centro" class="btn btn-light">Explorar Centro</a>
                 </div>
-            </section>
+            </div>
 
-            <!-- 4. BLOG / RECETAS (Los más reaccionados) -->
-            <section id="nuestro-blog">
-                <h2>Historias y Recetas Destacadas</h2>
-                <p>Lo más leído de nuestra comunidad natural</p>
+            <!-- SUR -->
+            <div class="zona-full sur">
+                <div class="overlay"></div>
 
-                <div class="contenedor-blog-destacados">
-                    <!-- Entrada de Blog 1 (Más visto) -->
-                    <article class="blog-card">
-                        <div class="badge-vistas">👁️ 1.2k</div>
-                        <img src="img/blog-miel.jpg" alt="Receta Miel">
-                        <h3>Queques de avena y Miel de Ulmo</h3>
-                        <p>Aprende a preparar este clásico saludable que ha encantado a todos...</p>
-                        <div class="reacciones-preview">😍 45 | 🙂 12</div>
-                        <a href="./blogs/post1.html" class="btn-leer">Leer entrada</a>
-                    </article>
-
-                    <!-- Entrada de Blog 2 (Más reaccionado) -->
-                    <article class="blog-card">
-                        <div class="badge-vistas">👁️ 950</div>
-                        <img src="img/blog-piel.jpg" alt="Cuidado Piel">
-                        <h3>Rutina nocturna con Rosa Mosqueta</h3>
-                        <p>El secreto mejor guardado para regenerar tu piel de forma natural...</p>
-                        <div class="reacciones-preview">😍 89 | 🙂 20</div>
-                        <a href="./blogs/post2.html" class="btn-leer">Leer entrada</a>
-                    </article>
-
-                    <!-- Entrada de Blog 3 -->
-                    <article class="blog-card">
-                        <div class="badge-vistas">👁️ 800</div>
-                        <img src="img/blog-hierbas.jpg" alt="Infusiones">
-                        <h3>3 Infusiones para tus defensas</h3>
-                        <p>Sabiduría herbolaria para mantenerte fuerte durante todo el año...</p>
-                        <div class="reacciones-preview">😍 30 | 🙂 15</div>
-                        <a href="./blogs/post3.html" class="btn-leer">Leer entrada</a>
-                    </article>
+                <div class="contenido-zona">
+                    <h2>Sur Nativo</h2>
+                    <p>Mieles e infusiones del bosque lluvioso.</p>
+                    <a href="./paginas/productos.html?zona=sur" class="btn btn-light">Explorar Sur</a>
                 </div>
+            </div>
 
-                <div class="ver-mas-blog">
-                    <button><a href="./paginas/blogs.html">Ver todos los Blogs</a></button>
-                </div>
-            </section>
+        </section>
 
-        </main>
+        <!-- BLOG -->
+        <section id="nuestro-blog" class="seccion-animada">
+            <h2>Historias y Recetas Destacadas</h2>
+            <p class="text-center mb-5">Lo más leído de nuestra comunidad natural</p>
 
+            <div class="contenedor-blog-destacados">
+
+                <article class="blog-card">
+                    <div class="badge-vistas">👁️ 1.2k</div>
+                    <div class="blog-img"></div>
+                    <h3>Queques de avena y Miel de Ulmo</h3>
+                    <p>Aprende a preparar este clásico saludable que ha encantado a todos...</p>
+                    <div class="reacciones-preview">😍 45 | 🙂 12</div>
+                    <a href="./blogs/post1.html" class="btn btn-outline-dark m-3">Leer entrada</a>
+                </article>
+
+                <article class="blog-card">
+                    <div class="badge-vistas">👁️ 950</div>
+                    <div class="blog-img"></div>
+                    <h3>Rutina nocturna con Rosa Mosqueta</h3>
+                    <p>El secreto mejor guardado para regenerar tu piel de forma natural...</p>
+                    <div class="reacciones-preview">😍 89 | 🙂 20</div>
+                    <a href="./blogs/post2.html" class="btn btn-outline-dark m-3">Leer entrada</a>
+                </article>
+
+                <article class="blog-card">
+                    <div class="badge-vistas">👁️ 800</div>
+                    <div class="blog-img"></div>
+                    <h3>3 Infusiones para tus defensas</h3>
+                    <p>Sabiduría herbolaria para mantenerte fuerte durante todo el año...</p>
+                    <div class="reacciones-preview">😍 30 | 🙂 15</div>
+                    <a href="./blogs/post3.html" class="btn btn-outline-dark m-3">Leer entrada</a>
+                </article>
+
+            </div>
+
+            <div class="text-center mt-4">
+                <a href="./paginas/blogs.html" class="btn btn-dark">Ver todos los Blogs</a>
+            </div>
+        </section>
+
+    </main>
 
 
             <!-- Notificación para contacto -->
 
-        <aside id="notificacion-contacto">
-            <div>
-                <p>¿Tienes dudas? Escríbenos directamente</p>
-                <form>
-                    <input type="text" placeholder="Tu nombre">
-                    <input type="email" placeholder="Tu email">
-                    <textarea placeholder="¿En qué te ayudamos?"></textarea>
-                    <button type="submit">Enviar</button>
-                </form>
-            </div>
-        </aside>
+            <!-- Panel -->
+            <aside id="notificacion-contacto" class="contacto-flotante oculto">
 
-        <footer>
-                <p>&copy; 2024 Vura Bazar Natural - Hecho en Chile</p>
-                <ul>
-                    <li><a href="#">Instagram</a></li>
-                    <li><a href="#">WhatsApp</a></li>
-                </ul>
+                <div class="card shadow-lg p-3 position-relative">
+
+                    <!-- Botón para cerrar -->
+                    <button id="cerrar-contacto" class="btn-close position-absolute top-0 end-0 m-2"></button>
+
+                    <h6 class="text-center mb-3">¿Tienes dudas?</h6>
+
+                    <form>
+                        <input type="text" class="form-control mb-2" placeholder="Tu nombre">
+                        <input type="email" class="form-control mb-2" placeholder="Tu email">
+                        <textarea class="form-control mb-3" rows="3" placeholder="¿En qué te ayudamos?"></textarea>
+                        <button class="btn btn-success w-100">Enviar</button>
+                    </form>
+
+                </div>
+
+            </aside>
+
+
+        <!--  Footer -->
+
+        <footer class="footer-custom mt-5">
+
+            <div class="container text-center py-4">
+
+                <p class="mb-2">&copy; 2024 Vura Bazar Natural</p>
+                <p class="small">Hecho en Chile</p>
+
+                <div class="mt-3">
+                    <a href="#" class="me-3 footer-link">Instagram</a>
+                    <a href="#" class="footer-link">WhatsApp</a>
+                </div>
+
+            </div>
+
         </footer>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="js/main.js"></script>
     </body>
+
+
+
 </html>
