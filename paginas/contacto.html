@@ -4,115 +4,175 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vura - Contacto</title>
-    <meta name="description" content="Ponte en contacto con Vura Bazar Natural">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Tu CSS -->
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 
 <body>
 
-    <header>
-        <div class="logo">
-            <img src="logo.png" alt="Logo de Vura"> 
+<!-- NAVBAR -->
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm navbar-custom">
+        <div class="container">
+
+            <a class="navbar-brand d-flex align-items-center fw-bold" href="../index.html">
+                <img src="../imagenes/logo.png" width="40" class="me-2">
+                VURA
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto text-uppercase small">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Inicio</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="productos.html">Productos</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="nosotros.html">Nosotros</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Contacto</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="blogs.html">Blogs</a>
+                    </li>
+
+                </ul>
+            </div>
+
         </div>
+    </nav>
+</header>
 
-        <nav>
-            <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="productos.html">Productos</a></li>
-                <li><a href="nosotros.html">Nosotros</a></li>
-                <li><a href="contacto.html" class="active">Contacto</a></li>
-                <li><a href="blogs.html">Blogs</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main class="contenedor-contacto">
-        
-        <section class="contacto-intro">
-            <h1>Ponte en contacto con nosotros</h1>
-            <p>¿Tienes dudas sobre un producto o quieres saber más sobre nuestro origen? Escríbenos.</p>
-        </section>
+<main>
 
-        <div class="fila-contacto">
-            <section class="seccion-formulario">
-                <h2>Envíanos un mensaje</h2>
-                <form action="#">
-                    <div class="campo">
-                        <label for="nombre">Nombre Completo</label>
-                        <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan Pérez" required>
-                    </div>
+    <!-- INTRO -->
+    <section class="contacto-intro text-center">
+        <div class="container">
+            <h1 class="fw-bold">Ponte en contacto</h1>
+            <p class="lead">¿Tienes dudas? Escríbenos y te ayudamos.</p>
+        </div>
+    </section>
 
-                    <div class="campo">
-                        <label for="email">Correo Electrónico</label>
-                        <input type="email" id="email" name="email" placeholder="correo@ejemplo.com" required>
-                    </div>
 
-                    <div class="campo">
-                        <label for="asunto">Asunto</label>
-                        <select id="asunto" name="asunto">
-                            <option value="consulta">Consulta de Producto</option>
-                            <option value="envio">Estado de Envío</option>
-                            <option value="mayorista">Venta Mayorista</option>
-                            <option value="otro">Otro</option>
-                        </select>
-                    </div>
+    <!-- FORM + INFO -->
+    <section class="container contacto-section">
+        <div class="row g-4">
 
-                    <div class="campo">
-                        <label for="mensaje">Mensaje</label>
-                        <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
-                    </div>
+            <!-- FORMULARIO -->
+            <div class="col-md-7">
+                <div class="form-card">
 
-                    <button type="submit" class="btn-enviar">Enviar Formulario</button>
-                </form>
-            </section>
+                    <h2>Envíanos un mensaje</h2>
 
-            <aside class="info-directa">
-                <div class="bloque-info">
+                    <form>
+                        <div class="mb-3">
+                            <label class="form-label">Nombre</label>
+                            <input type="text" class="form-control" placeholder="Juan Pérez">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Correo</label>
+                            <input type="email" class="form-control" placeholder="correo@ejemplo.com">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Asunto</label>
+                            <select class="form-select">
+                                <option>Consulta de Producto</option>
+                                <option>Estado de Envío</option>
+                                <option>Venta Mayorista</option>
+                                <option>Otro</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Mensaje</label>
+                            <textarea class="form-control" rows="5"></textarea>
+                        </div>
+
+                        <button class="btn btn-success w-100">Enviar</button>
+                    </form>
+
+                </div>
+            </div>
+
+            <!-- INFO -->
+            <div class="col-md-5">
+
+                <div class="info-card mb-3">
                     <h3>Vura Bazar Natural</h3>
-                    <p><strong>Ubicación:</strong> Copiapó, Atacama, Chile</p>
-                    <p><strong>Horario de atención:</strong> Lunes a Viernes, 09:00 - 18:00 hrs.</p>
+                    <p><strong>Ubicación:</strong> Copiapó, Chile</p>
+                    <p><strong>Horario:</strong> Lunes a Viernes 09:00 - 18:00</p>
                 </div>
 
-                <div class="bloque-info">
-                    <h3>Canales Directos</h3>
-                    <p>📧 Email: <a href="mailto:contacto@vura.cl">contacto@vura.cl</a></p>
-                    <p>📞 Teléfono: +56 9 1234 5678</p>
+                <div class="info-card mb-3">
+                    <h3>Contacto</h3>
+                    <p>📧 contacto@vura.cl</p>
+                    <p>📞 +56 9 1234 5678</p>
                 </div>
 
-                <div class="redes-sociales-contacto">
-                    <h3>Síguenos</h3>
-                    <p>Encuéntranos en Instagram como @VuraBazar.</p>
+                <div class="info-card">
+                    <h3>Redes</h3>
+                    <p>Instagram: @VuraBazar</p>
                 </div>
-            </aside>
+
+            </div>
+
         </div>
+    </section>
 
-        <!-- MAPA -->
-        <section class="mapa-ubicacion">
-            <hr> <!-- Línea para separar -->
-            <h2 style="text-align: center; margin-top: 30px;">Visítanos en nuestra tienda</h2>
-            <div class="contenedor-mapa" style="margin-top: 20px;">
+
+    <!-- MAPA -->
+    <section class="mapa-section">
+        <div class="container text-center">
+            <h2>Visítanos</h2>
+
+            <div class="mapa-wrapper">
                 <iframe 
                     src="https://www.google.com/maps/embed?pb=!4v1775888903721!6m8!1m7!1slm1T1Bug7ttdtABJ0w0PxQ!2m2!1d-27.37325056928993!2d-70.3230668236798!3f125.26825256874693!4f-12.695729682761922!5f0.7820865974627469" 
                     width="100%" 
-                    height="450" 
+                    height="400" 
                     style="border:0;" 
-                    allowfullscreen="" 
-                    loading="lazy" 
-                    referrerpolicy="no-referrer-when-downgrade">
+                    loading="lazy">
                 </iframe>
-
-                <p style="text-align: center; font-size: 0.9em; color: #666;">Av. Francisco de Aguirre, Copiapó, Región de Atacama.</p>
             </div>
-        </section>
 
-    </main>
+            <p class="text-muted mt-2">Copiapó, Región de Atacama</p>
 
-    <footer>
-        <p>&copy; 2024 Vura Bazar Natural - Hecho en Chile</p>
-        <ul>
-            <li><a href="#">Instagram</a></li>
-            <li><a href="#">WhatsApp</a></li>
-        </ul>
-    </footer>
+        </div>
+    </section>
+
+</main>
+
+
+<!-- FOOTER -->
+<footer class="footer-custom mt-5">
+    <div class="container text-center py-4">
+        <p>&copy; 2024 Vura Bazar Natural</p>
+        <div>
+            <a href="#" class="footer-link me-3">Instagram</a>
+            <a href="#" class="footer-link">WhatsApp</a>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
