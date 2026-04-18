@@ -1,0 +1,309 @@
+/* Base global */
+
+
+/* =========================================================
+   VARIABLES GLOBALES (Colores y base)
+   Acá se cambian los colores
+========================================================= */
+
+:root {
+    --color-fondo: #ddbc87d0; /* Puede afectar textos como los del footer */
+    --color-texto: #3e3e3e;
+
+    --color-primario: #318049;   /* Navbar y Footer, colores primarios generales */
+    --color-secundario: #D4A373; /* Detalles pequeños */
+    --color-acento: #6b8e23;     /* Botones */
+
+    --color-blanco: #ffffff;
+    --color-card: #E8DCC8; /* Color tarjeta productos */
+}
+
+
+/* =========================================================
+   ESTILOS BASE DE LA PÁGINA
+   Esto afecta todas las páginas: body, secciones, textos
+========================================================= */
+
+
+html, body {
+    height: 100%;
+}
+
+main {
+    flex: 1;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    padding-top: 70px; /* Evita que el navbar fijo tape contenido */
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    scroll-behavior: smooth;
+}
+
+section {
+    padding: 80px 0; /* Espaciado vertical */
+}
+
+.display-1 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 700;
+    /*color: var(--color-texto);*/ /* Cambia el color del texto inicial del hero de la página index.html */
+}
+
+/* .display-5 { */
+    /*color: var(--color-texto);*/ /* Cambia el color del texto subtitulo del hero de la página index.html */
+/*} */
+
+
+/* .lead { */
+    /*color: var(--color-texto);*/ /* Cambia el color del texto subtitulo 2 del hero de la página index.html */
+/*}*/
+
+h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   NAVBAR (Header global)
+   <nav> del todas las páginas
+========================================================= */
+
+.navbar-custom {
+    background: var(--color-primario); /* Verde principal */
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+/* Logo */
+.navbar-brand {
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+}
+
+/* Links del menú */
+.nav-link {
+    transition: all 0.3s ease;
+    color: white !important;
+    position: relative;
+}
+
+/* Hover links */
+.nav-link:hover {
+    color: var(--color-secundario) !important;
+}
+
+/* Línea animada debajo */
+.nav-link::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    background-color: var(--color-secundario);
+    transition: 0.3s;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+
+/* =========================================================
+   BOTONES GENERALES
+   Todos los botones de la página se ven afectados
+========================================================= */
+
+.btn {
+    background-color: var(--color-acento);
+    border: none;
+    color: white;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   HERO GLOBAL (Video/Imagen de la portada)
+   Se usa en index (y en algunas otras páginas)
+========================================================= */
+
+.hero-video {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+
+    /* Fondo de respaldo */
+    background: linear-gradient(135deg, #c9a66b, #4a7c59);
+}
+
+/* Video de fondo */
+.video-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    z-index: 0;
+
+    filter: brightness(0.75) contrast(1.1) saturate(1.1);
+}
+
+/* Capa oscura encima del video */
+.overlay-video {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    z-index: 1;
+}
+
+/* Contenido del hero */
+.contenido-hero {
+    position: relative;
+    z-index: 2;
+}
+
+/* Caja del texto */
+.hero-box {
+    background: rgba(0,0,0,0.35);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+}
+
+
+/* =========================================================
+   ANIMACIONES GENERALES (Scroll)
+   Se usa en algunas secciones
+========================================================= */
+
+.seccion-animada {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.9s ease;
+}
+
+.seccion-animada.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   TARJETAS GENÉRICAS (Reutilizables)
+   La base para productos, blogs, etc.
+========================================================= */
+
+.card-base {
+    background: var(--color-blanco);
+    border-radius: 18px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+}
+
+.card-base:hover {
+    transform: translateY(-8px);
+}
+
+/* article.blog-card {
+    background-color: var(--color-fondo); /* Color de fondo de las badges de blog de index.html */
+/*} */
+
+
+/* =========================================================
+   FOOTER GLOBAL
+   Se usa en todas las páginas
+========================================================= */
+
+.footer-custom {
+    background: var(--color-primario);
+    color: var(--color-blanco);
+    width: 100%;
+    margin-top: auto;
+}
+
+/* Links del footer */
+.footer-link {
+    color: var(--color-blanco);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-link:hover {
+    color: var(--color-acento);
+}
+
+
+/* =========================================================
+   CONTACTO FLOTANTE (Notificacióm)
+   Widget global, pero aparece principalmente en index.html
+========================================================= */
+
+/* Botón flotante */
+.contacto-boton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+}
+
+/* Panel */
+.contacto-flotante {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    width: 280px;
+    z-index: 999;
+
+    transition: all 0.3s ease;
+}
+
+/* Estados */
+.oculto {
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.card {
+    background-color: var(--color-fondo);
+}
+
+/* =========================================================
+   RESPONSIVE GLOBAL
+   Importante para compatibilidad de celular
+========================================================= */
+
+@media (max-width: 768px) {
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .hero-box {
+        padding: 20px;
+    }
+
+}

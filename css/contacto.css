@@ -1,0 +1,47 @@
+/* =========================================================
+   CONTACTO - INTRO
+========================================================= */
+
+.contacto-intro {
+    padding: 80px 0 40px;
+}
+
+
+/* =========================================================
+   FORMULARIO
+========================================================= */
+
+.form-card {
+    background: #E8DCC8; /* Colores de fondo */
+    font-size: large;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+
+/* =========================================================
+   INFO LATERAL
+========================================================= */
+
+.info-card {
+    background: #E8DCC8; /* Colores de fondo */
+    padding: 20px;
+    border-radius: 18px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+
+/* =========================================================
+   MAPA
+========================================================= */
+
+.mapa-section {
+    padding: 80px 0;
+}
+
+.mapa-wrapper {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
