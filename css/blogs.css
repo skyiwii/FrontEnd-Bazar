@@ -1,0 +1,189 @@
+/* =========================================================
+   BLOG PAGE (Layout general)
+========================================================= */
+
+.blog-layout {
+    margin-top: 100px;
+}
+
+
+/* =========================================================
+   HERO BLOG
+========================================================= */
+
+.blog-hero {
+    text-align: center;
+}
+
+.blog-hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.blog-hero p {
+    color: #666;
+}
+
+
+/* =========================================================
+   BUSCADOR
+========================================================= */
+
+.blog-search {
+    text-align: center;
+}
+
+.blog-search form {
+    display: flex;
+    justify-content: center;
+    max-width: 500px;
+    margin: auto;
+}
+
+.blog-search input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 10px 0 0 10px;
+    border: 1px solid #ccc;
+    background-color: #E8DCC8;
+}
+
+.blog-search button {
+    border: none;
+    padding: 10px 15px;
+    background: var(--color-acento);
+    color: white;
+    border-radius: 0 10px 10px 0;
+}
+
+
+/* =========================================================
+   TAGS
+========================================================= */
+
+.blog-tags {
+    margin-top: 10px;
+}
+
+.blog-tags a {
+    margin: 0 5px;
+    text-decoration: none;
+    color: var(--color-acento);
+    font-weight: 500;
+}
+
+.blog-tags a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   GRID DE ARTÍCULOS
+========================================================= */
+
+.grilla-articulos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+
+/* =========================================================
+   TARJETA BLOG
+========================================================= */
+
+.post-card {
+    background: var(--color-blanco);
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+}
+
+.post-card:hover {
+    transform: translateY(-8px);
+}
+
+
+/* Imagen */
+.post-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+
+/* Contenido */
+.contenido-post {
+    padding: 15px;
+    background-color: #E8DCC8;
+}
+
+.etiqueta {
+    font-size: 0.75rem;
+    color: var(--color-acento);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.contenido-post h3 {
+    margin-top: 5px;
+    font-size: 1.2rem;
+}
+
+.contenido-post p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+
+/* =========================================================
+   PAGINACIÓN
+========================================================= */
+
+.paginacion {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.paginacion a {
+    display: inline-block;
+    margin: 0 5px;
+    padding: 8px 12px;
+    background: #eee;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #333;
+    transition: 0.2s;
+}
+
+.paginacion a:hover {
+    background: #ddd;
+}
+
+.paginacion a.active {
+    background: var(--color-acento);
+    color: white;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .blog-search form {
+        flex-direction: column;
+    }
+
+    .blog-search input {
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+
+    .blog-search button {
+        border-radius: 10px;
+    }
+
+}
