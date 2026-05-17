@@ -274,6 +274,52 @@ h2 {
     transition: all 0.3s ease;
 }
 
+/* ==================== MODO OSCURO ==================== */
+:root.dark-mode {
+    --color-fondo: #121212;
+    --color-texto: #e5e5e5;
+    --color-primario: #1e3a2f;
+    --color-secundario: #8b7355;
+    --color-acento: #9cb342;
+    --color-card: #222222;
+    --color-blanco: #121212;
+}
+
+.dark-mode {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+}
+
+.dark-mode .navbar-custom {
+    background-color: var(--color-primario) !important;
+    color: var(--color-texto) !important;
+}
+
+.dark-mode .nav-link,
+.dark-mode .navbar-brand,
+.dark-mode .navbar-toggler-icon {
+    color: var(--color-texto) !important;
+}
+
+.dark-mode .producto-card-carrusel,
+.dark-mode .card-base,
+.dark-mode .card,
+.dark-mode .hero-box,
+.dark-mode .footer-custom {
+    background-color: var(--color-card);
+    color: var(--color-texto);
+    border-color: #333;
+}
+
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode h4,
+.dark-mode h5,
+.dark-mode h6 {
+    color: #ffffff;
+}
+
 /* Estados */
 .oculto {
     opacity: 0;
