@@ -1,0 +1,216 @@
+/* =========================
+   HERO (VIDEO PORTADA)
+========================= */
+
+.hero-video {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #c9a66b, #4a7c59);
+}
+
+.video-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    z-index: 0;
+    filter: brightness(0.75) contrast(1.1);
+}
+
+.overlay-video {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    z-index: 1;
+}
+
+.contenido-hero {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-box {
+    background: rgba(0,0,0,0.35);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+}
+
+
+/* =========================
+   PRODUCTOS DESTACADOS
+========================= */
+
+.contenedor-productos-carrusel {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.producto-card-carrusel {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #E8DCC8; /* Color de fondo */
+    border-radius: 18px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.producto-card-carrusel:hover {
+    transform: translateY(-8px);
+}
+
+.producto-card-carrusel img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+
+/* =========================
+   ZONAS CHILE
+========================= */
+
+#Zonas-Chile {
+    scroll-snap-type: y mandatory;
+}
+
+.zona-full {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    position: relative;
+    scroll-snap-align: start;
+}
+
+.zona-full::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: 0;
+}
+
+/* Norte */
+.zona-full.norte::before {
+    background-image:
+        linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+        url("../media/norte.jpg");
+}
+
+/* Centro */
+.zona-full.centro::before {
+    background-image:
+        linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+        url("../media/centro.jpg");
+}
+
+/* Sur */
+.zona-full.sur::before {
+    background-image:
+        linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+        url("../media/sur.jpg");
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.3);
+}
+
+.contenido-zona {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 0.8s;
+}
+
+.zona-full.visible .contenido-zona {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* =========================
+   BLOG DESTACADO
+========================= */
+
+.contenedor-blog-destacados {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.blog-card {
+    position: relative;
+    background: #F2EDE4; /* Color fondo de la tarjeta */
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.blog-card:hover {
+    transform: translateY(-10px);
+}
+
+.blog-img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+}
+
+.blog-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.badge-vistas {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: rgba(0,0,0,0.6);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 0.8rem;
+}
+
+.reacciones-preview {
+    font-size: 0.85rem;
+    color: #888;
+    margin: 0 15px;
+}
+
+
+/* =========================
+   ANIMACIONES
+========================= */
+
+.seccion-animada {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 0.9s;
+}
+
+.seccion-animada.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
