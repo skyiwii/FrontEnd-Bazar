@@ -2,7 +2,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     const btnTema = document.getElementById('btn-tema');
-    const body = document.Body;
+    const body = document.body;
 
     // Función para cambiar el tema
     function toggleDarkMode() {
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Agregar evento al botón
     if (btnTema) {
-        btnTema.addEventListener('click', toggleDarkModo);
+        btnTema.addEventListener('click', toggleDarkMode);
     }
 
     // Cargar tema al iniciar

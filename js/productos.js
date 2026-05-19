@@ -58,8 +58,8 @@ function renderizarProductos(productosAMostrar) {
 
     contenedor.querySelectorAll('.btn-agregar').forEach(button => {
         button.addEventListener('click', () => {
-            const id = Number(button.dataset.ID);
-            AgregarAlCarrito(id);
+            const id = Number(button.dataset.id);
+            agregarAlCarrito(id);
         });
     });
 }
