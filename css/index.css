@@ -1,0 +1,348 @@
+/* =========================================
+   HERO
+========================================= */
+
+.hero-video {
+
+    min-height: 100vh;
+
+    position: relative;
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+    linear-gradient(
+        135deg,
+        #5f715d,
+        #8b6f47
+    );
+}
+
+.video-bg {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    filter:
+        brightness(0.55)
+        saturate(0.9);
+}
+
+.overlay-video {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0,0,0,0.35),
+            rgba(0,0,0,0.45)
+        );
+}
+
+.contenido-hero {
+
+    position: relative;
+
+    z-index: 2;
+}
+
+.hero-box {
+
+    background:
+        rgba(255,255,255,0.08);
+
+    border:
+        1px solid rgba(255,255,255,0.15);
+
+    backdrop-filter: blur(10px);
+
+    padding: 60px;
+
+    border-radius: 32px;
+}
+
+.hero-box h1 {
+
+    font-size:
+        clamp(4rem, 10vw, 7rem);
+
+    letter-spacing: -4px;
+}
+
+.hero-box h2 {
+
+    font-size:
+        clamp(1.5rem, 3vw, 2.5rem);
+
+    margin-bottom: 20px;
+}
+
+.hero-box p {
+
+    color: rgba(255,255,255,0.85);
+
+    max-width: 600px;
+
+    margin:
+        0 auto 30px;
+}
+
+
+
+
+/* =========================================
+   PRODUCTOS POPULARES
+========================================= */
+
+#Destacados {
+
+    background: #f2ede4;
+}
+
+.carousel-inner {
+
+    padding: 20px 0;
+}
+
+.producto-card-carrusel {
+
+    background: white;
+
+    border-radius: 24px;
+
+    overflow: hidden;
+
+    padding: 18px;
+
+    text-align: center;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.04);
+
+    border:
+        1px solid #ece7de;
+
+    max-width: 320px;
+
+    margin: auto;
+}
+
+.producto-card-carrusel img {
+
+    width: 100%;
+
+    height: 260px;
+
+    object-fit: cover;
+
+    border-radius: 18px;
+
+    margin-bottom: 18px;
+}
+
+.producto-card-carrusel h3 {
+
+    font-size: 1.2rem;
+
+    margin-bottom: 10px;
+}
+
+.producto-card-carrusel p {
+
+    font-size: 1rem;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================
+   ZONAS
+========================================= */
+
+.zona-full {
+
+    position: relative;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+.zona-full::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background-size: cover;
+    background-position: center;
+
+    transform: scale(1.05);
+
+    transition: transform 6s ease;
+}
+
+.zona-full:hover::before {
+    transform: scale(1);
+}
+
+.norte::before {
+
+    background-image:
+        linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+        url("../media/norte.jpg");
+}
+
+.centro::before {
+
+    background-image:
+        linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+        url("../media/centro.jpg");
+}
+
+.sur::before {
+
+    background-image:
+        linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+        url("../media/sur.jpg");
+}
+
+.contenido-zona {
+
+    position: relative;
+
+    z-index: 2;
+
+    color: white;
+
+    text-align: center;
+
+    max-width: 650px;
+
+    padding: 40px;
+}
+
+.contenido-zona h2 {
+
+    font-size:
+        clamp(2.5rem, 5vw, 5rem);
+
+    margin-bottom: 20px;
+}
+
+.contenido-zona p {
+
+    color: rgba(255,255,255,0.85);
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================================
+   BLOG
+========================================= */
+
+#nuestro-blog {
+
+    background: #f7f4ee;
+}
+
+.contenedor-blog-destacados {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(300px, 1fr));
+
+    gap: 30px;
+}
+
+.blog-card {
+
+    background: white;
+
+    border-radius: 24px;
+
+    overflow: hidden;
+
+    border:
+        1px solid #ece7de;
+
+    transition: 0.35s ease;
+}
+
+.blog-card:hover {
+
+    transform: translateY(-8px);
+}
+
+.blog-img {
+
+    overflow: hidden;
+}
+
+.blog-img img {
+
+    width: 100%;
+
+    height: 240px;
+
+    object-fit: cover;
+
+    transition: 0.5s ease;
+}
+
+.blog-card:hover img {
+
+    transform: scale(1.04);
+}
+
+.badge-vistas {
+
+    position: absolute;
+
+    top: 18px;
+    left: 18px;
+
+    background: rgba(255,255,255,0.9);
+
+    padding: 8px 12px;
+
+    border-radius: 999px;
+
+    font-size: 0.8rem;
+
+    backdrop-filter: blur(8px);
+}
+
+.reacciones-preview {
+
+    color: #777;
+
+    font-size: 0.9rem;
+
+    padding: 0 24px 24px;
+}

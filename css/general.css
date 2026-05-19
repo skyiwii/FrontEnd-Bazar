@@ -1,0 +1,452 @@
+/* =========================================
+   VARIABLES GLOBALES
+========================================= */
+
+:root {
+
+    --color-fondo: #f7f4ee;
+    --color-superficie: #ffffff;
+
+    --color-texto: #2f2f2f;
+    --color-texto-suave: #6b6b6b;
+
+    --color-primario: #5f715d;
+    --color-secundario: #d6c7ae;
+
+    --color-borde: #e8e2d8;
+
+    --sombra-suave:
+        0 4px 20px rgba(0,0,0,0.04);
+
+    --radio: 20px;
+
+}
+
+
+/* =========================================
+   RESET GENERAL
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    font-family:
+        "Inter",
+        "Segoe UI",
+        sans-serif;
+
+    background: var(--color-fondo);
+
+    color: var(--color-texto);
+
+    padding-top: 76px;
+}
+
+
+/* =========================================
+   TIPOGRAFÍA
+========================================= */
+
+h1,
+h2,
+h3,
+h4 {
+    font-weight: 600;
+    letter-spacing: -1px;
+}
+
+h2 {
+
+    font-size: clamp(2rem, 4vw, 3rem);
+
+    text-align: center;
+
+    margin-bottom: 20px;
+}
+
+p {
+    color: var(--color-texto-suave);
+    line-height: 1.7;
+}
+
+section {
+    padding: 100px 0;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar-custom {
+
+    background: rgba(247, 244, 238, 0.88);
+
+    backdrop-filter: blur(12px);
+
+    border-bottom:
+        1px solid var(--color-borde);
+
+    transition: 0.3s ease;
+}
+
+.navbar-brand {
+
+    color: var(--color-primario) !important;
+
+    font-size: 1.2rem;
+
+    letter-spacing: 2px;
+}
+
+.nav-link {
+
+    color: var(--color-texto) !important;
+
+    font-size: 0.92rem;
+
+    margin-left: 18px;
+
+    position: relative;
+
+    transition: 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--color-primario) !important;
+}
+
+.nav-link::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -5px;
+
+    width: 0%;
+    height: 1px;
+
+    background: var(--color-primario);
+
+    transition: 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+
+/* =========================================
+   BOTONES
+========================================= */
+
+.btn {
+
+    border-radius: 999px;
+
+    padding:
+        12px 26px;
+
+    transition: 0.3s ease;
+
+    font-weight: 500;
+}
+
+.btn-primary {
+
+    background: var(--color-primario);
+
+    border: none;
+}
+
+.btn-primary:hover {
+
+    background: #4f614d;
+
+    transform: translateY(-2px);
+}
+
+.btn-outline-light {
+
+    border-width: 1px;
+}
+
+
+/* =========================================
+   TARJETAS GENERALES
+========================================= */
+
+.card-base {
+
+    background: var(--color-superficie);
+
+    border-radius: var(--radio);
+
+    overflow: hidden;
+
+    box-shadow: var(--sombra-suave);
+
+    border:
+        1px solid var(--color-borde);
+
+    transition: 0.35s ease;
+}
+
+.card-base:hover {
+
+    transform: translateY(-6px);
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer-custom {
+
+    background: #ece6db;
+
+    border-top:
+        1px solid var(--color-borde);
+
+    color: var(--color-texto);
+
+}
+
+.footer-link {
+
+    text-decoration: none;
+
+    color: var(--color-texto);
+
+    transition: 0.3s ease;
+}
+
+.footer-link:hover {
+
+    color: var(--color-primario);
+}
+
+
+/* =========================================
+   CONTACTO FLOTANTE
+========================================= */
+
+.contacto-flotante {
+
+    position: fixed;
+
+    bottom: 25px;
+    right: 25px;
+
+    width: 320px;
+
+    z-index: 999;
+
+    opacity: 0;
+
+    transform:
+        translateY(40px);
+
+    animation:
+        mostrarPopup 0.8s ease forwards;
+
+    animation-delay: 2s;
+}
+
+/* Tarjeta */
+
+.contacto-flotante .card {
+
+    border: none;
+
+    border-radius: 24px;
+
+    background:
+        rgba(255,255,255,0.92);
+
+    backdrop-filter: blur(15px);
+
+    box-shadow:
+        0 10px 40px rgba(0,0,0,0.08);
+}
+
+
+.contacto-flotante .form-control {
+
+    border-radius: 14px;
+
+    border:
+        1px solid #e7dfd3;
+
+    padding: 12px;
+}
+
+/* Mostrar */
+
+@keyframes mostrarPopup {
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+/* =========================================
+   CERRAR POPUP SOLO CSS
+========================================= */
+
+#cerrar-widget {
+    display: none;
+}
+
+#cerrar-widget:checked + .contacto-flotante {
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform:
+        translateY(30px);
+
+    pointer-events: none;
+
+    transition:
+        opacity 0.4s ease,
+        transform 0.4s ease,
+        visibility 0.4s;
+}
+
+
+/* =========================================
+   ANIMACIONES SOLO CSS
+========================================= */
+
+.seccion-animada {
+
+    animation:
+        fadeUp 0.8s ease both;
+}
+
+/* =========================================================
+   APARICIÓN GLOBAL
+========================================================= */
+
+@keyframes fadeUp {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(40px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+/* ELEMENTOS GENERALES */
+
+main section,
+main header,
+main article,
+main aside {
+
+    opacity: 0;
+
+    animation:
+        fadeUp 0.9s ease forwards;
+}
+
+
+/* DELAYS */
+
+main section:nth-child(1),
+main header:nth-child(1) {
+
+    animation-delay: 0.05s;
+}
+
+main section:nth-child(2),
+main article:nth-child(2) {
+
+    animation-delay: 0.15s;
+}
+
+main section:nth-child(3),
+main article:nth-child(3) {
+
+    animation-delay: 0.25s;
+}
+
+main section:nth-child(4) {
+
+    animation-delay: 0.35s;
+}
+
+main section:nth-child(5) {
+
+    animation-delay: 0.45s;
+}
+
+
+
+/* =========================================
+   CERRAR POPUP SOLO CSS
+========================================= */
+
+#cerrar-widget {
+    display: none;
+}
+
+#cerrar-widget:checked + .contacto-flotante {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(30px);
+    pointer-events: none;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+
+    section {
+        padding: 70px 0;
+    }
+
+    .navbar-nav {
+
+        padding-top: 20px;
+    }
+
+    .contacto-flotante {
+
+        width: calc(100% - 30px);
+
+        right: 15px;
+    }
+}
