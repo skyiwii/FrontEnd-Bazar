@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Vura - Bienestar y Blog</title>
-    <link rel="icon" href="../media/logo.png" type="image/png">
 
     <link rel="icon" href="../media/logo.png" type="image/png">
 
@@ -25,9 +24,221 @@
     <!-- NAVBAR -->
     <header>
 
-            <a class="navbar-brand d-flex align-items-center fw-bold" href="../index.html">
-                <img src="../media/logo.png" width="40" class="me-2">
-                VURA
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm navbar-custom">
+
+            <div class="container">
+
+                <a class="navbar-brand d-flex align-items-center fw-bold" href="../index.html">
+
+                    <img
+                        src="../media/logo.png"
+                        width="40"
+                        class="me-2"
+                        alt="Logo Vura">
+
+                    VURA
+
+                </a>
+
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav"
+                    aria-label="Abrir navegación">
+
+                    <span class="navbar-toggler-icon"></span>
+
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+
+                    <ul class="navbar-nav ms-auto text-uppercase small">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Inicio</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="productos.html">Productos</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="nosotros.html">Nosotros</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">Contacto</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Blogs</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- MAIN -->
+    <main class="container blog-layout">
+
+        <!-- HERO -->
+        <section class="blog-hero seccion-animada">
+
+            <h1>Bienestar Natural y Vida Consciente</h1>
+
+            <p>
+                Descubre recetas, rituales naturales y consejos simples
+                para conectar con una vida más equilibrada.
+            </p>
+
+        </section>
+
+
+        <!-- SEARCH -->
+        <section class="blog-search seccion-animada">
+
+            <form action="#" method="GET">
+
+                <input
+                    type="search"
+                    name="buscar"
+                    placeholder="Buscar recetas, bienestar o ingredientes..."
+                    aria-label="Buscar artículos"
+                    required>
+
+                <button type="submit">
+                    Buscar
+                </button>
+
+            </form>
+
+            <!-- TAGS -->
+            <div class="blog-tags">
+
+                <span>Sugerencias:</span>
+
+                <a href="#">#Recetas</a>
+                <a href="#">#Bienestar</a>
+                <a href="#">#MielNatural</a>
+                <a href="#">#Herbolaria</a>
+
+            </div>
+
+        </section>
+
+
+        <!-- GRID POSTS -->
+        <section class="grilla-articulos">
+
+            <!-- POST 1 -->
+            <article class="post-card seccion-animada">
+
+                <img
+                    src="../media/queques-miel.jpg"
+                    alt="Queques de avena preparados con miel natural">
+
+                <div class="contenido-post">
+
+                    <span class="etiqueta">
+                        Recetas
+                    </span>
+
+                    <h3>
+                        Queques de avena y miel de ulmo
+                    </h3>
+
+                    <p>
+                        Aprende a reemplazar el azúcar refinada
+                        con miel natural y prepara una receta
+                        suave, nutritiva y perfecta para cualquier momento.
+                    </p>
+
+                    <a href="../blogs/post1.html" class="btn btn-primary">
+                        Leer artículo
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- POST 2 -->
+            <article class="post-card seccion-animada">
+
+                <img
+                    src="../media/rosa-mosqueta.jpg"
+                    alt="Aceite natural de rosa mosqueta">
+
+                <div class="contenido-post">
+
+                    <span class="etiqueta">
+                        Cuidado Natural
+                    </span>
+
+                    <h3>
+                        Rutina nocturna con rosa mosqueta
+                    </h3>
+
+                    <p>
+                        Descubre una rutina simple para hidratar,
+                        regenerar y cuidar tu piel usando ingredientes naturales.
+                    </p>
+
+                    <a href="../blogs/post2.html" class="btn btn-primary">
+                        Leer artículo
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- POST 3 -->
+            <article class="post-card seccion-animada">
+
+                <img
+                    src="../media/tres-infusiones.jpg"
+                    alt="Infusiones naturales de hierbas">
+
+                <div class="contenido-post">
+
+                    <span class="etiqueta">
+                        Herbolaria
+                    </span>
+
+                    <h3>
+                        3 infusiones para fortalecer defensas
+                    </h3>
+
+                    <p>
+                        Boldo, poleo y menta: conoce cómo estas
+                        hierbas tradicionales pueden acompañar tu bienestar diario.
+                    </p>
+
+                    <a href="../blogs/post3.html" class="btn btn-primary">
+                        Leer artículo
+                    </a>
+
+                </div>
+
+            </article>
+
+        </section>
+
+
+        <!-- PAGINATION -->
+        <nav class="paginacion" aria-label="Paginación blog">
+
+            <a href="#" aria-label="Página anterior">
+                «
             </a>
 
             <a href="#" class="active">
@@ -81,102 +292,9 @@
     </footer>
 
 
-<!-- CONTENIDO -->
-<main class="container blog-layout">
-
-    <!-- HERO -->
-    <section class="blog-hero text-center">
-        <h1>Bienestar y Recetas</h1>
-        <p>Secretos naturales y consejos para una vida en equilibrio con la tierra.</p>
-    </section>
-
-
-    <!-- BUSCADOR -->
-    <section class="blog-search">
-        <form>
-            <input type="search" placeholder="¿Qué receta o consejo buscas?">
-            <button type="submit">Buscar</button>
-        </form>
-
-        <div class="blog-tags">
-            <span>Sugerencias:</span>
-            <a href="#">#Recetas</a>
-            <a href="#">#CuidadoPiel</a>
-            <a href="#">#Miel</a>
-        </div>
-    </section>
-
-
-    <!-- GRID -->
-    <section class="grilla-articulos">
-
-        <article class="post-card">
-            <img src="../media/queques-miel.jpg">
-            <div class="contenido-post">
-                <span class="etiqueta">Recetas</span>
-                <h3>Queques de avena y Miel de Ulmo</h3>
-                <p>Descubre cómo reemplazar el azúcar por miel natural...</p>
-                <a href="../blogs/post1.html" class="btn btn-dark">Leer más</a>
-            </div>
-        </article>
-
-        <article class="post-card">
-            <img src="../media/rosa-mosqueta.jpg">
-            <div class="contenido-post">
-                <span class="etiqueta">Cuidado</span>
-                <h3>Rutina nocturna con Rosa Mosqueta</h3>
-                <p>Regenera tu piel con ingredientes naturales...</p>
-                <a href="../blogs/post2.html" class="btn btn-dark">Leer más</a>
-            </div>
-        </article>
-
-        <article class="post-card">
-            <img src="../media/tres-infusiones.jpg">
-            <div class="contenido-post">
-                <span class="etiqueta">Herbolaria</span>
-                <h3>3 infusiones para defensas</h3>
-                <p>El poder del boldo, poleo y menta...</p>
-                <a href="../blogs/post3.html" class="btn btn-dark">Leer más</a>
-            </div>
-        </article>
-
-    </section>
-
-
-    <!-- PAGINACIÓN -->
-    <nav class="paginacion">
-        <a href="#">«</a>
-        <a href="#" class="active">1</a>
-        <a href="#">2</a>
-        <a href="#">3</a>
-        <a href="#">»</a>
-    </nav>
-
-</main>
-
-
-        <!--  Footer -->
-
-        <footer class="footer-custom mt-5">
-
-            <div class="container text-center py-4">
-
-                <p class="mb-2">&copy; 2024 Vura Bazar Natural</p>
-                <p class="small">Hecho en Chile</p>
-
-                <div class="mt-3">
-                    <a href="#" class="me-3 footer-link">Instagram</a>
-                    <a href="#" class="footer-link">WhatsApp</a>
-                </div>
-
-            </div>
-
-        </footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 
 </html>
-
-
