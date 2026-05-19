@@ -1,10 +1,8 @@
-// js/theme.js
-// Modo Oscuro - 40%
 
 document.addEventListener('DOMContentLoaded', () => {
 
     const btnTema = document.getElementById('btn-tema');
-    const body = document.body;
+    const body = document.Body;
 
     // Función para cambiar el tema
     function toggleDarkMode() {
@@ -25,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Agregar evento al botón
     if (btnTema) {
-        btnTema.addEventListener('click', toggleDarkMode);
+        btnTema.addEventListener('click', toggleDarkModo);
     }
 
     // Cargar tema al iniciar
