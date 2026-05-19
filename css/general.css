@@ -1,145 +1,113 @@
-/* =========================================
-   VARIABLES GLOBALES
-========================================= */
+/* Base global */
+
+
+/* =========================================================
+   VARIABLES GLOBALES (Colores y base)
+   Acá se cambian los colores
+========================================================= */
 
 :root {
+    --color-fondo: #ddbc87d0; /* Puede afectar textos como los del footer */
+    --color-texto: #3e3e3e;
 
-    --color-fondo: #f7f4ee;
-    --color-superficie: #ffffff;
+    --color-primario: #318049;   /* Navbar y Footer, colores primarios generales */
+    --color-secundario: #D4A373; /* Detalles pequeños */
+    --color-acento: #6b8e23;     /* Botones */
 
-    --color-texto: #2f2f2f;
-    --color-texto-suave: #6b6b6b;
-
-    --color-primario: #5f715d;
-    --color-secundario: #d6c7ae;
-
-    --color-borde: #e8e2d8;
-
-    --sombra-suave:
-        0 4px 20px rgba(0,0,0,0.04);
-
-    --radio: 20px;
-
+    --color-blanco: #ffffff;
+    --color-card: #E8DCC8; /* Color tarjeta productos */
 }
 
 
-/* =========================================
-   RESET GENERAL
-========================================= */
+/* =========================================================
+   ESTILOS BASE DE LA PÁGINA
+   Esto afecta todas las páginas: body, secciones, textos
+========================================================= */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+
+html, body {
+    height: 100%;
 }
 
-html {
-    scroll-behavior: smooth;
+main {
+    flex: 1;
 }
 
 body {
-
-    font-family:
-        "Inter",
-        "Segoe UI",
-        sans-serif;
-
-    background: var(--color-fondo);
-
+    display: flex;
+    flex-direction: column;
+    padding-top: 70px; /* Evita que el navbar fijo tape contenido */
+    background-color: var(--color-fondo);
     color: var(--color-texto);
-
-    padding-top: 76px;
-}
-
-
-/* =========================================
-   TIPOGRAFÍA
-========================================= */
-
-h1,
-h2,
-h3,
-h4 {
-    font-weight: 600;
-    letter-spacing: -1px;
-}
-
-h2 {
-
-    font-size: clamp(2rem, 4vw, 3rem);
-
-    text-align: center;
-
-    margin-bottom: 20px;
-}
-
-p {
-    color: var(--color-texto-suave);
-    line-height: 1.7;
+    scroll-behavior: smooth;
 }
 
 section {
-    padding: 100px 0;
+    padding: 80px 0; /* Espaciado vertical */
+}
+
+.display-1 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 700;
+    /*color: var(--color-texto);*/ /* Cambia el color del texto inicial del hero de la página index.html */
+}
+
+/* .display-5 { */
+    /*color: var(--color-texto);*/ /* Cambia el color del texto subtitulo del hero de la página index.html */
+/*} */
+
+
+/* .lead { */
+    /*color: var(--color-texto);*/ /* Cambia el color del texto subtitulo 2 del hero de la página index.html */
+/*}*/
+
+h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 700;
 }
 
 
-/* =========================================
-   NAVBAR
-========================================= */
+/* =========================================================
+   NAVBAR (Header global)
+   <nav> del todas las páginas
+========================================================= */
 
 .navbar-custom {
-
-    background: rgba(247, 244, 238, 0.88);
-
-    backdrop-filter: blur(12px);
-
-    border-bottom:
-        1px solid var(--color-borde);
-
-    transition: 0.3s ease;
+    background: var(--color-primario); /* Verde principal */
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 
+/* Logo */
 .navbar-brand {
-
-    color: var(--color-primario) !important;
-
-    font-size: 1.2rem;
-
-    letter-spacing: 2px;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
 }
 
+/* Links del menú */
 .nav-link {
-
-    color: var(--color-texto) !important;
-
-    font-size: 0.92rem;
-
-    margin-left: 18px;
-
+    transition: all 0.3s ease;
+    color: white !important;
     position: relative;
-
-    transition: 0.3s ease;
 }
 
+/* Hover links */
 .nav-link:hover {
-    color: var(--color-primario) !important;
+    color: var(--color-secundario) !important;
 }
 
+/* Línea animada debajo */
 .nav-link::after {
-
     content: "";
-
     position: absolute;
-
-    left: 0;
-    bottom: -5px;
-
     width: 0%;
-    height: 1px;
-
-    background: var(--color-primario);
-
-    transition: 0.3s ease;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    background-color: var(--color-secundario);
+    transition: 0.3s;
 }
 
 .nav-link:hover::after {
@@ -147,306 +115,241 @@ section {
 }
 
 
-/* =========================================
-   BOTONES
-========================================= */
+/* =========================================================
+   BOTONES GENERALES
+   Todos los botones de la página se ven afectados
+========================================================= */
 
 .btn {
-
-    border-radius: 999px;
-
-    padding:
-        12px 26px;
-
-    transition: 0.3s ease;
-
-    font-weight: 500;
-}
-
-.btn-primary {
-
-    background: var(--color-primario);
-
+    background-color: var(--color-acento);
     border: none;
+    color: white;
+    border-radius: 10px;
+    transition: all 0.3s ease;
 }
 
-.btn-primary:hover {
-
-    background: #4f614d;
-
+.btn:hover {
     transform: translateY(-2px);
 }
 
-.btn-outline-light {
 
-    border-width: 1px;
+/* =========================================================
+   HERO GLOBAL (Video/Imagen de la portada)
+   Se usa en index (y en algunas otras páginas)
+========================================================= */
+
+.hero-video {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+
+    /* Fondo de respaldo */
+    background: linear-gradient(135deg, #c9a66b, #4a7c59);
+}
+
+/* Video de fondo */
+.video-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    z-index: 0;
+
+    filter: brightness(0.75) contrast(1.1) saturate(1.1);
+}
+
+/* Capa oscura encima del video */
+.overlay-video {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    z-index: 1;
+}
+
+/* Contenido del hero */
+.contenido-hero {
+    position: relative;
+    z-index: 2;
+}
+
+/* Caja del texto */
+.hero-box {
+    background: rgba(0,0,0,0.35);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
 }
 
 
-/* =========================================
-   TARJETAS GENERALES
-========================================= */
+/* =========================================================
+   ANIMACIONES GENERALES (Scroll)
+   Se usa en algunas secciones
+========================================================= */
+
+.seccion-animada {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.9s ease;
+}
+
+.seccion-animada.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   TARJETAS GENÉRICAS (Reutilizables)
+   La base para productos, blogs, etc.
+========================================================= */
 
 .card-base {
-
-    background: var(--color-superficie);
-
-    border-radius: var(--radio);
-
-    overflow: hidden;
-
-    box-shadow: var(--sombra-suave);
-
-    border:
-        1px solid var(--color-borde);
-
-    transition: 0.35s ease;
+    background: var(--color-blanco);
+    border-radius: 18px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
 }
 
 .card-base:hover {
-
-    transform: translateY(-6px);
+    transform: translateY(-8px);
 }
 
+/* article.blog-card {
+    background-color: var(--color-fondo); /* Color de fondo de las badges de blog de index.html */
+/*} */
 
-/* =========================================
-   FOOTER
-========================================= */
+
+/* =========================================================
+   FOOTER GLOBAL
+   Se usa en todas las páginas
+========================================================= */
 
 .footer-custom {
-
-    background: #ece6db;
-
-    border-top:
-        1px solid var(--color-borde);
-
-    color: var(--color-texto);
-
+    background: var(--color-primario);
+    color: var(--color-blanco);
+    width: 100%;
+    margin-top: auto;
 }
 
+/* Links del footer */
 .footer-link {
-
+    color: var(--color-blanco);
     text-decoration: none;
-
-    color: var(--color-texto);
-
-    transition: 0.3s ease;
+    transition: 0.3s;
 }
 
 .footer-link:hover {
-
-    color: var(--color-primario);
+    color: var(--color-acento);
 }
 
 
-/* =========================================
-   CONTACTO FLOTANTE
-========================================= */
+/* =========================================================
+   CONTACTO FLOTANTE (Notificacióm)
+   Widget global, pero aparece principalmente en index.html
+========================================================= */
 
-.contacto-flotante {
-
+/* Botón flotante */
+.contacto-boton {
     position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
 
-    bottom: 25px;
-    right: 25px;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+}
 
-    width: 320px;
-
+/* Panel */
+.contacto-flotante {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    width: 280px;
     z-index: 999;
 
+    transition: all 0.3s ease;
+}
+
+/* ==================== MODO OSCURO ==================== */
+:root.dark-mode {
+    --color-fondo: #121212;
+    --color-texto: #e5e5e5;
+    --color-primario: #1e3a2f;
+    --color-secundario: #8b7355;
+    --color-acento: #9cb342;
+    --color-card: #222222;
+    --color-blanco: #121212;
+}
+
+.dark-mode {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+}
+
+.dark-mode .navbar-custom {
+    background-color: var(--color-primario) !important;
+    color: var(--color-texto) !important;
+}
+
+.dark-mode .nav-link,
+.dark-mode .navbar-brand,
+.dark-mode .navbar-toggler-icon {
+    color: var(--color-texto) !important;
+}
+
+.dark-mode .producto-card-carrusel,
+.dark-mode .card-base,
+.dark-mode .card,
+.dark-mode .hero-box,
+.dark-mode .footer-custom {
+    background-color: var(--color-card);
+    color: var(--color-texto);
+    border-color: #333;
+}
+
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode h4,
+.dark-mode h5,
+.dark-mode h6 {
+    color: #ffffff;
+}
+
+/* Estados */
+.oculto {
     opacity: 0;
-
-    transform:
-        translateY(40px);
-
-    animation:
-        mostrarPopup 0.8s ease forwards;
-
-    animation-delay: 2s;
-}
-
-/* Tarjeta */
-
-.contacto-flotante .card {
-
-    border: none;
-
-    border-radius: 24px;
-
-    background:
-        rgba(255,255,255,0.92);
-
-    backdrop-filter: blur(15px);
-
-    box-shadow:
-        0 10px 40px rgba(0,0,0,0.08);
-}
-
-
-.contacto-flotante .form-control {
-
-    border-radius: 14px;
-
-    border:
-        1px solid #e7dfd3;
-
-    padding: 12px;
-}
-
-/* Mostrar */
-
-@keyframes mostrarPopup {
-
-    to {
-
-        opacity: 1;
-
-        transform:
-            translateY(0);
-    }
-}
-
-
-/* =========================================
-   CERRAR POPUP SOLO CSS
-========================================= */
-
-#cerrar-widget {
-    display: none;
-}
-
-#cerrar-widget:checked + .contacto-flotante {
-
-    opacity: 0;
-
-    visibility: hidden;
-
-    transform:
-        translateY(30px);
-
+    transform: translateY(20px);
     pointer-events: none;
+}
 
-    transition:
-        opacity 0.4s ease,
-        transform 0.4s ease,
-        visibility 0.4s;
+.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 
-/* =========================================
-   ANIMACIONES SOLO CSS
-========================================= */
-
-.seccion-animada {
-
-    animation:
-        fadeUp 0.8s ease both;
+.card {
+    background-color: var(--color-fondo);
 }
 
 /* =========================================================
-   APARICIÓN GLOBAL
+   RESPONSIVE GLOBAL
+   Importante para compatibilidad de celular
 ========================================================= */
-
-@keyframes fadeUp {
-
-    from {
-
-        opacity: 0;
-
-        transform:
-            translateY(40px);
-    }
-
-    to {
-
-        opacity: 1;
-
-        transform:
-            translateY(0);
-    }
-}
-
-
-/* ELEMENTOS GENERALES */
-
-main section,
-main header,
-main article,
-main aside {
-
-    opacity: 0;
-
-    animation:
-        fadeUp 0.9s ease forwards;
-}
-
-
-/* DELAYS */
-
-main section:nth-child(1),
-main header:nth-child(1) {
-
-    animation-delay: 0.05s;
-}
-
-main section:nth-child(2),
-main article:nth-child(2) {
-
-    animation-delay: 0.15s;
-}
-
-main section:nth-child(3),
-main article:nth-child(3) {
-
-    animation-delay: 0.25s;
-}
-
-main section:nth-child(4) {
-
-    animation-delay: 0.35s;
-}
-
-main section:nth-child(5) {
-
-    animation-delay: 0.45s;
-}
-
-
-
-/* =========================================
-   CERRAR POPUP SOLO CSS
-========================================= */
-
-#cerrar-widget {
-    display: none;
-}
-
-#cerrar-widget:checked + .contacto-flotante {
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(30px);
-    pointer-events: none;
-}
-
-/* =========================================
-   RESPONSIVE
-========================================= */
 
 @media (max-width: 768px) {
 
-    section {
-        padding: 70px 0;
+    h2 {
+        font-size: 1.5rem;
     }
 
-    .navbar-nav {
-
-        padding-top: 20px;
+    .hero-box {
+        padding: 20px;
     }
 
-    .contacto-flotante {
-
-        width: calc(100% - 30px);
-
-        right: 15px;
-    }
 }

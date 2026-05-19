@@ -1,116 +1,59 @@
 /* =========================================================
-   LAYOUT GENERAL
+   BLOG PAGE (Layout general)
 ========================================================= */
 
 .blog-layout {
-    padding-top: 60px;
+    margin-top: 100px;
 }
 
 
 /* =========================================================
-   HERO
+   HERO BLOG
 ========================================================= */
 
 .blog-hero {
-
-    padding:
-        70px 20px 50px;
-
     text-align: center;
 }
 
 .blog-hero h1 {
-
-    font-size: clamp(2.5rem, 5vw, 4.5rem);
-
-    color: var(--color-texto);
-
-    margin-bottom: 20px;
+    font-size: 2.5rem;
+    font-weight: 700;
 }
 
 .blog-hero p {
-
-    max-width: 700px;
-
-    margin: auto;
-
-    font-size: 1.05rem;
-
-    color: var(--color-texto-suave);
+    color: #666;
 }
 
 
 /* =========================================================
-   SEARCH
+   BUSCADOR
 ========================================================= */
 
 .blog-search {
-
-    margin:
-        0 auto 70px;
-
-    max-width: 850px;
+    text-align: center;
 }
 
 .blog-search form {
-
     display: flex;
-
-    gap: 14px;
+    justify-content: center;
+    max-width: 500px;
+    margin: auto;
 }
 
 .blog-search input {
-
     flex: 1;
-
-    border: 1px solid var(--color-borde);
-
-    background: rgba(255,255,255,0.8);
-
-    backdrop-filter: blur(10px);
-
-    padding: 18px 22px;
-
-    border-radius: 999px;
-
-    outline: none;
-
-    transition: 0.3s ease;
-
-    font-size: 0.95rem;
-}
-
-.blog-search input:focus {
-
-    border-color: var(--color-primario);
-
-    box-shadow:
-        0 0 0 4px rgba(95,113,93,0.08);
+    padding: 10px;
+    border-radius: 10px 0 0 10px;
+    border: 1px solid #ccc;
+    background-color: #E8DCC8;
 }
 
 .blog-search button {
-
     border: none;
-
-    background: var(--color-primario);
-
+    padding: 10px 15px;
+    background: var(--color-acento);
     color: white;
-
-    padding:
-        0 28px;
-
-    border-radius: 999px;
-
-    transition: 0.3s ease;
-
-    font-weight: 500;
-}
-
-.blog-search button:hover {
-
-    transform: translateY(-2px);
-
-    background: #4f614d;
+    border-radius: 0 10px 10px 0;
 }
 
 
@@ -119,179 +62,78 @@
 ========================================================= */
 
 .blog-tags {
-
-    margin-top: 18px;
-
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-
-    flex-wrap: wrap;
-
-    gap: 12px;
-}
-
-.blog-tags span {
-
-    color: var(--color-texto-suave);
+    margin-top: 10px;
 }
 
 .blog-tags a {
-
+    margin: 0 5px;
     text-decoration: none;
-
-    color: var(--color-primario);
-
-    background: rgba(95,113,93,0.08);
-
-    padding:
-        8px 16px;
-
-    border-radius: 999px;
-
-    font-size: 0.88rem;
-
-    transition: 0.3s ease;
+    color: var(--color-acento);
+    font-weight: 500;
 }
 
 .blog-tags a:hover {
-
-    background: var(--color-primario);
-
-    color: white;
+    text-decoration: underline;
 }
 
 
 /* =========================================================
-   GRID
+   GRID DE ARTÍCULOS
 ========================================================= */
 
 .grilla-articulos {
-
     display: grid;
-
-    grid-template-columns:
-        repeat(auto-fit, minmax(320px, 1fr));
-
-    gap: 35px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
 }
 
 
 /* =========================================================
-   CARD BLOG
+   TARJETA BLOG
 ========================================================= */
 
 .post-card {
-
-    background: rgba(255,255,255,0.75);
-
-    backdrop-filter: blur(12px);
-
-    border:
-        1px solid rgba(255,255,255,0.6);
-
-    border-radius: 28px;
-
+    background: var(--color-blanco);
+    border-radius: 18px;
     overflow: hidden;
-
-    box-shadow:
-        0 10px 30px rgba(0,0,0,0.05);
-
-    transition: 0.45s ease;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
 }
 
 .post-card:hover {
-
-    transform:
-        translateY(-10px);
-
-    box-shadow:
-        0 20px 45px rgba(0,0,0,0.08);
+    transform: translateY(-8px);
 }
 
 
 /* Imagen */
-
 .post-card img {
-
     width: 100%;
-
-    height: 240px;
-
+    height: 200px;
     object-fit: cover;
-
-    transition: 0.6s ease;
-}
-
-.post-card:hover img {
-
-    transform: scale(1.05);
 }
 
 
 /* Contenido */
-
 .contenido-post {
-
-    padding: 28px;
+    padding: 15px;
+    background-color: #E8DCC8;
 }
 
 .etiqueta {
-
-    display: inline-block;
-
-    margin-bottom: 14px;
-
-    padding:
-        7px 14px;
-
-    background: rgba(95,113,93,0.1);
-
-    color: var(--color-primario);
-
-    border-radius: 999px;
-
-    font-size: 0.78rem;
-
-    font-weight: 600;
-
-    letter-spacing: 1px;
-
+    font-size: 0.75rem;
+    color: var(--color-acento);
+    font-weight: bold;
     text-transform: uppercase;
 }
 
 .contenido-post h3 {
-
-    font-size: 1.5rem;
-
-    margin-bottom: 14px;
-
-    line-height: 1.3;
+    margin-top: 5px;
+    font-size: 1.2rem;
 }
 
 .contenido-post p {
-
-    margin-bottom: 22px;
-}
-
-
-/* Botón */
-
-.contenido-post .btn {
-
-    background: var(--color-texto);
-
-    border: none;
-
-    padding:
-        12px 24px;
-}
-
-.contenido-post .btn:hover {
-
-    background: var(--color-primario);
+    font-size: 0.9rem;
+    color: #555;
 }
 
 
@@ -300,51 +142,27 @@
 ========================================================= */
 
 .paginacion {
-
-    margin-top: 70px;
-
-    display: flex;
-
-    justify-content: center;
-
-    gap: 12px;
+    text-align: center;
+    margin-top: 40px;
 }
 
 .paginacion a {
-
-    width: 46px;
-    height: 46px;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
+    display: inline-block;
+    margin: 0 5px;
+    padding: 8px 12px;
+    background: #eee;
+    border-radius: 8px;
     text-decoration: none;
-
-    border-radius: 50%;
-
-    background: rgba(255,255,255,0.7);
-
-    color: var(--color-texto);
-
-    border:
-        1px solid var(--color-borde);
-
-    transition: 0.3s ease;
+    color: #333;
+    transition: 0.2s;
 }
 
 .paginacion a:hover {
-
-    background: var(--color-primario);
-
-    color: white;
+    background: #ddd;
 }
 
 .paginacion a.active {
-
-    background: var(--color-primario);
-
+    background: var(--color-acento);
     color: white;
 }
 
@@ -356,18 +174,16 @@
 @media (max-width: 768px) {
 
     .blog-search form {
-
         flex-direction: column;
     }
 
-    .blog-search button {
-
-        height: 55px;
+    .blog-search input {
+        border-radius: 10px;
+        margin-bottom: 10px;
     }
 
-    .grilla-articulos {
-
-        gap: 25px;
+    .blog-search button {
+        border-radius: 10px;
     }
 
 }

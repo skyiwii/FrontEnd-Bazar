@@ -180,3 +180,32 @@ Object.entries(productos).forEach(([key, p]) => {
 });
 
 
+
+// =============================
+// ZOOM DINÁMICO IMAGEN
+// =============================
+
+const wrapper = document.querySelector(".imagen-principal-wrapper");
+const img = document.getElementById("img-principal");
+
+if (wrapper && img) {
+    img.onload = () => {
+        wrapper.addEventListener("mousemove", (e) => {
+            const rect = wrapper.getBoundingClientRect();
+
+            const x = ((e.clientX - rect.left) / rect.width) * 100;
+            const y = ((e.clientY - rect.top) / rect.height) * 100;
+
+            img.style.transformOrigin = `${x}% ${y}%`;
+        });
+
+        wrapper.addEventListener("mouseenter", () => {
+            img.style.transform = "scale(1.6)";
+        });
+
+        wrapper.addEventListener("mouseleave", () => {
+            img.style.transform = "scale(1)";
+            img.style.transformOrigin = "center";
+        });
+    };
+}
