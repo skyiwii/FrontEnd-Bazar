@@ -22,6 +22,20 @@
 
 }
 
+/* ====================== MODO OSCURO ====================== */
+body.dark {
+    --color-fondo: #121212;
+    --color-superficie: #1e1e1e;
+    --color-texto: #e0e0e0;
+    --color-texto-suave: #b0b0b0;
+    --color-borde: #2a2a2a;
+    --sombra-suave: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+body {
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
 
 /* =========================================
    RESET GENERAL
@@ -97,6 +111,10 @@ section {
         1px solid var(--color-borde);
 
     transition: 0.3s ease;
+}
+
+body.dark .navbar-custom {
+    background: rgba(18, 18, 18, 0.88);
 }
 
 .navbar-brand {
@@ -182,6 +200,22 @@ section {
     border-width: 1px;
 }
 
+/* =========================================
+   BOTÓN TEMA OSCURO
+========================================= */
+
+.theme-toggle {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.15);
+}
 
 /* =========================================
    TARJETAS GENERALES
@@ -222,6 +256,10 @@ section {
 
     color: var(--color-texto);
 
+}
+
+body.dark .footer-custom {
+    background: #1a1a1a;
 }
 
 .footer-link {
