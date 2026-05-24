@@ -1,184 +1,182 @@
-﻿// Arreglo de productos
-const productos = [
-    {
-        id: 1,
+const productos = {
+    1: {
         nombre: "Aceite Esencial de Eucalipto",
-        categoria: "aceites",
-        precio: 12990,
+        precio: "$12.990",
         descripcion: "Ideal para despejar vías respiratorias.",
-        imagen: "../media/producto1-principal.jpg"
+
+        imagen: "../media/producto1-vista1.jpg",
+
+        miniaturas: [
+            "../media/producto1-vista1.jpg",
+            "../media/producto1-vista2.jpg",
+            "../media/producto1-vista3.jpg"
+        ],
+
+        info: [
+            "100% Eucalyptus Globulus",
+            "Origen: Los Lagos",
+            "Formato: 15ml"
+        ],
+        uso: "Usar en difusor o masajes."
     },
-    {
-        id: 2,
+
+    2: {
         nombre: "Aceite de Rosa Mosqueta",
-        categoria: "aceites",
-        precio: 18500,
+        precio: "$18.500",
         descripcion: "Regenerador natural para la piel.",
-        imagen: "../media/producto2-principal.jpg"
+
+        imagen: "../media/producto2-principal.jpg",
+
+        miniaturas: [
+            "../media/producto2-principal.jpg",
+            "../media/producto2-vista2.jpg",
+            "../media/producto2-vista3.jpg"
+        ],
+
+        info: [
+            "100% Rosa Rubiginosa",
+            "Origen: Biobío",
+            "Formato: 30ml"
+        ],
+        uso: "Aplicar en la noche."
     },
-    {
-        id: 3,
+
+    3: {
         nombre: "Miel de Ulmo",
-        categoria: "miel",
-        precio: 9500,
+        precio: "$9.500",
         descripcion: "Propiedades antibacterianas únicas.",
-        imagen: "../media/producto3-principal.jpg"
-    },
-    {
-        id: 4,
-        nombre: "Aceite Esencial de Lavanda",
-        categoria: "aceites",
-        precio: 13990,
-        descripcion: "Ayuda a relajar y mejorar el sueño.",
-        imagen: "../media/producto4-principal.jpg"
+
+        imagen: "../media/producto3-principal.jpg",
+
+        miniaturas: [
+            "../media/producto3-principal.jpg",
+            "../media/producto3-vista2.jpg",
+            "../media/producto3-vista3.jpg"
+        ],
+
+        info: [
+            "100% miel cruda",
+            "Origen: Los Ríos",
+            "Formato: 500g"
+        ],
+        uso: "Consumir o en infusiones."
     }
-];
+};
 
-// Función para mostrar los productos
-function renderizarProductos(productosAMostrar) {
-    const contenedor = document.getElementById('productos-container');
-    if (!contenedor) return;
 
-    contenedor.innerHTML = '';
+// ===============================
+// OBTENER ID
+// ===============================
+const params = new URLSearchParams(window.location.search);
+const id = params.get("id");
+const producto = productos[id];
 
-    productosAMostrar.forEach(producto => {
-        const cardHTML = `
-            <div class="col-md-4 mb-4">
-                <article class="producto-card">
-                    <img src="${producto.imagen}" alt="${producto.nombre}">
-                    <h3>${producto.nombre}</h3>
-                    <p>${producto.descripcion}</p>
-                    <p><strong>$${producto.precio.toLocaleString('es-CL')}</strong></p>
-                    <button class="btn btn-dark btn-agregar" data-id="${producto.id}">Agregar al carrito</button>
-                </article>
+
+// ===============================
+// VALIDACIÓN
+// ===============================
+if (!producto) {
+    document.querySelector("main").innerHTML = `
+        <div class="text-center mt-5">
+            <h2>Producto no encontrado</h2>
+            <a href="productos.html" class="btn btn-primary mt-3">Volver a productos</a>
+        </div>
+    `;
+} else {
+
+    // ===============================
+    // DATOS BÁSICOS
+    // ===============================
+    document.title = "Vura - " + producto.nombre;
+
+    document.getElementById("nombre").textContent = producto.nombre;
+    document.getElementById("precio").textContent = producto.precio;
+    document.getElementById("descripcion").textContent = producto.descripcion;
+    document.getElementById("breadcrumb-nombre").textContent = producto.nombre;
+
+    const imgPrincipal = document.getElementById("img-principal");
+    imgPrincipal.src = producto.imagen;
+
+
+    // ===============================
+    // MINIATURAS
+    // ===============================
+    const contenedorMini = document.getElementById("miniaturas");
+    contenedorMini.innerHTML = "";
+
+    producto.miniaturas.forEach((imgSrc) => {
+
+    const imagen = document.createElement("img");
+    imagen.src = imgSrc;
+    imagen.classList.add("miniatura-item");
+
+    // marcar activa si coincide con principal
+    if (imgSrc === producto.imagen) {
+        imagen.classList.add("activa");
+        }
+
+        imagen.addEventListener("click", () => {
+            imgPrincipal.src = imgSrc;
+
+            document.querySelectorAll(".miniatura-item").forEach(el =>
+                el.classList.remove("activa")
+            );
+
+            imagen.classList.add("activa");
+        });
+
+        contenedorMini.appendChild(imagen);
+    });
+
+
+    // ===============================
+    // INFO TÉCNICA
+    // ===============================
+    const ul = document.getElementById("info-tecnica");
+    ul.innerHTML = "";
+
+    producto.info.forEach(item => {
+        const li = document.createElement("li");
+        li.textContent = item;
+        ul.appendChild(li);
+    });
+
+
+    // ===============================
+    // USO
+    // ===============================
+    document.getElementById("uso").textContent = producto.uso;
+}
+
+
+
+// ===============================
+// RELACIONADOS
+// ===============================
+const contenedorRelacionados = document.getElementById("relacionados");
+contenedorRelacionados.innerHTML = "";
+
+Object.entries(productos).forEach(([key, p]) => {
+
+    if (key != id) {
+
+        const card = document.createElement("article");
+        card.classList.add("card-mini");
+
+        card.innerHTML = `
+            <div class="card-img">
+                <img src="${p.imagen}" alt="${p.nombre}">
+            </div>
+
+            <div class="card-body">
+                <h4>${p.nombre}</h4>
+                <p>${p.precio}</p>
+                <a href="producto.html?id=${key}" class="btn btn-sm">Ver producto</a>
             </div>
         `;
-        contenedor.innerHTML += cardHTML;
-    });
 
-    contenedor.querySelectorAll('.btn-agregar').forEach(button => {
-        button.addEventListener('click', () => {
-            const id = Number(button.dataset.id);
-            agregarAlCarrito(id);
-        });
-    });
-}
-
-// Función de filtro y búsqueda
-function filtrarProductos() {
-    const texto = document.getElementById('buscador').value.toLowerCase().trim();
-    const categoria = document.getElementById('filtro-categoria').value;
-
-    const productosFiltrados = productos.filter(producto => {
-        const coincideNombre = producto.nombre.toLowerCase().includes(texto);
-        const coincideDescripcion = producto.descripcion.toLowerCase().includes(texto);
-        const coincideCategoria = (categoria === 'todos') || (producto.categoria === categoria);
-
-        return (coincideNombre || coincideDescripcion) && coincideCategoria;
-    });
-
-    renderizarProductos(productosFiltrados);
-}
-
-// Inicializar cuando cargue la página
-document.addEventListener('DOMContentLoaded', () => {
-    renderizarProductos(productos);
-
-    // Eventos del filtro
-    const buscador = document.getElementById('buscador');
-    const filtroCategoria = document.getElementById('filtro-categoria');
-
-    if (buscador) buscador.addEventListener('input', filtrarProductos);
-    if (filtroCategoria) filtroCategoria.addEventListener('change', filtrarProductos);
-});
-
-// ==================== CARRITO DE COMPRAS ====================
-
-let carrito = [];
-
-// Agregar producto al carrito
-function agregarAlCarrito(id) {
-    const producto = productos.find(p => p.id === id);
-    if (!producto) return;
-
-    const existente = carrito.find(item => item.id === id);
-    
-    if (existente) {
-        existente.cantidad = (existente.cantidad || 1) + 1;
-    } else {
-        carrito.push({
-            ...producto,
-            cantidad: 1
-        });
-    }
-
-    actualizarCarrito();
-    alert(`${producto.nombre} se agregó al carrito ✓`);
-}
-
-// Actualizar contador y total
-function actualizarCarrito() {
-    const contador = document.getElementById('contador-carrito');
-    if (contador) {
-        const totalItems = carrito.reduce((sum, item) => sum + item.cantidad, 0);
-        contador.textContent = totalItems;
-    }
-}
-
-// Mostrar el carrito en un modal
-function mostrarCarrito() {
-    const modal = document.getElementById('modal-carrito');
-    const contenedorItems = document.getElementById('items-carrito');
-    const totalElement = document.getElementById('total-carrito');
-
-    if (!modal || !contenedorItems || !totalElement) return;
-
-    contenedorItems.innerHTML = '';
-
-    let total = 0;
-
-    carrito.forEach((item, index) => {
-        const subtotal = item.precio * item.cantidad;
-        total += subtotal;
-
-        contenedorItems.innerHTML += `
-            <div class="item-carrito mb-3">
-                <p><strong>${item.nombre}</strong></p>
-                <p>Cantidad: ${item.cantidad} × $${item.precio.toLocaleString('es-CL')}</p>
-                <p>Subtotal: $${subtotal.toLocaleString('es-CL')}</p>
-                <button onclick="eliminarDelCarrito(${index})" class="btn btn-sm btn-danger">Eliminar</button>
-            </div>
-        `;
-    });
-
-    totalElement.textContent = total.toLocaleString('es-CL');
-    modal.style.display = 'flex';
-}
-
-// Eliminar producto del carrito
-function eliminarDelCarrito(index) {
-    carrito.splice(index, 1);
-    mostrarCarrito();
-    actualizarCarrito();
-}
-
-// Vaciar carrito
-function vaciarCarrito() {
-    carrito = [];
-    mostrarCarrito();
-    actualizarCarrito();
-}
-
-// Cerrar modal
-function cerrarModal() {
-    const modal = document.getElementById('modal-carrito');
-    if (modal) modal.style.display = 'none';
-}
-
-// Inicializar eventos del carrito
-document.addEventListener('DOMContentLoaded', () => {
-    const btnCarrito = document.getElementById('btn-carrito');
-    if (btnCarrito) {
-        btnCarrito.addEventListener('click', mostrarCarrito);
+        contenedorRelacionados.appendChild(card);
     }
 });
+
+

@@ -1,113 +1,145 @@
-/* Base global */
-
-
-/* =========================================================
-   VARIABLES GLOBALES (Colores y base)
-   Acá se cambian los colores
-========================================================= */
+/* =========================================
+   VARIABLES GLOBALES
+========================================= */
 
 :root {
-    --color-fondo: #ddbc87d0; /* Puede afectar textos como los del footer */
-    --color-texto: #3e3e3e;
 
-    --color-primario: #318049;   /* Navbar y Footer, colores primarios generales */
-    --color-secundario: #D4A373; /* Detalles pequeños */
-    --color-acento: #6b8e23;     /* Botones */
+    --color-fondo: #f7f4ee;
+    --color-superficie: #ffffff;
 
-    --color-blanco: #ffffff;
-    --color-card: #E8DCC8; /* Color tarjeta productos */
+    --color-texto: #2f2f2f;
+    --color-texto-suave: #6b6b6b;
+
+    --color-primario: #5f715d;
+    --color-secundario: #d6c7ae;
+
+    --color-borde: #e8e2d8;
+
+    --sombra-suave:
+        0 4px 20px rgba(0,0,0,0.04);
+
+    --radio: 20px;
+
 }
 
 
-/* =========================================================
-   ESTILOS BASE DE LA PÁGINA
-   Esto afecta todas las páginas: body, secciones, textos
-========================================================= */
+/* =========================================
+   RESET GENERAL
+========================================= */
 
-
-html, body {
-    height: 100%;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-main {
-    flex: 1;
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-    padding-top: 70px; /* Evita que el navbar fijo tape contenido */
-    background-color: var(--color-fondo);
-    color: var(--color-texto);
+html {
     scroll-behavior: smooth;
 }
 
-section {
-    padding: 80px 0; /* Espaciado vertical */
+body {
+
+    font-family:
+        "Inter",
+        "Segoe UI",
+        sans-serif;
+
+    background: var(--color-fondo);
+
+    color: var(--color-texto);
+
+    padding-top: 76px;
 }
 
-.display-1 {
-    text-align: center;
-    margin-bottom: 40px;
-    font-weight: 700;
-    /*color: var(--color-texto);*/ /* Cambia el color del texto inicial del hero de la página index.html */
+
+/* =========================================
+   TIPOGRAFÍA
+========================================= */
+
+h1,
+h2,
+h3,
+h4 {
+    font-weight: 600;
+    letter-spacing: -1px;
 }
-
-/* .display-5 { */
-    /*color: var(--color-texto);*/ /* Cambia el color del texto subtitulo del hero de la página index.html */
-/*} */
-
-
-/* .lead { */
-    /*color: var(--color-texto);*/ /* Cambia el color del texto subtitulo 2 del hero de la página index.html */
-/*}*/
 
 h2 {
+
+    font-size: clamp(2rem, 4vw, 3rem);
+
     text-align: center;
-    margin-bottom: 40px;
-    font-weight: 700;
+
+    margin-bottom: 20px;
+}
+
+p {
+    color: var(--color-texto-suave);
+    line-height: 1.7;
+}
+
+section {
+    padding: 100px 0;
 }
 
 
-/* =========================================================
-   NAVBAR (Header global)
-   <nav> del todas las páginas
-========================================================= */
+/* =========================================
+   NAVBAR
+========================================= */
 
 .navbar-custom {
-    background: var(--color-primario); /* Verde principal */
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(0,0,0,0.05);
+
+    background: rgba(247, 244, 238, 0.88);
+
+    backdrop-filter: blur(12px);
+
+    border-bottom:
+        1px solid var(--color-borde);
+
+    transition: 0.3s ease;
 }
 
-/* Logo */
 .navbar-brand {
-    font-size: 1.3rem;
-    letter-spacing: 1px;
+
+    color: var(--color-primario) !important;
+
+    font-size: 1.2rem;
+
+    letter-spacing: 2px;
 }
 
-/* Links del menú */
 .nav-link {
-    transition: all 0.3s ease;
-    color: white !important;
+
+    color: var(--color-texto) !important;
+
+    font-size: 0.92rem;
+
+    margin-left: 18px;
+
     position: relative;
+
+    transition: 0.3s ease;
 }
 
-/* Hover links */
 .nav-link:hover {
-    color: var(--color-secundario) !important;
+    color: var(--color-primario) !important;
 }
 
-/* Línea animada debajo */
 .nav-link::after {
+
     content: "";
+
     position: absolute;
-    width: 0%;
-    height: 2px;
+
     left: 0;
-    bottom: 0;
-    background-color: var(--color-secundario);
-    transition: 0.3s;
+    bottom: -5px;
+
+    width: 0%;
+    height: 1px;
+
+    background: var(--color-primario);
+
+    transition: 0.3s ease;
 }
 
 .nav-link:hover::after {
@@ -115,244 +147,306 @@ h2 {
 }
 
 
-/* =========================================================
-   BOTONES GENERALES
-   Todos los botones de la página se ven afectados
-========================================================= */
+/* =========================================
+   BOTONES
+========================================= */
 
 .btn {
-    background-color: var(--color-acento);
-    border: none;
-    color: white;
-    border-radius: 10px;
-    transition: all 0.3s ease;
+
+    border-radius: 999px;
+
+    padding:
+        12px 26px;
+
+    transition: 0.3s ease;
+
+    font-weight: 500;
 }
 
-.btn:hover {
+.btn-primary {
+
+    background: var(--color-primario);
+
+    border: none;
+}
+
+.btn-primary:hover {
+
+    background: #4f614d;
+
     transform: translateY(-2px);
 }
 
+.btn-outline-light {
 
-/* =========================================================
-   HERO GLOBAL (Video/Imagen de la portada)
-   Se usa en index (y en algunas otras páginas)
-========================================================= */
-
-.hero-video {
-    height: 100vh;
-    position: relative;
-    overflow: hidden;
-
-    /* Fondo de respaldo */
-    background: linear-gradient(135deg, #c9a66b, #4a7c59);
-}
-
-/* Video de fondo */
-.video-bg {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    transform: translate(-50%, -50%);
-    object-fit: cover;
-    z-index: 0;
-
-    filter: brightness(0.75) contrast(1.1) saturate(1.1);
-}
-
-/* Capa oscura encima del video */
-.overlay-video {
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(4px);
-    z-index: 1;
-}
-
-/* Contenido del hero */
-.contenido-hero {
-    position: relative;
-    z-index: 2;
-}
-
-/* Caja del texto */
-.hero-box {
-    background: rgba(0,0,0,0.35);
-    backdrop-filter: blur(10px);
-    border-radius: 20px;
+    border-width: 1px;
 }
 
 
-/* =========================================================
-   ANIMACIONES GENERALES (Scroll)
-   Se usa en algunas secciones
-========================================================= */
-
-.seccion-animada {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: all 0.9s ease;
-}
-
-.seccion-animada.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-
-/* =========================================================
-   TARJETAS GENÉRICAS (Reutilizables)
-   La base para productos, blogs, etc.
-========================================================= */
+/* =========================================
+   TARJETAS GENERALES
+========================================= */
 
 .card-base {
-    background: var(--color-blanco);
-    border-radius: 18px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-    transition: all 0.3s ease;
+
+    background: var(--color-superficie);
+
+    border-radius: var(--radio);
+
+    overflow: hidden;
+
+    box-shadow: var(--sombra-suave);
+
+    border:
+        1px solid var(--color-borde);
+
+    transition: 0.35s ease;
 }
 
 .card-base:hover {
-    transform: translateY(-8px);
+
+    transform: translateY(-6px);
 }
 
-/* article.blog-card {
-    background-color: var(--color-fondo); /* Color de fondo de las badges de blog de index.html */
-/*} */
 
-
-/* =========================================================
-   FOOTER GLOBAL
-   Se usa en todas las páginas
-========================================================= */
+/* =========================================
+   FOOTER
+========================================= */
 
 .footer-custom {
-    background: var(--color-primario);
-    color: var(--color-blanco);
-    width: 100%;
-    margin-top: auto;
+
+    background: #ece6db;
+
+    border-top:
+        1px solid var(--color-borde);
+
+    color: var(--color-texto);
+
 }
 
-/* Links del footer */
 .footer-link {
-    color: var(--color-blanco);
+
     text-decoration: none;
-    transition: 0.3s;
+
+    color: var(--color-texto);
+
+    transition: 0.3s ease;
 }
 
 .footer-link:hover {
-    color: var(--color-acento);
+
+    color: var(--color-primario);
 }
 
 
-/* =========================================================
-   CONTACTO FLOTANTE (Notificacióm)
-   Widget global, pero aparece principalmente en index.html
-========================================================= */
+/* =========================================
+   CONTACTO FLOTANTE
+========================================= */
 
-/* Botón flotante */
-.contacto-boton {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 1000;
-
-    border-radius: 50%;
-    width: 55px;
-    height: 55px;
-}
-
-/* Panel */
 .contacto-flotante {
+
     position: fixed;
-    bottom: 90px;
-    right: 20px;
-    width: 280px;
+
+    bottom: 25px;
+    right: 25px;
+
+    width: 320px;
+
     z-index: 999;
 
-    transition: all 0.3s ease;
+    opacity: 0;
+
+    transform:
+        translateY(40px);
+
+    animation:
+        mostrarPopup 0.8s ease forwards;
+
+    animation-delay: 2s;
 }
 
-/* Estados */
-.oculto {
+/* Tarjeta */
+
+.contacto-flotante .card {
+
+    border: none;
+
+    border-radius: 24px;
+
+    background:
+        rgba(255,255,255,0.92);
+
+    backdrop-filter: blur(15px);
+
+    box-shadow:
+        0 10px 40px rgba(0,0,0,0.08);
+}
+
+
+.contacto-flotante .form-control {
+
+    border-radius: 14px;
+
+    border:
+        1px solid #e7dfd3;
+
+    padding: 12px;
+}
+
+/* Mostrar */
+
+@keyframes mostrarPopup {
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+/* =========================================
+   CERRAR POPUP SOLO CSS
+========================================= */
+
+#cerrar-widget {
+    display: none;
+}
+
+#cerrar-widget:checked + .contacto-flotante {
+
     opacity: 0;
-    transform: translateY(20px);
+
+    visibility: hidden;
+
+    transform:
+        translateY(30px);
+
+    pointer-events: none;
+
+    transition:
+        opacity 0.4s ease,
+        transform 0.4s ease,
+        visibility 0.4s;
+}
+
+
+/* =========================================
+   ANIMACIONES SOLO CSS
+========================================= */
+
+.seccion-animada {
+
+    animation:
+        fadeUp 0.8s ease both;
+}
+
+/* =========================================================
+   APARICIÓN GLOBAL
+========================================================= */
+
+@keyframes fadeUp {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(40px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+/* ELEMENTOS GENERALES */
+
+main section,
+main header,
+main article,
+main aside {
+
+    opacity: 0;
+
+    animation:
+        fadeUp 0.9s ease forwards;
+}
+
+
+/* DELAYS */
+
+main section:nth-child(1),
+main header:nth-child(1) {
+
+    animation-delay: 0.05s;
+}
+
+main section:nth-child(2),
+main article:nth-child(2) {
+
+    animation-delay: 0.15s;
+}
+
+main section:nth-child(3),
+main article:nth-child(3) {
+
+    animation-delay: 0.25s;
+}
+
+main section:nth-child(4) {
+
+    animation-delay: 0.35s;
+}
+
+main section:nth-child(5) {
+
+    animation-delay: 0.45s;
+}
+
+
+
+/* =========================================
+   CERRAR POPUP SOLO CSS
+========================================= */
+
+#cerrar-widget {
+    display: none;
+}
+
+#cerrar-widget:checked + .contacto-flotante {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(30px);
     pointer-events: none;
 }
 
-.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-
-.card {
-    background-color: var(--color-fondo);
-}
-
-/* =========================================================
-   RESPONSIVE GLOBAL
-   Importante para compatibilidad de celular
-========================================================= */
+/* =========================================
+   RESPONSIVE
+========================================= */
 
 @media (max-width: 768px) {
 
-    h2 {
-        font-size: 1.5rem;
+    section {
+        padding: 70px 0;
     }
 
-    .hero-box {
-        padding: 20px;
+    .navbar-nav {
+
+        padding-top: 20px;
     }
 
-}
+    .contacto-flotante {
 
+        width: calc(100% - 30px);
 
-/* =========================================================
-   MODO OSCURO (soporte básico)
-   Se activa añadiendo la clase `dark-mode` al <body>
-========================================================= */
-
-.dark-mode {
-    background-color: #02150f; /* fondo verde muy oscuro */
-    color: #dff8ea; /* texto claro con matiz verde */
-}
-
-.dark-mode .navbar-custom {
-    background: #04291c; /* navbar profundo */
-    border-bottom-color: rgba(223,248,234,0.05);
-}
-
-.dark-mode .nav-link {
-    color: #dff8ea !important;
-}
-
-.dark-mode .nav-link:hover {
-    color: #bfe8c9 !important;
-}
-
-.dark-mode .btn {
-    background-color: #125e42; /* botón verde oscuro */
-    color: #fff;
-}
-
-.dark-mode .btn-outline-dark {
-    color: #dff8ea;
-    border-color: rgba(223,248,234,0.12);
-}
-
-.dark-mode .footer-custom {
-    background: #021f17; /* footer verde muy oscuro */
-    color: #cfe8d8;
-}
-
-.dark-mode .card-base,
-.dark-mode .card {
-    background-color: #042519; /* cards ligeramente más claras que el fondo */
-    color: #dff8ea;
-}
-
-.dark-mode .hero-box {
-    background: rgba(2,21,15,0.7);
+        right: 15px;
+    }
 }
