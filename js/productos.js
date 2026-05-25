@@ -60,6 +60,69 @@ const productos = {
             "Formato: 500g"
         ],
         uso: "Consumir o en infusiones."
+    },
+
+    4: {
+        nombre: "Jabón de Lavanda",
+        precio: "$4.500",
+        descripcion: "Jabón artesanal de lavanda para limpieza suave y aroma natural.",
+
+        imagen: "../media/jabon-lavanda.png",
+
+        miniaturas: [
+            "../media/jabon-lavanda.png",
+            "../media/jabon-lavanda.png",
+            "../media/jabon-lavanda.png"
+        ],
+
+        info: [
+            "Lavanda orgánica",
+            "Libre de parabenos",
+            "Peso: 120g"
+        ],
+        uso: "Usar en la ducha diaria para una piel suave y perfumada."
+    },
+
+    5: {
+        nombre: "Miel de Quillay",
+        precio: "$11.500",
+        descripcion: "Miel monofloral de quillay, ideal para endulzar y cuidar.",
+
+        imagen: "../media/miel-de-quillay.png",
+
+        miniaturas: [
+            "../media/miel-de-quillay.png",
+            "../media/miel-de-quillay.png",
+            "../media/miel-de-quillay.png"
+        ],
+
+        info: [
+            "100% miel de quillay",
+            "Origen: Chile",
+            "Formato: 500g"
+        ],
+        uso: "Consumir directamente o añadir a té y postres."
+    },
+
+    6: {
+        nombre: "Mermelada de Damasco",
+        precio: "$6.200",
+        descripcion: "Mermelada artesanal de damasco, dulce y natural.",
+
+        imagen: "../media/mermelada_damasco.png",
+
+        miniaturas: [
+            "../media/mermelada_damasco.png",
+            "../media/mermelada_damasco.png",
+            "../media/mermelada_damasco.png"
+        ],
+
+        info: [
+            "Fruta natural",
+            "Sin colorantes artificiales",
+            "Contenido: 300g"
+        ],
+        uso: "Ideal para untar en panes y repostería."
     }
 };
 
