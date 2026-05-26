@@ -1,96 +1,373 @@
-/* =========================================================
-   HERO - NOSOTROS
-========================================================= */
+/* =========================================
+   HERO
+========================================= */
 
 .nosotros-hero {
-    height: 65vh;
+
+    min-height: 85vh;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     text-align: center;
-    color: white;
+
+    position: relative;
+
+    overflow: hidden;
 
     background:
-        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
-        linear-gradient(135deg, var(--color-primario), #2f4f3a);
+        linear-gradient(
+            rgba(0,0,0,0.45),
+            rgba(0,0,0,0.45)
+        ),
+        url("../media/productos-naturales.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.nosotros-hero::before {
+
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    backdrop-filter: blur(2px);
+}
+
+.hero-contenido {
+
+    position: relative;
+    z-index: 2;
+
+    max-width: 850px;
+
+    padding: 70px 50px;
+
+    border-radius: 36px;
+
+    background:
+        var(--color-overlay);
+
+    border:
+        1px solid rgba(255,255,255,0.12);
+
+    backdrop-filter: blur(14px);
+}
+
+.hero-etiqueta {
+
+    display: inline-block;
+
+    padding:
+        10px 18px;
+
+    border-radius: 999px;
+
+    background:
+        rgba(255,255,255,0.12);
+
+    color:
+        rgba(255,255,255,0.92);
+
+    font-size: 0.85rem;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 24px;
+}
+
+.hero-contenido h1 {
+
+    font-size:
+        clamp(3rem, 8vw, 6rem);
+
+    color: white;
+
+    margin-bottom: 20px;
+
+    letter-spacing: -3px;
+}
+
+.hero-contenido p {
+
+    color:
+        rgba(255,255,255,0.86);
+
+    font-size: 1.15rem;
+
+    max-width: 650px;
+
+    margin: auto;
+
+    line-height: 1.9;
+}
+
+
+/* =========================================
+   HISTORIA
+========================================= */
+
+.historia-section {
+
+    background:
+        var(--color-fondo);
+}
+
+.historia-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 80px;
+
+    align-items: center;
+}
+
+.historia-texto h2 {
+
+    text-align: left;
+
+    margin-bottom: 30px;
+
+    color:
+        var(--color-texto);
+}
+
+.historia-texto p {
+
+    font-size: 1.05rem;
+
+    margin-bottom: 22px;
+
+    color:
+        var(--color-texto-suave);
+}
+
+.historia-imagen {
 
     position: relative;
 }
 
-.nosotros-hero h1 {
-    font-size: 2.8rem;
-    font-weight: 700;
+.historia-imagen img {
+
+    width: 100%;
+
+    border-radius: 34px;
+
+    object-fit: cover;
+
+    border:
+        1px solid var(--color-borde);
+
+    box-shadow:
+        var(--sombra-suave);
+
+    transition: 0.5s ease;
 }
 
-.nosotros-hero p {
-    max-width: 600px;
-    margin: auto;
-    opacity: 0.9;
-}
+.historia-imagen:hover img {
 
-
-/* =========================================================
-   HISTORIA
-   (solo ajustes específicos, padding ya lo da general.css)
-========================================================= */
-
-.historia-section p {
-    color:var(--color-texto);
-}
-
-.historia-section h2 {
-    color:var(--color-texto);
-}
-
-
-.historia-section img {
-    border-radius: 15px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    transform:
+        translateY(-6px)
+        scale(1.01);
 }
 
 
-/* =========================================================
+/* =========================================
    VALORES
-========================================================= */
+========================================= */
 
 .valores-section {
-    background: #f1f3f2; /* Puede usar los colores globales */
+
+    background:
+        linear-gradient(
+            to bottom,
+            var(--color-card-secundaria),
+            var(--color-fondo)
+        );
 }
 
 .valores-section h2 {
-    color: var(--color-texto);
+
+    color:
+        var(--color-texto);
+
+    margin-bottom: 70px;
 }
 
 .valor-card {
-    background: #E8DCC8; /* Colores globales */
-    padding: 30px;
-    border-radius: 18px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-    transition: all 0.3s ease;
-    text-align: center;
+
+    height: 100%;
+
+    padding: 45px 35px;
+
+    border-radius: 30px;
+
+    background:
+        var(--color-card);
+
+    border:
+        1px solid var(--color-borde);
+
+    box-shadow:
+        var(--sombra-suave);
+
+    transition: 0.4s ease;
 }
 
 .valor-card:hover {
-    transform: translateY(-10px) scale(1.02);
+
+    transform:
+        translateY(-10px);
 }
 
 .icono {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-    color: var(--color-acento);
+
+    font-size: 3rem;
+
+    margin-bottom: 22px;
 }
 
-/* =========================================================
+.valor-card h3 {
+
+    margin-bottom: 16px;
+
+    color:
+        var(--color-texto);
+}
+
+.valor-card p {
+
+    color:
+        var(--color-texto-suave);
+}
+
+
+/* =========================================
    CTA FINAL
-========================================================= */
+========================================= */
 
 .nosotros-final {
-    background: linear-gradient(135deg, 
-                black, 
-                var(--color-primario)); /* Colores */
+
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 140px 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2e382d,
+            #5f715d
+        );
 }
 
-.nosotros-final p, h2 {
-    color: var(--color-blanco); /* Colores */
+body.dark-mode .nosotros-final {
+
+    background:
+        linear-gradient(
+            135deg,
+            #181818,
+            #242424
+        );
 }
 
+.nosotros-final::before {
+
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            rgba(255,255,255,0.08),
+            transparent 40%
+        );
+}
+
+.nosotros-final .container {
+
+    position: relative;
+
+    z-index: 2;
+}
+
+.nosotros-final h2 {
+
+    color: white;
+
+    font-size:
+        clamp(2.5rem, 5vw, 4rem);
+
+    margin-bottom: 20px;
+}
+
+.nosotros-final p {
+
+    color:
+        rgba(255,255,255,0.82);
+
+    margin-bottom: 35px;
+
+    font-size: 1.1rem;
+}
+
+.nosotros-final .btn {
+
+    padding:
+        14px 34px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 992px) {
+
+    .historia-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+    .historia-texto {
+
+        text-align: center;
+    }
+
+    .historia-texto h2 {
+
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .hero-contenido {
+
+        padding: 45px 28px;
+    }
+
+    .historia-section,
+    .nosotros-final {
+
+        padding: 90px 0;
+    }
+
+    .valor-card {
+
+        margin-bottom: 24px;
+    }
+}
