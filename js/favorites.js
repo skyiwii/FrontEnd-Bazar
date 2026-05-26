@@ -47,6 +47,20 @@ function updateFavoriteButtons() {
     });
 }
 
+function updateFavoritesCount() {
+    const countElement = document.getElementById('fav-count');
+    const favoritesButton = document.getElementById('favorites-btn');
+    const count = getFavorites().length;
+
+    if (countElement) {
+        countElement.textContent = String(count);
+    }
+
+    if (favoritesButton) {
+        favoritesButton.setAttribute('aria-label', `Ver favoritos (${count})`);
+    }
+}
+
 function initFavorites() {
     document.body.addEventListener('click', (event) => {
         const button = event.target.closest('[data-favorite-button]');
@@ -63,12 +77,21 @@ function initFavorites() {
 
         toggleFavorite(productId);
         updateFavoriteButtons();
+        updateFavoritesCount();
         document.dispatchEvent(new CustomEvent('favorites-changed', {
             detail: { productId }
         }));
     });
 
+    const favoritesButton = document.getElementById('favorites-btn');
+    if (favoritesButton) {
+        favoritesButton.addEventListener('click', () => {
+            window.location.href = '../paginas/favoritos.html';
+        });
+    }
+
     updateFavoriteButtons();
+    updateFavoritesCount();
 }
 
-export { getFavorites, isFavorite, toggleFavorite, updateFavoriteButtons, initFavorites };
+export { getFavorites, isFavorite, toggleFavorite, updateFavoriteButtons, updateFavoritesCount, initFavorites };

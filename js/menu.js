@@ -1,29 +1,45 @@
-function initHamburgerMenu() {
-    const togglers = document.querySelectorAll('.navbar-toggler');
+/**
+ * Menú Hamburguesa Dinámico + Accesibilidad
+ */
 
-    togglers.forEach((button) => {
-        const targetId = button.getAttribute('data-bs-target')?.replace('#', '');
-        const target = targetId ? document.getElementById(targetId) : null;
+export function initHamburgerMenu() {
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+    const navLinks = document.querySelectorAll('.nav-link');
 
-        if (!target) {
-            return;
-        }
+    if (!hamburger || !navMenu) return;
 
-        button.setAttribute('aria-controls', targetId);
-        button.setAttribute('aria-expanded', target.classList.contains('show') ? 'true' : 'false');
-        button.setAttribute('aria-label', 'Abrir menú de navegación');
+    function toggleMenu() {
+        const isOpen = hamburger.getAttribute('aria-expanded') === 'true';
 
-        button.addEventListener('click', () => {
-            const isExpanded = button.getAttribute('aria-expanded') === 'true';
-            button.setAttribute('aria-expanded', String(!isExpanded));
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
 
-            setTimeout(() => {
-                button.setAttribute('aria-expanded', String(target.classList.contains('show')));
-            }, 150);
+        hamburger.setAttribute('aria-expanded', String(!isOpen));
+        navMenu.setAttribute('aria-hidden', String(isOpen));
+    }
+
+    hamburger.addEventListener('click', toggleMenu);
+
+    navLinks.forEach((link) => {
+        link.addEventListener('click', () => {
+            if (navMenu.classList.contains('active')) {
+                toggleMenu();
+            }
         });
     });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+            toggleMenu();
+        }
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!navMenu.contains(e.target) && !hamburger.contains(e.target)) {
+            if (navMenu.classList.contains('active')) {
+                toggleMenu();
+            }
+        }
+    });
 }
-
-document.addEventListener('DOMContentLoaded', initHamburgerMenu);
-
-export { initHamburgerMenu };
