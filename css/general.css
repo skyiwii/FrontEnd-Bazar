@@ -10,11 +10,7 @@
     --color-texto: #2f2f2f;
     --color-texto-suave: #6b6b6b;
 
-<<<<<<< HEAD
-    --color-primario: #5f715d;
-=======
     --color-primario: #212529;
->>>>>>> Progreso-Alfonso
     --color-secundario: #d6c7ae;
 
     --color-borde: #e8e2d8;
@@ -23,8 +19,6 @@
         0 4px 20px rgba(0,0,0,0.04);
 
     --radio: 20px;
-<<<<<<< HEAD
-=======
 
 
     --color-card: #ffffff;
@@ -40,23 +34,10 @@
 
 
         
->>>>>>> Progreso-Alfonso
 
 }
 
 
-<<<<<<< HEAD
-/* =========================================
-   RESET GENERAL
-========================================= */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-=======
 
 
 
@@ -282,7 +263,6 @@ body.dark-mode .navbar-toggler-icon {
     box-sizing: border-box;
 }
 
->>>>>>> Progreso-Alfonso
 html {
     scroll-behavior: smooth;
 }
@@ -349,8 +329,6 @@ section {
     transition: 0.3s ease;
 }
 
-<<<<<<< HEAD
-=======
 
 body.dark-mode .navbar-custom {
 
@@ -361,7 +339,6 @@ body.dark-mode .navbar-custom {
 
 
 
->>>>>>> Progreso-Alfonso
 .navbar-brand {
 
     color: var(--color-primario) !important;
@@ -430,12 +407,8 @@ body.dark-mode .navbar-custom {
 
     background: var(--color-primario);
 
-<<<<<<< HEAD
-    border: none;
-=======
     border: 
         1px solid var(--color-borde);
->>>>>>> Progreso-Alfonso
 }
 
 .btn-primary:hover {
@@ -448,11 +421,6 @@ body.dark-mode .navbar-custom {
 .btn-outline-light {
 
     border-width: 1px;
-<<<<<<< HEAD
-}
-
-
-=======
 }
 
 #btn-darkmode {
@@ -496,7 +464,6 @@ body.dark-mode .badge-vistas {
 
 
 
->>>>>>> Progreso-Alfonso
 /* =========================================
    TARJETAS GENERALES
 ========================================= */
@@ -553,12 +520,6 @@ body.dark-mode .badge-vistas {
 }
 
 
-<<<<<<< HEAD
-/* =========================================
-   CONTACTO FLOTANTE
-========================================= */
-
-=======
 body.dark-mode .footer-custom {
 
     background: #1a1a1a;
@@ -572,7 +533,6 @@ body.dark-mode .footer-custom {
    CONTACTO FLOTANTE
 ========================================= */
 
->>>>>>> Progreso-Alfonso
 .contacto-flotante {
 
     position: fixed;
@@ -584,183 +544,10 @@ body.dark-mode .footer-custom {
 
     z-index: 999;
 
-<<<<<<< HEAD
-    opacity: 0;
-
-    transform:
-        translateY(40px);
-
-    animation:
-        mostrarPopup 0.8s ease forwards;
-
-    animation-delay: 2s;
-}
-
-/* Tarjeta */
-
-.contacto-flotante .card {
-
-    border: none;
-
-    border-radius: 24px;
-
-    background:
-        rgba(255,255,255,0.92);
-
-    backdrop-filter: blur(15px);
-
-    box-shadow:
-        0 10px 40px rgba(0,0,0,0.08);
-}
-
-
-.contacto-flotante .form-control {
-
-    border-radius: 14px;
-
-    border:
-        1px solid #e7dfd3;
-
-    padding: 12px;
-}
-
-/* Mostrar */
-
-@keyframes mostrarPopup {
-
-    to {
-
-        opacity: 1;
-
-        transform:
-            translateY(0);
-    }
-}
-
-
-/* =========================================
-   CERRAR POPUP SOLO CSS
-========================================= */
-
-#cerrar-widget {
-    display: none;
-}
-
-#cerrar-widget:checked + .contacto-flotante {
-
-=======
->>>>>>> Progreso-Alfonso
     opacity: 0;
 
     visibility: hidden;
 
-<<<<<<< HEAD
-    transform:
-        translateY(30px);
-
-    pointer-events: none;
-
-    transition:
-        opacity 0.4s ease,
-        transform 0.4s ease,
-        visibility 0.4s;
-}
-
-
-/* =========================================
-   ANIMACIONES SOLO CSS
-========================================= */
-
-.seccion-animada {
-
-    animation:
-        fadeUp 0.8s ease both;
-}
-
-/* =========================================================
-   APARICIÓN GLOBAL
-========================================================= */
-
-@keyframes fadeUp {
-
-    from {
-
-        opacity: 0;
-
-        transform:
-            translateY(40px);
-    }
-
-    to {
-
-        opacity: 1;
-
-        transform:
-            translateY(0);
-    }
-}
-
-
-/* ELEMENTOS GENERALES */
-
-main section,
-main header,
-main article,
-main aside {
-
-    opacity: 0;
-
-    animation:
-        fadeUp 0.9s ease forwards;
-}
-
-
-/* DELAYS */
-
-main section:nth-child(1),
-main header:nth-child(1) {
-
-    animation-delay: 0.05s;
-}
-
-main section:nth-child(2),
-main article:nth-child(2) {
-
-    animation-delay: 0.15s;
-}
-
-main section:nth-child(3),
-main article:nth-child(3) {
-
-    animation-delay: 0.25s;
-}
-
-main section:nth-child(4) {
-
-    animation-delay: 0.35s;
-}
-
-main section:nth-child(5) {
-
-    animation-delay: 0.45s;
-}
-
-
-
-/* =========================================
-   CERRAR POPUP SOLO CSS
-========================================= */
-
-#cerrar-widget {
-    display: none;
-}
-
-#cerrar-widget:checked + .contacto-flotante {
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(30px);
-=======
->>>>>>> Progreso-Alfonso
     pointer-events: none;
 
     transform:
@@ -774,11 +561,6 @@ main section:nth-child(5) {
 
 }
 
-<<<<<<< HEAD
-/* =========================================
-   RESPONSIVE
-========================================= */
-=======
 
 /* ESTADO VISIBLE */
 
@@ -891,7 +673,6 @@ body.dark-mode select {
 /* =========================================================
    APARICIÓN GLOBAL
 ========================================================= */
->>>>>>> Progreso-Alfonso
 
 @keyframes fadeUp {
 
@@ -980,8 +761,6 @@ main section:nth-child(5) {
         right: 15px;
     }
 }
-<<<<<<< HEAD
-=======
 
 
 
@@ -1170,4 +949,3 @@ body.dark-mode .btn-favorito.favorito-activo {
 
 }
 
->>>>>>> Progreso-Alfonso

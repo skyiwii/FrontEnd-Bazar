@@ -27,14 +27,11 @@
     max-width: 1000px;
 }
 
-<<<<<<< HEAD
-=======
 
 /* =========================================================
    BREADCRUMB
 ========================================================= */
 
->>>>>>> Progreso-Alfonso
 .breadcrumb-custom {
 
     display: flex;
@@ -56,22 +53,14 @@
 
     text-decoration: none;
 
-<<<<<<< HEAD
-    color: var(--color-primario);
-=======
     color: var(--color-texto);
->>>>>>> Progreso-Alfonso
 
     transition: 0.3s;
 }
 
 .breadcrumb-custom a:hover {
 
-<<<<<<< HEAD
-    opacity: 0.7;
-=======
     color: var(--color-texto-suave);
->>>>>>> Progreso-Alfonso
 }
 
 .breadcrumb-custom span {
@@ -79,106 +68,6 @@
     color: var(--color-texto-suave);
 }
 
-<<<<<<< HEAD
-.post-categoria {
-
-    display: inline-flex;
-
-    padding:
-        10px 18px;
-
-    border-radius: 999px;
-
-    background:
-        rgba(95,113,93,0.12);
-
-    color: var(--color-primario);
-
-    font-size: 0.8rem;
-
-    font-weight: 700;
-
-    letter-spacing: 2px;
-
-    margin-bottom: 28px;
-}
-
-.post-hero h1 {
-
-    font-size:
-        clamp(2.7rem, 6vw, 5rem);
-
-    line-height: 1.05;
-
-    max-width: 950px;
-
-    margin:
-        0 auto 25px;
-}
-
-.post-subtitulo {
-
-    max-width: 700px;
-
-    margin:
-        0 auto 35px;
-
-    font-size: 1.15rem;
-
-    color: var(--color-texto-suave);
-
-    line-height: 1.8;
-}
-
-.meta-data {
-
-    display: flex;
-
-    justify-content: center;
-
-    gap: 14px;
-
-    flex-wrap: wrap;
-
-    color: var(--color-texto-suave);
-
-    font-size: 0.92rem;
-}
-
-
-/* =========================================================
-   IMAGEN HERO
-========================================================= */
-
-.post-imagen-principal {
-
-    width: 100%;
-
-    padding:
-        0 25px;
-
-    margin-bottom: 70px;
-}
-
-.post-imagen-principal img {
-
-    width: 100%;
-
-    max-width: 1300px;
-
-    max-height: 680px;
-
-    object-fit: cover;
-
-    display: block;
-
-    margin: auto;
-
-    border-radius: 38px;
-
-    box-shadow:
-        0 25px 70px rgba(0,0,0,0.14);
-=======
 
 /* =========================================================
    CATEGORÍA BADGE
@@ -206,14 +95,10 @@
     letter-spacing: 2px;
 
     margin-bottom: 28px;
->>>>>>> Progreso-Alfonso
 }
 
 
 /* =========================================================
-<<<<<<< HEAD
-   CONTENIDO
-=======
    TÍTULO Y SUBTÍTULO
 ========================================================= */
 
@@ -299,7 +184,6 @@
 
 /* =========================================================
    CONTENIDO PRINCIPAL
->>>>>>> Progreso-Alfonso
 ========================================================= */
 
 .post-contenido {
@@ -308,23 +192,6 @@
 
     margin: auto;
 
-<<<<<<< HEAD
-    padding:
-        65px;
-
-    border-radius: 38px;
-
-    background:
-        rgba(255,255,255,0.72);
-
-    backdrop-filter: blur(14px);
-
-    border:
-        1px solid rgba(255,255,255,0.6);
-
-    box-shadow:
-        0 10px 40px rgba(0,0,0,0.06);
-=======
     padding: 65px;
 
     border-radius: 38px;
@@ -334,7 +201,6 @@
     border: 1px solid var(--color-borde);
 
     box-shadow: var(--sombra-suave);
->>>>>>> Progreso-Alfonso
 }
 
 .post-contenido p {
@@ -355,11 +221,8 @@
     margin-bottom: 20px;
 
     font-size: 1.8rem;
-<<<<<<< HEAD
-=======
 
     color: var(--color-texto);
->>>>>>> Progreso-Alfonso
 }
 
 .post-contenido ul,
@@ -390,22 +253,6 @@
 
     margin-top: 50px;
 
-<<<<<<< HEAD
-    padding:
-        40px;
-
-    border-radius: 30px;
-
-    background:
-        linear-gradient(
-            135deg,
-            rgba(95,113,93,0.08),
-            rgba(214,199,174,0.18)
-        );
-
-    border-left:
-        4px solid var(--color-primario);
-=======
     padding: 40px;
 
     border-radius: 30px;
@@ -414,7 +261,6 @@
 
     border-left:
         4px solid var(--color-secundario);
->>>>>>> Progreso-Alfonso
 
     font-size: 1.15rem;
 
@@ -438,11 +284,7 @@
 
 
 /* =========================================================
-<<<<<<< HEAD
-   ESTADISTICAS
-=======
    ESTADÍSTICAS
->>>>>>> Progreso-Alfonso
 ========================================================= */
 
 .post-estadisticas {
@@ -463,17 +305,9 @@
 
     border-radius: 18px;
 
-<<<<<<< HEAD
-    background:
-        rgba(255,255,255,0.7);
-
-    border:
-        1px solid var(--color-borde);
-=======
     background: var(--color-card);
 
     border: 1px solid var(--color-borde);
->>>>>>> Progreso-Alfonso
 
     color: var(--color-texto-suave);
 }
@@ -491,11 +325,8 @@
 .reacciones-post h3 {
 
     margin-bottom: 20px;
-<<<<<<< HEAD
-=======
 
     color: var(--color-texto);
->>>>>>> Progreso-Alfonso
 }
 
 .reacciones-grid {
@@ -509,19 +340,9 @@
 
 .reaccion-btn {
 
-<<<<<<< HEAD
-    border: none;
-
-    background:
-        rgba(255,255,255,0.8);
-
-    border:
-        1px solid var(--color-borde);
-=======
     background: var(--color-card);
 
     border: 1px solid var(--color-borde);
->>>>>>> Progreso-Alfonso
 
     border-radius: 22px;
 
@@ -541,11 +362,8 @@
     transition: 0.3s ease;
 
     font-size: 1.3rem;
-<<<<<<< HEAD
-=======
 
     cursor: pointer;
->>>>>>> Progreso-Alfonso
 }
 
 .reaccion-btn span {
@@ -561,9 +379,6 @@
         translateY(-5px);
 
     box-shadow:
-<<<<<<< HEAD
-        0 10px 25px rgba(0,0,0,0.08);
-=======
         0 10px 25px rgba(0, 0, 0, 0.08);
 
     border-color: var(--color-secundario);
@@ -574,7 +389,6 @@
     background: var(--color-card-secundaria);
 
     border-color: var(--color-secundario);
->>>>>>> Progreso-Alfonso
 }
 
 
@@ -590,313 +404,6 @@
 .comentarios-header {
 
     display: flex;
-<<<<<<< HEAD
-
-    justify-content: space-between;
-
-    align-items: center;
-
-    margin-bottom: 30px;
-
-    gap: 20px;
-}
-
-.orden-comentarios {
-
-    border:
-        1px solid var(--color-borde);
-
-    border-radius: 14px;
-
-    padding:
-        12px 18px;
-
-    background:
-        white;
-}
-
-
-/* =========================================================
-   FORM
-========================================================= */
-
-.form-comentario {
-
-    background:
-        rgba(255,255,255,0.75);
-
-    border:
-        1px solid var(--color-borde);
-
-    border-radius: 32px;
-
-    padding:
-        35px;
-
-    margin-bottom: 40px;
-}
-
-.comentario-top-form {
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(2, 1fr);
-
-    gap: 16px;
-
-    margin-bottom: 16px;
-}
-
-.form-comentario input,
-.form-comentario textarea {
-
-    border:
-        1px solid var(--color-borde);
-
-    border-radius: 18px;
-
-    padding:
-        16px;
-
-    background:
-        rgba(255,255,255,0.85);
-}
-
-.form-comentario input:focus,
-.form-comentario textarea:focus {
-
-    border-color: var(--color-primario);
-
-    box-shadow:
-        0 0 0 4px rgba(95,113,93,0.08);
-}
-
-.comentario-opciones {
-
-    margin:
-        18px 0 22px;
-}
-
-.checkbox-label {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 10px;
-
-    color: var(--color-texto-suave);
-}
-
-
-/* =========================================================
-   LISTA COMENTARIOS
-========================================================= */
-
-.lista-comentarios {
-
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 20px;
-}
-
-.comentario-item {
-
-    background:
-        rgba(255,255,255,0.75);
-
-    border:
-        1px solid var(--color-borde);
-
-    border-radius: 28px;
-
-    padding:
-        28px;
-}
-
-
-/* Header comentario */
-
-.comentario-header {
-
-    margin-bottom: 18px;
-}
-
-.comentario-user {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 14px;
-}
-
-.avatar {
-
-    width: 52px;
-
-    height: 52px;
-
-    border-radius: 50%;
-
-    background:
-        linear-gradient(
-            135deg,
-            var(--color-primario),
-            #7b9278
-        );
-
-    color: white;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    font-weight: 700;
-}
-
-.comentario-user strong {
-
-    display: block;
-}
-
-.comentario-user span {
-
-    color: var(--color-texto-suave);
-
-    font-size: 0.85rem;
-}
-
-
-/* Body */
-
-.comentario-body p {
-
-    line-height: 1.9;
-
-    margin-bottom: 18px;
-}
-
-
-/* Acciones */
-
-.comentario-acciones {
-
-    display: flex;
-
-    gap: 12px;
-
-    flex-wrap: wrap;
-}
-
-.comentario-acciones button {
-
-    border: none;
-
-    background:
-        rgba(95,113,93,0.08);
-
-    color: var(--color-primario);
-
-    padding:
-        10px 16px;
-
-    border-radius: 14px;
-
-    transition: 0.3s;
-}
-
-.comentario-acciones button:hover {
-
-    background:
-        rgba(95,113,93,0.15);
-}
-
-
-/* Respuestas */
-
-.comentario-respuestas {
-
-    margin-top: 25px;
-
-    padding-left: 35px;
-
-    border-left:
-        2px solid rgba(95,113,93,0.12);
-}
-
-.respuesta {
-
-    margin-top: 18px;
-
-    background:
-        rgba(250,250,250,0.8);
-}
-
-
-/* =========================================================
-   NAVEGACION
-========================================================= */
-
-.post-navegacion {
-
-    max-width: 850px;
-
-    margin:
-        90px auto 0;
-}
-
-.post-navegacion .fila {
-
-    display: flex;
-
-    justify-content: space-between;
-
-    gap: 30px;
-}
-
-.post-navegacion span {
-
-    color: var(--color-texto-suave);
-
-    font-size: 0.85rem;
-}
-
-.post-navegacion a {
-
-    text-decoration: none;
-
-    color: var(--color-primario);
-
-    font-weight: 600;
-
-    transition: 0.3s;
-}
-
-.post-navegacion a:hover {
-
-    opacity: 0.7;
-}
-
-
-/* =========================================================
-   ANIMACIONES
-========================================================= */
-
-.post-hero,
-.post-imagen-principal,
-.post-contenido,
-.interaccion-blog,
-.post-navegacion {
-
-    animation:
-        fadeUp 0.8s ease both;
-=======
 
     justify-content: space-between;
 
@@ -1239,7 +746,6 @@
 .post-navegacion a:hover {
 
     color: var(--color-texto-suave);
->>>>>>> Progreso-Alfonso
 }
 
 

@@ -64,11 +64,7 @@
 .hero-box {
 
     background:
-<<<<<<< HEAD
-        rgba(255,255,255,0.08);
-=======
             var(--color-overlay);
->>>>>>> Progreso-Alfonso
 
     border:
         1px solid rgba(255,255,255,0.15);
@@ -115,11 +111,7 @@
 
 #Destacados {
 
-<<<<<<< HEAD
-    background: #f2ede4;
-=======
     background: var(--color-card-secundaria);
->>>>>>> Progreso-Alfonso
 }
 
 .carousel-inner {
@@ -129,13 +121,9 @@
 
 .producto-card-carrusel {
 
-<<<<<<< HEAD
-    background: white;
-=======
     background: var(--color-card);
 
 
->>>>>>> Progreso-Alfonso
 
     border-radius: 24px;
 
@@ -149,11 +137,7 @@
         0 10px 30px rgba(0,0,0,0.04);
 
     border:
-<<<<<<< HEAD
-        1px solid #ece7de;
-=======
         1px solid var(--color-borde);
->>>>>>> Progreso-Alfonso
 
     max-width: 320px;
 
@@ -285,11 +269,7 @@
 
 #nuestro-blog {
 
-<<<<<<< HEAD
-    background: #f7f4ee;
-=======
     background: var(--color-fondo);
->>>>>>> Progreso-Alfonso
 }
 
 .contenedor-blog-destacados {
@@ -304,22 +284,14 @@
 
 .blog-card {
 
-<<<<<<< HEAD
-    background: white;
-=======
     background: var(--color-card);
->>>>>>> Progreso-Alfonso
 
     border-radius: 24px;
 
     overflow: hidden;
 
     border:
-<<<<<<< HEAD
-        1px solid #ece7de;
-=======
         1px solid var(--color-borde);
->>>>>>> Progreso-Alfonso
 
     transition: 0.35s ease;
 }
