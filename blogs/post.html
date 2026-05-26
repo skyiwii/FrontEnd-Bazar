@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Vura - Blog</title>
+
+    <link rel="icon" href="../media/logo.png" type="image/png">
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="../css/post-detalle.css">
+    <link rel="stylesheet" href="../css/comentarios.css">
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm navbar-custom">
+            <div class="container">
+
+                <a class="navbar-brand d-flex align-items-center fw-bold" href="../index.html">
+                    <img src="../media/logo.png" width="40" class="me-2" alt="Logo Vura">
+                    VURA
+                </a>
+
+                <button id="btn-menu" class="navbar-toggler" type="button"
+                    aria-label="Abrir menú" aria-expanded="false" aria-controls="navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="navbar-collapse" id="navbarNav" aria-hidden="true">
+                    <ul class="navbar-nav ms-auto text-uppercase small align-items-lg-center">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../paginas/productos.html">Productos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../paginas/nosotros.html">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../paginas/contacto.html">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="../paginas/blogs.html">Blogs</a>
+                        </li>
+
+                        <li class="nav-item ms-lg-3">
+                            <button id="btn-darkmode" class="btn btn-sm btn-outline-dark"
+                                type="button" aria-label="Cambiar modo oscuro">
+                                🌙
+                            </button>
+                        </li>
+
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- MAIN -->
+    <main class="contenedor-articulo">
+
+        <section id="post-hero"      class="post-hero seccion-animada"></section>
+        <section id="post-imagen"    class="post-imagen-principal seccion-animada"></section>
+        <section id="post-contenido" class="post-contenido seccion-animada"></section>
+
+        <!-- INTERACCIÓN -->
+        <section class="interaccion-blog seccion-animada">
+
+            <div id="post-estadisticas" class="post-estadisticas"></div>
+
+            <div id="post-reacciones" class="reacciones-post"></div>
+
+            <!-- COMENTARIOS -->
+            <div class="comentarios-seccion">
+
+                <div class="comentarios-header">
+                    <h3>Comentarios</h3>
+                    <select class="orden-comentarios">
+                        <option value="recientes">Más recientes</option>
+                        <option value="valorados">Más valorados</option>
+                    </select>
+                </div>
+
+                <!-- FORM PRINCIPAL -->
+                <form id="form-comentario" class="form-comentario" novalidate>
+
+                    <div class="comentario-top-form">
+                        <div>
+                            <input type="text" class="form-control"
+                                placeholder="Nombre o apodo" autocomplete="name">
+                        </div>
+                        <div>
+                            <input type="email" class="form-control"
+                                placeholder="Correo electrónico" autocomplete="email">
+                        </div>
+                    </div>
+
+                    <div>
+                        <textarea class="form-control" rows="5"
+                            placeholder="Comparte tu opinión... (mínimo 10 caracteres)"
+                            maxlength="500"></textarea>
+                    </div>
+
+                    <div class="comentario-opciones">
+                        <label class="checkbox-label">
+                            <input type="checkbox">
+                            Notificarme si alguien responde
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">
+                        Publicar comentario
+                    </button>
+
+                </form>
+
+                <!-- LISTA -->
+                <div id="lista-comentarios" class="lista-comentarios"></div>
+
+            </div>
+
+        </section>
+
+        <section id="post-navegacion" class="post-navegacion seccion-animada"></section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer-custom mt-5">
+        <div class="container text-center py-4">
+            <p class="mb-2">&copy; 2024 Vura Bazar Natural</p>
+            <p class="small">Hecho en Chile</p>
+            <div class="mt-3">
+                <a href="#" class="me-3 footer-link">Instagram</a>
+                <a href="#" class="footer-link">WhatsApp</a>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- DATOS BLOGS -->
+    <script src="../js/blogs/blogs-data.js"></script>
+
+    <!-- DETALLE POST (renderiza hero, imagen, contenido, nav) -->
+    <script src="../js/blogs/post-detalle.js"></script>
+
+    <!-- SISTEMA DE COMENTARIOS -->
+    <script src="../js/blogs/comentarios.js"></script>
+
+    <!-- HAMBURGUESA Y HEADER -->
+    <script src="../js/general.js"></script>
+
+    <!-- MODO OSCURO -->
+    <script src="../js/modo-oscuro.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
