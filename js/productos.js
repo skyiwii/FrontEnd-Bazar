@@ -3,6 +3,7 @@ const productos = {
         nombre: "Aceite Esencial de Eucalipto",
         precio: "$12.990",
         descripcion: "Ideal para despejar vías respiratorias.",
+        categoria: "Bienestar",
 
         imagen: "../media/producto1-vista1.jpg",
 
@@ -24,6 +25,7 @@ const productos = {
         nombre: "Aceite de Rosa Mosqueta",
         precio: "$18.500",
         descripcion: "Regenerador natural para la piel.",
+        categoria: "Bienestar",
 
         imagen: "../media/producto2-principal.jpg",
 
@@ -45,6 +47,7 @@ const productos = {
         nombre: "Miel de Ulmo",
         precio: "$9.500",
         descripcion: "Propiedades antibacterianas únicas.",
+        categoria: "Bebidas",
 
         imagen: "../media/producto3-principal.jpg",
 
@@ -66,6 +69,7 @@ const productos = {
         nombre: "Jabón de Lavanda",
         precio: "$4.500",
         descripcion: "Jabón artesanal de lavanda para limpieza suave y aroma natural.",
+        categoria: "Cuidado",
 
         imagen: "../media/jabon-lavanda.png",
 
@@ -87,6 +91,7 @@ const productos = {
         nombre: "Miel de Quillay",
         precio: "$11.500",
         descripcion: "Miel monofloral de quillay, ideal para endulzar y cuidar.",
+        categoria: "Bebidas",
 
         imagen: "../media/miel-de-quillay.png",
 
@@ -108,13 +113,15 @@ const productos = {
         nombre: "Mermelada de Damasco",
         precio: "$6.200",
         descripcion: "Mermelada artesanal de damasco, dulce y natural.",
+        categoria: "Alimentos",
 
-        imagen: "../media/mermelada_damasco.png",
+        imagen: "../media/mermelada-damasco_nuevo.png",
 
         miniaturas: [
-            "../media/mermelada_damasco.png",
-            "../media/mermelada_damasco.png",
-            "../media/mermelada_damasco.png"
+            "../media/mermelada-damasco_nuevo.png",
+            "../media/damasco_1.png",
+            "../media/damasco_2.png",
+            "../media/damasco_3.png"
         ],
 
         info: [

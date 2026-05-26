@@ -96,21 +96,25 @@
         <aside class="sidebar-filtros">
 
             <div class="buscador">
-                <input type="text" placeholder="Buscar producto...">
-                <button>🔍</button>
+                <input type="text" placeholder="Buscar producto..." aria-label="Buscar producto">
+                <button type="button" aria-label="Buscar">🔍</button>
             </div>
 
             <div class="filtro-categorias">
                 <details open>
-                    <summary>Categorías</summary>
-                    <ul>
-                        <li><a href="#">Frutas y Verduras</a></li>
-                        <li><a href="#">Lácteos</a></li>
-                        <li><a href="#">Panadería</a></li>
-                        <li><a href="#">Cereales</a></li>
-                        <li><a href="#">Bebidas</a></li>
+                    <summary aria-label="Categorías">Categorías</summary>
+                    <ul id="category-list">
+                        <li><button type="button" class="category-filter active" data-category="Todos" aria-pressed="true">Todos</button></li>
+                        <li><button type="button" class="category-filter" data-category="Bienestar" aria-pressed="false">Bienestar</button></li>
+                        <li><button type="button" class="category-filter" data-category="Bebidas" aria-pressed="false">Bebidas</button></li>
+                        <li><button type="button" class="category-filter" data-category="Cuidado" aria-pressed="false">Cuidado</button></li>
+                        <li><button type="button" class="category-filter" data-category="Alimentos" aria-pressed="false">Alimentos</button></li>
                     </ul>
                 </details>
+            </div>
+
+            <div class="productos-meta">
+                <p id="products-count" class="productos-count">6 productos encontrados</p>
             </div>
 
         </aside>
@@ -118,45 +122,57 @@
         <!-- PRODUCTOS -->
         <section class="productos-grilla">
 
-            <article class="producto-card">
-                <img src="../media/producto1-principal.jpg">
+            <article class="producto-card" data-product-id="1" data-name="Aceite Eucalipto" data-description="Aceite Eucalipto descripción" data-category="Bienestar">
+                <button type="button" class="producto-favorito-btn" data-favorite-button data-product-id="1" data-favorite-label="Aceite Eucalipto" data-icon-only="true" aria-pressed="false" title="Agregar a favoritos">🤍</button>
+                <img src="../media/producto1-principal.jpg" alt="Aceite Eucalipto">
                 <h3>Aceite Eucalipto</h3>
                 <p>Aceite Eucalipto descripción</p>
+                <span class="categoria-chip">Bienestar</span>
                 <a href="../productos/producto.html?id=1" class="btn btn-dark">Ver detalles</a>
             </article>
 
-            <article class="producto-card">
-                <img src="../media/producto2-principal.jpg">
+            <article class="producto-card" data-product-id="2" data-name="Aceite Rosa Mosqueta" data-description="Aceite Rosa Mosqueta descripción" data-category="Bienestar">
+                <button type="button" class="producto-favorito-btn" data-favorite-button data-product-id="2" data-favorite-label="Aceite Rosa Mosqueta" data-icon-only="true" aria-pressed="false" title="Agregar a favoritos">🤍</button>
+                <img src="../media/producto2-principal.jpg" alt="Aceite Rosa Mosqueta">
                 <h3>Aceite Rosa Mosqueta</h3>
                 <p>Aceite Rosa Mosqueta descripción</p>
+                <span class="categoria-chip">Bienestar</span>
                 <a href="../productos/producto.html?id=2" class="btn btn-dark">Ver detalles</a>
             </article>
 
-            <article class="producto-card">
-                <img src="../media/producto3-principal.jpg">
+            <article class="producto-card" data-product-id="3" data-name="Miel de Ulmo" data-description="Miel de Ulmo descripción" data-category="Bebidas">
+                <button type="button" class="producto-favorito-btn" data-favorite-button data-product-id="3" data-favorite-label="Miel de Ulmo" data-icon-only="true" aria-pressed="false" title="Agregar a favoritos">🤍</button>
+                <img src="../media/producto3-principal.jpg" alt="Miel de Ulmo">
                 <h3>Miel de Ulmo</h3>
                 <p>Miel de Ulmo descripción</p>
+                <span class="categoria-chip">Bebidas</span>
                 <a href="../productos/producto.html?id=3" class="btn btn-dark">Ver detalles</a>
             </article>
 
-            <article class="producto-card">
-                <img src="../media/jabon-lavanda.png">
+            <article class="producto-card" data-product-id="4" data-name="Jabón de Lavanda" data-description="Jabón artesanal de lavanda para limpieza suave y aroma natural." data-category="Cuidado">
+                <button type="button" class="producto-favorito-btn" data-favorite-button data-product-id="4" data-favorite-label="Jabón de Lavanda" data-icon-only="true" aria-pressed="false" title="Agregar a favoritos">🤍</button>
+                <img src="../media/jabon-lavanda.png" alt="Jabón de Lavanda">
                 <h3>Jabón de Lavanda</h3>
                 <p>Jabón artesanal de lavanda para limpieza suave y aroma natural.</p>
+                <span class="categoria-chip">Cuidado</span>
                 <a href="../productos/producto.html?id=4" class="btn btn-dark">Ver detalles</a>
             </article>
 
-            <article class="producto-card">
-                <img src="../media/miel-de-quillay.png">
+            <article class="producto-card" data-product-id="5" data-name="Miel de Quillay" data-description="Miel monofloral de quillay, ideal para endulzar y cuidar." data-category="Bebidas">
+                <button type="button" class="producto-favorito-btn" data-favorite-button data-product-id="5" data-favorite-label="Miel de Quillay" data-icon-only="true" aria-pressed="false" title="Agregar a favoritos">🤍</button>
+                <img src="../media/miel-de-quillay.png" alt="Miel de Quillay">
                 <h3>Miel de Quillay</h3>
                 <p>Miel monofloral de quillay, ideal para endulzar y cuidar.</p>
+                <span class="categoria-chip">Bebidas</span>
                 <a href="../productos/producto.html?id=5" class="btn btn-dark">Ver detalles</a>
             </article>
 
-            <article class="producto-card">
-                <img src="../media/mermelada_damasco.png">
+            <article class="producto-card" data-product-id="6" data-name="Mermelada de Damasco" data-description="Mermelada artesanal de damasco, dulce y natural." data-category="Alimentos">
+                <button type="button" class="producto-favorito-btn" data-favorite-button data-product-id="6" data-favorite-label="Mermelada de Damasco" data-icon-only="true" aria-pressed="false" title="Agregar a favoritos">🤍</button>
+                <img src="../media/mermelada-damasco_nuevo.png" alt="Mermelada de Damasco">
                 <h3>Mermelada de Damasco</h3>
                 <p>Mermelada artesanal de damasco, dulce y natural.</p>
+                <span class="categoria-chip">Alimentos</span>
                 <a href="../productos/producto.html?id=6" class="btn btn-dark">Ver detalles</a>
             </article>
 
@@ -183,7 +199,7 @@
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<!-- Script del Tema Oscuro -->
+<script type="module" src="../js/productos-page.js"></script>
 <script src="../js/theme.js"></script>
 
 </body>
