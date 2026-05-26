@@ -65,9 +65,15 @@
 
     border: 1px solid var(--color-borde);
 
+<<<<<<< HEAD
     background: rgba(255,255,255,0.8);
 
     backdrop-filter: blur(10px);
+=======
+    background: var(--color-input);
+
+    color: var(--color-texto);
+>>>>>>> Progreso-Alfonso
 
     padding: 18px 22px;
 
@@ -80,21 +86,41 @@
     font-size: 0.95rem;
 }
 
+<<<<<<< HEAD
 .blog-search input:focus {
 
     border-color: var(--color-primario);
 
     box-shadow:
         0 0 0 4px rgba(95,113,93,0.08);
+=======
+.blog-search input::placeholder {
+
+    color: var(--color-texto-suave);
+}
+
+.blog-search input:focus {
+
+    border-color: var(--color-secundario);
+
+    box-shadow:
+        0 0 0 4px var(--color-borde);
+>>>>>>> Progreso-Alfonso
 }
 
 .blog-search button {
 
     border: none;
 
+<<<<<<< HEAD
     background: var(--color-primario);
 
     color: white;
+=======
+    background: var(--color-boton-dark);
+
+    color: var(--color-fondo);
+>>>>>>> Progreso-Alfonso
 
     padding:
         0 28px;
@@ -104,13 +130,22 @@
     transition: 0.3s ease;
 
     font-weight: 500;
+<<<<<<< HEAD
+=======
+
+    cursor: pointer;
+>>>>>>> Progreso-Alfonso
 }
 
 .blog-search button:hover {
 
     transform: translateY(-2px);
 
+<<<<<<< HEAD
     background: #4f614d;
+=======
+    opacity: 0.85;
+>>>>>>> Progreso-Alfonso
 }
 
 
@@ -142,9 +177,17 @@
 
     text-decoration: none;
 
+<<<<<<< HEAD
     color: var(--color-primario);
 
     background: rgba(95,113,93,0.08);
+=======
+    color: var(--color-texto);
+
+    background: var(--color-card-secundaria);
+
+    border: 1px solid var(--color-borde);
+>>>>>>> Progreso-Alfonso
 
     padding:
         8px 16px;
@@ -158,9 +201,17 @@
 
 .blog-tags a:hover {
 
+<<<<<<< HEAD
     background: var(--color-primario);
 
     color: white;
+=======
+    background: var(--color-boton-dark);
+
+    color: var(--color-fondo);
+
+    border-color: var(--color-boton-dark);
+>>>>>>> Progreso-Alfonso
 }
 
 
@@ -185,19 +236,29 @@
 
 .post-card {
 
+<<<<<<< HEAD
     background: rgba(255,255,255,0.75);
 
     backdrop-filter: blur(12px);
 
     border:
         1px solid rgba(255,255,255,0.6);
+=======
+    background: var(--color-card);
+
+    border: 1px solid var(--color-borde);
+>>>>>>> Progreso-Alfonso
 
     border-radius: 28px;
 
     overflow: hidden;
 
+<<<<<<< HEAD
     box-shadow:
         0 10px 30px rgba(0,0,0,0.05);
+=======
+    box-shadow: var(--sombra-suave);
+>>>>>>> Progreso-Alfonso
 
     transition: 0.45s ease;
 }
@@ -208,7 +269,11 @@
         translateY(-10px);
 
     box-shadow:
+<<<<<<< HEAD
         0 20px 45px rgba(0,0,0,0.08);
+=======
+        0 20px 45px rgba(0, 0, 0, 0.12);
+>>>>>>> Progreso-Alfonso
 }
 
 
@@ -247,9 +312,17 @@
     padding:
         7px 14px;
 
+<<<<<<< HEAD
     background: rgba(95,113,93,0.1);
 
     color: var(--color-primario);
+=======
+    background: var(--color-card-secundaria);
+
+    color: var(--color-texto-suave);
+
+    border: 1px solid var(--color-borde);
+>>>>>>> Progreso-Alfonso
 
     border-radius: 999px;
 
@@ -266,6 +339,11 @@
 
     font-size: 1.5rem;
 
+<<<<<<< HEAD
+=======
+    color: var(--color-texto);
+
+>>>>>>> Progreso-Alfonso
     margin-bottom: 14px;
 
     line-height: 1.3;
@@ -273,6 +351,7 @@
 
 .contenido-post p {
 
+<<<<<<< HEAD
     margin-bottom: 22px;
 }
 
@@ -292,6 +371,11 @@
 .contenido-post .btn:hover {
 
     background: var(--color-primario);
+=======
+    color: var(--color-texto-suave);
+
+    margin-bottom: 22px;
+>>>>>>> Progreso-Alfonso
 }
 
 
@@ -324,6 +408,7 @@
 
     border-radius: 50%;
 
+<<<<<<< HEAD
     background: rgba(255,255,255,0.7);
 
     color: var(--color-texto);
@@ -339,13 +424,31 @@
     background: var(--color-primario);
 
     color: white;
+=======
+    background: var(--color-card);
+
+    color: var(--color-texto);
+
+    border: 1px solid var(--color-borde);
+
+    transition: 0.3s ease;
+>>>>>>> Progreso-Alfonso
 }
 
+.paginacion a:hover,
 .paginacion a.active {
 
+<<<<<<< HEAD
     background: var(--color-primario);
 
     color: white;
+=======
+    background: var(--color-boton-dark);
+
+    color: var(--color-fondo);
+
+    border-color: var(--color-boton-dark);
+>>>>>>> Progreso-Alfonso
 }
 
 
@@ -363,11 +466,18 @@
     .blog-search button {
 
         height: 55px;
+<<<<<<< HEAD
+    }
+
+    .grilla-articulos {
+
+        gap: 25px;
+=======
+>>>>>>> Progreso-Alfonso
     }
 
     .grilla-articulos {
 
         gap: 25px;
     }
-
 }

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Vura - Usuarios Registrados</title>
+
+    <link
+        rel="icon"
+        href="../../media/logo.png"
+        type="image/png">
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <link
+        rel="stylesheet"
+        href="../../css/general.css">
+
+    <link
+        rel="stylesheet"
+        href="../../css/usuarios-admin.css">
+
+</head>
+
+<body>
+
+<header>
+
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm navbar-custom">
+
+        <div class="container">
+
+            <a
+                class="navbar-brand d-flex align-items-center fw-bold"
+                href="../../index.html">
+
+                <img
+                    src="../../media/logo.png"
+                    width="40"
+                    class="me-2"
+                    alt="Logo Vura">
+
+                VURA
+
+            </a>
+
+            <button
+                id="btn-menu"
+                class="navbar-toggler"
+                type="button"
+                aria-label="Abrir menú">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <div
+                class="navbar-collapse"
+                id="navbarNav">
+
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link"
+                            href="./dashboard-admin.html">
+
+                            Dashboard
+
+                        </a>
+
+                    </li>
+
+                    <li class="nav-item ms-lg-3">
+
+                        <button
+                            id="btn-logout"
+                            class="btn btn-dark btn-sm">
+
+                            Cerrar Sesión
+
+                        </button>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+<main class="usuarios-admin-main">
+
+    <section class="usuarios-hero">
+
+        <div class="container">
+
+            <span class="admin-tag">
+
+                Administración
+
+            </span>
+
+            <h1>
+
+                Usuarios Registrados
+
+            </h1>
+
+            <p>
+
+                Revisa las cuentas creadas dentro del sistema Vura.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <section class="usuarios-panel">
+
+        <div class="container">
+
+            <div class="usuarios-toolbar card-base">
+
+                <div>
+
+                    <h2>
+
+                        Lista de usuarios
+
+                    </h2>
+
+                    <p>
+
+                        Administra usuarios clientes registrados.
+
+                    </p>
+
+                </div>
+
+                <input
+                    type="text"
+                    id="buscador-usuarios"
+                    class="form-control"
+                    placeholder="Buscar por nombre o correo...">
+
+            </div>
+
+            <div
+                id="contador-usuarios"
+                class="contador-usuarios">
+
+            </div>
+
+            <div
+                id="contenedor-usuarios"
+                class="usuarios-grid">
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer class="footer-custom">
+
+    <div class="container text-center py-4">
+
+        <p class="mb-2">
+
+            &copy; 2024 Vura Bazar Natural
+
+        </p>
+
+        <p class="small">
+
+            Hecho en Chile
+
+        </p>
+
+    </div>
+
+</footer>
+
+
+<script src="../../js/auth/auth.js"></script>
+<script src="../../js/auth/session.js"></script>
+<script src="../../js/auth/guards.js"></script>
+
+<script src="../../js/intranet/usuarios-admin.js"></script>
+
+<script src="../../js/general.js"></script>
+<script src="../../js/modo-oscuro.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

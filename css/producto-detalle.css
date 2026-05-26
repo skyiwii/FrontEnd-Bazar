@@ -53,7 +53,11 @@
 
 .breadcrumb-custom span {
 
+<<<<<<< HEAD
     color: var(--color-primario);
+=======
+    color: var(--color-texto);
+>>>>>>> Progreso-Alfonso
 }
 
 
@@ -93,10 +97,20 @@
     border-radius: 30px;
 
     background:
+<<<<<<< HEAD
         #f7f4ef;
 
     border:
         1px solid rgba(0,0,0,0.04);
+=======
+        var(--color-card-secundaria);
+
+    border:
+        1px solid var(--color-borde);
+
+    box-shadow:
+        var(--sombra-suave);
+>>>>>>> Progreso-Alfonso
 }
 
 .img-principal {
@@ -145,13 +159,24 @@
 
     cursor: pointer;
 
+<<<<<<< HEAD
+=======
+    background:
+        var(--color-card);
+
+>>>>>>> Progreso-Alfonso
     border:
         2px solid transparent;
 
     transition:
         transform 0.3s ease,
         border-color 0.3s ease,
+<<<<<<< HEAD
         opacity 0.3s ease;
+=======
+        opacity 0.3s ease,
+        background-color 0.3s ease;
+>>>>>>> Progreso-Alfonso
 
     opacity: 0.8;
 }
@@ -200,9 +225,18 @@
     border-radius: 999px;
 
     background:
+<<<<<<< HEAD
         rgba(95,113,93,0.08);
 
     color: var(--color-primario);
+=======
+        var(--color-card-secundaria);
+
+    border:
+        1px solid var(--color-borde);
+
+    color: var(--color-texto);
+>>>>>>> Progreso-Alfonso
 
     font-size: 0.78rem;
 
@@ -228,6 +262,11 @@
     margin: 0;
 
     max-width: 520px;
+<<<<<<< HEAD
+=======
+
+    color: var(--color-texto);
+>>>>>>> Progreso-Alfonso
 }
 
 
@@ -239,7 +278,11 @@
 
     font-weight: 600;
 
+<<<<<<< HEAD
     color: var(--color-primario);
+=======
+    color: var(--color-texto);
+>>>>>>> Progreso-Alfonso
 
     margin: 0;
 }
@@ -300,7 +343,14 @@
     border-radius: 14px;
 
     background:
+<<<<<<< HEAD
         rgba(95,113,93,0.08);
+=======
+        var(--color-card-secundaria);
+
+    border:
+        1px solid var(--color-borde);
+>>>>>>> Progreso-Alfonso
 
     display: flex;
 
@@ -310,7 +360,11 @@
 
     font-size: 1rem;
 
+<<<<<<< HEAD
     color: var(--color-primario);
+=======
+    color: var(--color-texto);
+>>>>>>> Progreso-Alfonso
 }
 
 
@@ -331,8 +385,11 @@
 
 .producto-accion .btn {
 
+<<<<<<< HEAD
     border: none;
 
+=======
+>>>>>>> Progreso-Alfonso
     border-radius: 16px;
 
     padding:
@@ -376,17 +433,30 @@
 .detalle-card {
 
     background:
+<<<<<<< HEAD
         rgba(255,255,255,0.72);
 
     backdrop-filter: blur(10px);
 
     border:
         1px solid rgba(0,0,0,0.04);
+=======
+        var(--color-card);
+
+    border:
+        1px solid var(--color-borde);
+>>>>>>> Progreso-Alfonso
 
     border-radius: 28px;
 
     padding:
         36px;
+<<<<<<< HEAD
+=======
+
+    box-shadow:
+        var(--sombra-suave);
+>>>>>>> Progreso-Alfonso
 }
 
 .detalle-card h3 {
@@ -394,6 +464,11 @@
     margin-bottom: 24px;
 
     font-size: 1.4rem;
+<<<<<<< HEAD
+=======
+
+    color: var(--color-texto);
+>>>>>>> Progreso-Alfonso
 }
 
 .detalle-card p,
@@ -455,10 +530,20 @@
     border-radius: 24px;
 
     background:
+<<<<<<< HEAD
         rgba(255,255,255,0.82);
 
     border:
         1px solid rgba(0,0,0,0.04);
+=======
+        var(--color-card);
+
+    border:
+        1px solid var(--color-borde);
+
+    box-shadow:
+        var(--sombra-suave);
+>>>>>>> Progreso-Alfonso
 
     transition:
         transform 0.35s ease,
@@ -471,7 +556,11 @@
         translateY(-5px);
 
     box-shadow:
+<<<<<<< HEAD
         0 16px 35px rgba(0,0,0,0.06);
+=======
+        0 16px 35px rgba(0,0,0,0.08);
+>>>>>>> Progreso-Alfonso
 }
 
 .card-img {
@@ -506,6 +595,11 @@
     margin-bottom: 12px;
 
     font-size: 1.2rem;
+<<<<<<< HEAD
+=======
+
+    color: var(--color-texto);
+>>>>>>> Progreso-Alfonso
 }
 
 .card-body p {
@@ -523,9 +617,22 @@
 
     text-decoration: none;
 
+<<<<<<< HEAD
     color: var(--color-primario);
 
     font-weight: 600;
+=======
+    color: var(--color-texto);
+
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+.card-body a:hover {
+
+    color: var(--color-primario);
+>>>>>>> Progreso-Alfonso
 }
 
 

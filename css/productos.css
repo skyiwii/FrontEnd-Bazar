@@ -6,14 +6,19 @@
 
     text-align: center;
 
+<<<<<<< HEAD
     padding:
         40px 0 70px;
+=======
+    padding: 40px 0 70px;
+>>>>>>> Progreso-Alfonso
 }
 
 .catalogo-tag {
 
     display: inline-block;
 
+<<<<<<< HEAD
     padding:
         8px 18px;
 
@@ -22,6 +27,17 @@
     background: #ece6db;
 
     color: var(--color-primario);
+=======
+    padding: 8px 18px;
+
+    border-radius: 999px;
+
+    background: var(--color-card-secundaria);
+
+    color: var(--color-texto);
+
+    border: 1px solid var(--color-borde);
+>>>>>>> Progreso-Alfonso
 
     font-size: 0.85rem;
 
@@ -30,8 +46,14 @@
 
 .hero-catalogo h1 {
 
+<<<<<<< HEAD
     font-size:
         clamp(3rem, 7vw, 5rem);
+=======
+    color: var(--color-texto);
+
+    font-size: clamp(3rem, 7vw, 5rem);
+>>>>>>> Progreso-Alfonso
 
     margin-bottom: 20px;
 
@@ -45,6 +67,11 @@
     margin: auto;
 
     font-size: 1.05rem;
+<<<<<<< HEAD
+=======
+
+    color: var(--color-texto-suave);
+>>>>>>> Progreso-Alfonso
 }
 
 
@@ -56,8 +83,12 @@
 
     display: grid;
 
+<<<<<<< HEAD
     grid-template-columns:
         260px 1fr;
+=======
+    grid-template-columns: 260px 1fr;
+>>>>>>> Progreso-Alfonso
 
     gap: 40px;
 
@@ -75,23 +106,37 @@
 
     top: 110px;
 
+<<<<<<< HEAD
     background: rgba(255,255,255,0.72);
 
     backdrop-filter: blur(14px);
 
     border:
         1px solid var(--color-borde);
+=======
+    background: var(--color-card);
+
+    backdrop-filter: blur(14px);
+
+    border: 1px solid var(--color-borde);
+>>>>>>> Progreso-Alfonso
 
     border-radius: 28px;
 
     padding: 24px;
 
+<<<<<<< HEAD
     box-shadow:
         0 10px 30px rgba(0,0,0,0.03);
+=======
+    box-shadow: var(--sombra-suave);
+>>>>>>> Progreso-Alfonso
 }
 
 
-/* BUSCADOR */
+/* =========================================
+   BUSCADOR
+========================================= */
 
 .buscador {
 
@@ -103,10 +148,16 @@
 
     border-radius: 18px;
 
+<<<<<<< HEAD
     border:
         1px solid var(--color-borde);
 
     background: white;
+=======
+    border: 1px solid var(--color-borde);
+
+    background: var(--color-input);
+>>>>>>> Progreso-Alfonso
 }
 
 .buscador input {
@@ -120,6 +171,16 @@
     outline: none;
 
     background: transparent;
+<<<<<<< HEAD
+=======
+
+    color: var(--color-texto);
+}
+
+.buscador input::placeholder {
+
+    color: var(--color-texto-suave);
+>>>>>>> Progreso-Alfonso
 }
 
 .buscador button {
@@ -130,11 +191,18 @@
 
     background: transparent;
 
+<<<<<<< HEAD
+=======
+    color: var(--color-texto);
+
+>>>>>>> Progreso-Alfonso
     font-size: 1.1rem;
 }
 
 
-/* CATEGORÍAS */
+/* =========================================
+   CATEGORÍAS
+========================================= */
 
 .filtro-categorias summary {
 
@@ -145,6 +213,11 @@
     margin-bottom: 15px;
 
     list-style: none;
+<<<<<<< HEAD
+=======
+
+    color: var(--color-texto);
+>>>>>>> Progreso-Alfonso
 }
 
 .filtro-categorias ul {
@@ -197,12 +270,17 @@
 
 .producto-card {
 
+<<<<<<< HEAD
     background: white;
+=======
+    background: var(--color-card);
+>>>>>>> Progreso-Alfonso
 
     border-radius: 28px;
 
     overflow: hidden;
 
+<<<<<<< HEAD
     border:
         1px solid var(--color-borde);
 
@@ -210,16 +288,33 @@
 
     box-shadow:
         0 6px 25px rgba(0,0,0,0.04);
+=======
+    border: 1px solid var(--color-borde);
+
+    transition: 0.35s ease;
+
+    box-shadow: var(--sombra-suave);
+>>>>>>> Progreso-Alfonso
 }
 
 .producto-card:hover {
 
+<<<<<<< HEAD
     transform:
         translateY(-8px);
 }
 
 
 /* IMAGEN */
+=======
+    transform: translateY(-8px);
+}
+
+
+/* =========================================
+   IMAGEN
+========================================= */
+>>>>>>> Progreso-Alfonso
 
 .producto-card img {
 
@@ -238,6 +333,7 @@
 }
 
 
+<<<<<<< HEAD
 /* CONTENIDO */
 
 .producto-card h3 {
@@ -246,10 +342,24 @@
 
     margin:
         24px 24px 10px;
+=======
+/* =========================================
+   CONTENIDO
+========================================= */
+
+.producto-card h3 {
+
+    color: var(--color-texto);
+
+    font-size: 1.2rem;
+
+    margin: 24px 24px 10px;
+>>>>>>> Progreso-Alfonso
 }
 
 .producto-card p {
 
+<<<<<<< HEAD
     margin:
         0 24px 24px;
 
@@ -260,8 +370,63 @@
 
     margin:
         0 24px 24px;
+=======
+    margin: 0 24px 24px;
+
+    min-height: 50px;
+
+    color: var(--color-texto-suave);
+}
+
+.precio-card {
+
+    display: block;
+
+    margin: 0 24px 20px;
+
+    color: var(--color-texto);
+
+    text-align: center;
+
+    font-size: 1.1rem;
+
+    font-weight: 700;
+}
+
+.producto-card .btn {
+
+    margin: 0 24px 24px;
+>>>>>>> Progreso-Alfonso
 
     width: calc(100% - 48px);
+}
+
+
+/* =========================================
+<<<<<<< HEAD
+   RESPONSIVE
+========================================= */
+
+=======
+   MENSAJE SIN PRODUCTOS
+========================================= */
+
+.sin-productos {
+
+    background: var(--color-card);
+
+    border: 1px solid var(--color-borde);
+
+    border-radius: 24px;
+
+    padding: 50px 20px;
+
+    box-shadow: var(--sombra-suave);
+}
+
+.sin-productos h3 {
+
+    color: var(--color-texto);
 }
 
 
@@ -269,6 +434,7 @@
    RESPONSIVE
 ========================================= */
 
+>>>>>>> Progreso-Alfonso
 @media (max-width: 992px) {
 
     .productos-layout {

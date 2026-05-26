@@ -1,0 +1,223 @@
+/* =========================================
+   MAIN
+========================================= */
+
+.categorias-main {
+
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            180deg,
+            #f7f4ef,
+            #ece7df
+        );
+
+}
+
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.categorias-hero {
+
+    padding:
+        150px 20px 70px;
+
+    text-align: center;
+
+}
+
+
+.admin-tag {
+
+    display: inline-block;
+
+    padding:
+        10px 22px;
+
+    border-radius: 999px;
+
+    background:
+        rgba(0,0,0,0.06);
+
+    margin-bottom: 25px;
+
+    font-size: 0.8rem;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+}
+
+
+.categorias-hero h1 {
+
+    font-size:
+        clamp(2.5rem, 6vw, 4rem);
+
+    margin-bottom: 20px;
+
+}
+
+
+.categorias-hero p {
+
+    max-width: 700px;
+
+    margin: auto;
+
+    line-height: 1.8;
+
+}
+
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.categorias-form-section {
+
+    padding:
+        0 20px 60px;
+
+}
+
+
+.categorias-form {
+
+    max-width: 700px;
+
+    margin: auto;
+
+    padding: 40px;
+
+}
+
+
+.form-control {
+
+    border-radius: 14px;
+
+    padding:
+        14px 16px;
+
+}
+
+
+
+/* =========================================
+   GRID
+========================================= */
+
+.categorias-lista-section {
+
+    padding:
+        0 20px 100px;
+
+}
+
+
+.categorias-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(260px, 1fr));
+
+    gap: 30px;
+
+}
+
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.categoria-card {
+
+    padding: 30px;
+
+    border-radius: 24px;
+
+    background: white;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.08);
+
+    transition:
+        transform 0.3s ease;
+
+}
+
+
+.categoria-card:hover {
+
+    transform:
+        translateY(-5px);
+
+}
+
+
+.categoria-card h3 {
+
+    margin-bottom: 25px;
+
+}
+
+
+.categoria-actions {
+
+    display: flex;
+
+    gap: 12px;
+
+}
+
+
+.categoria-actions .btn {
+
+    flex: 1;
+
+    border-radius: 12px;
+
+}
+
+
+
+/* =========================================
+   DARK MODE
+========================================= */
+
+.dark-mode .categorias-main {
+
+    background:
+        linear-gradient(
+            180deg,
+            #111111,
+            #1b1b1b
+        );
+
+}
+
+
+.dark-mode .categorias-form,
+.dark-mode .categoria-card {
+
+    background:
+        #1f1f1f;
+
+}
+
+
+.dark-mode .categoria-card h3,
+.dark-mode .categorias-hero h1 {
+
+    color: white;
+
+}

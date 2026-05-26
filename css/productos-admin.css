@@ -1,0 +1,386 @@
+/* =========================================
+   MAIN
+========================================= */
+
+.productos-admin-main {
+
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            180deg,
+            #f7f4ef 0%,
+            #ece7df 100%
+        );
+
+}
+
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.productos-admin-hero {
+
+    padding:
+        150px 20px 70px;
+
+    text-align: center;
+
+}
+
+
+.productos-admin-hero-content {
+
+    max-width: 760px;
+
+    margin: auto;
+
+}
+
+
+.admin-tag {
+
+    display: inline-block;
+
+    padding:
+        10px 22px;
+
+    border-radius: 999px;
+
+    background:
+        rgba(0,0,0,0.06);
+
+    margin-bottom: 25px;
+
+    font-size: 0.8rem;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+}
+
+
+.productos-admin-hero h1 {
+
+    font-size:
+        clamp(2.5rem, 6vw, 4.5rem);
+
+    margin-bottom: 20px;
+
+}
+
+
+.productos-admin-hero p {
+
+    font-size: 1.05rem;
+
+    line-height: 1.8;
+
+    color:
+        var(--color-texto-secundario);
+
+}
+
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.productos-form-section {
+
+    padding:
+        0 20px 60px;
+
+}
+
+
+.productos-form {
+
+    max-width: 850px;
+
+    margin: auto;
+
+    padding: 40px;
+
+}
+
+
+.form-header {
+
+    margin-bottom: 35px;
+
+}
+
+
+.form-header h2 {
+
+    margin-bottom: 10px;
+
+}
+
+
+.form-control {
+
+    border-radius: 14px;
+
+    padding:
+        14px 16px;
+
+    border:
+        1px solid rgba(0,0,0,0.1);
+
+    box-shadow: none;
+
+}
+
+
+.form-control:focus {
+
+    border-color:
+        #1f1f1f;
+
+    box-shadow: none;
+
+}
+
+
+
+/* =========================================
+   LISTA
+========================================= */
+
+.productos-lista-section {
+
+    padding:
+        0 20px 100px;
+
+}
+
+
+.lista-header {
+
+    text-align: center;
+
+    margin-bottom: 50px;
+
+}
+
+
+.lista-header h2 {
+
+    margin-bottom: 12px;
+
+}
+
+
+.productos-admin-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(280px, 1fr));
+
+    gap: 30px;
+
+}
+
+
+
+/* =========================================
+   CARD PRODUCTO
+========================================= */
+
+.producto-admin-card {
+
+    overflow: hidden;
+
+    border-radius: 24px;
+
+    background:
+        white;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.08);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+}
+
+
+.producto-admin-card:hover {
+
+    transform:
+        translateY(-6px);
+
+    box-shadow:
+        0 18px 40px rgba(0,0,0,0.12);
+
+}
+
+
+.producto-admin-img {
+
+    width: 100%;
+
+    height: 240px;
+
+    object-fit: cover;
+
+}
+
+
+.producto-admin-body {
+
+    padding: 25px;
+
+}
+
+
+.producto-admin-body h3 {
+
+    font-size: 1.3rem;
+
+    margin-bottom: 14px;
+
+}
+
+
+.producto-admin-body p {
+
+    min-height: 80px;
+
+    color:
+        var(--color-texto-secundario);
+
+    line-height: 1.7;
+
+}
+
+
+.producto-admin-precio {
+
+    display: block;
+
+    margin-bottom: 20px;
+
+    font-size: 1.2rem;
+
+    font-weight: 700;
+
+}
+
+
+.producto-admin-actions {
+
+    display: flex;
+
+    gap: 12px;
+
+}
+
+
+.producto-admin-actions .btn {
+
+    flex: 1;
+
+    border-radius: 12px;
+
+}
+
+
+
+/* =========================================
+   DARK MODE
+========================================= */
+
+.dark-mode .productos-admin-main {
+
+    background:
+        linear-gradient(
+            180deg,
+            #111111,
+            #1b1b1b
+        );
+
+}
+
+
+.dark-mode .productos-form,
+.dark-mode .producto-admin-card {
+
+    background:
+        #1f1f1f;
+
+    border:
+        1px solid rgba(255,255,255,0.05);
+
+}
+
+
+.dark-mode .form-control {
+
+    background:
+        #151515;
+
+    border:
+        1px solid rgba(255,255,255,0.08);
+
+    color: white;
+
+}
+
+
+.dark-mode .form-control:focus {
+
+    border-color:
+        rgba(255,255,255,0.2);
+
+}
+
+
+.dark-mode .productos-admin-hero p,
+.dark-mode .lista-header p,
+.dark-mode .producto-admin-body p {
+
+    color:
+        rgba(255,255,255,0.75);
+
+}
+
+
+.dark-mode .producto-admin-body h3,
+.dark-mode .form-header h2,
+.dark-mode .lista-header h2 {
+
+    color: white;
+
+}
+
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .productos-form {
+
+        padding: 30px 24px;
+
+    }
+
+
+    .producto-admin-actions {
+
+        flex-direction: column;
+
+    }
+
+}

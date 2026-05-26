@@ -1,0 +1,392 @@
+/* =========================================================
+   MAIN
+========================================================= */
+
+.registro-main {
+
+    min-height: 100vh;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.registro-hero {
+
+    position: relative;
+
+    overflow: hidden;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ece4d7 0%,
+            #f7f4ee 50%,
+            #e7ddd0 100%
+        );
+
+}
+
+
+body.dark-mode .registro-hero {
+
+    background:
+        linear-gradient(
+            135deg,
+            #121212 0%,
+            #171717 50%,
+            #1d1d1d 100%
+        );
+
+}
+
+
+.overlay-registro {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(255,255,255,0.2),
+            transparent 35%
+        );
+
+    pointer-events: none;
+
+}
+
+
+body.dark-mode .overlay-registro {
+
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(255,255,255,0.04),
+            transparent 35%
+        );
+
+}
+
+
+/* =========================================================
+   LAYOUT
+========================================================= */
+
+.registro-layout {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        500px;
+
+    gap: 70px;
+
+    align-items: center;
+
+}
+
+
+/* =========================================================
+   INFO
+========================================================= */
+
+.registro-info h1 {
+
+    font-size:
+        clamp(3rem, 6vw, 5rem);
+
+    margin-bottom: 20px;
+
+}
+
+
+.registro-info p {
+
+    font-size: 1.05rem;
+
+    max-width: 600px;
+}
+
+
+.registro-tag {
+
+    display: inline-block;
+
+    padding:
+        10px 18px;
+
+    border-radius: 999px;
+
+    margin-bottom: 25px;
+
+    background:
+        rgba(255,255,255,0.65);
+
+    border:
+        1px solid var(--color-borde);
+
+    backdrop-filter: blur(10px);
+
+    font-size: 0.85rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+}
+
+
+body.dark-mode .registro-tag {
+
+    background:
+        rgba(255,255,255,0.06);
+
+}
+
+
+/* =========================================================
+   BENEFICIOS
+========================================================= */
+
+.beneficios-registro {
+
+    margin-top: 40px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+
+}
+
+
+.beneficio-registro {
+
+    display: flex;
+
+    gap: 16px;
+
+    align-items: flex-start;
+
+    padding: 18px;
+
+    border-radius: 20px;
+
+    background: var(--color-overlay);
+
+    border:
+        1px solid var(--color-borde);
+
+    backdrop-filter: blur(10px);
+
+}
+
+
+.beneficio-registro span {
+
+    font-size: 1.5rem;
+
+}
+
+
+.beneficio-registro h4 {
+
+    font-size: 1rem;
+
+    margin-bottom: 6px;
+
+}
+
+
+.beneficio-registro p {
+
+    margin: 0;
+
+    font-size: 0.92rem;
+
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.registro-card {
+
+    padding: 40px;
+
+    background: var(--color-card);
+
+    backdrop-filter: blur(15px);
+
+}
+
+
+.registro-header {
+
+    text-align: center;
+
+    margin-bottom: 30px;
+
+}
+
+
+.registro-header h2 {
+
+    margin-bottom: 10px;
+
+}
+
+
+.registro-header p {
+
+    margin: 0;
+}
+
+
+/* =========================================================
+   FORMULARIO
+========================================================= */
+
+.form-label {
+
+    font-weight: 500;
+
+}
+
+
+.form-control {
+
+    border-radius: 16px;
+
+    padding:
+        14px 16px;
+
+    border:
+        1px solid var(--color-borde);
+
+    background: var(--color-input);
+
+}
+
+
+.form-control:focus {
+
+    border-color: var(--color-secundario);
+
+    box-shadow:
+        0 0 0 0.2rem rgba(214,199,174,0.25);
+
+}
+
+
+.btn-registro {
+
+    padding:
+        14px 20px;
+
+    border-radius: 16px;
+
+    font-weight: 600;
+
+}
+
+
+.texto-login {
+
+    text-align: center;
+
+    margin-top: 22px;
+
+    font-size: 0.95rem;
+
+}
+
+
+.texto-login a {
+
+    color: var(--color-texto);
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+}
+
+
+.texto-login a:hover {
+
+    opacity: 0.7;
+
+}
+
+
+/* =========================================================
+   MENSAJE
+========================================================= */
+
+.mensaje-registro {
+
+    min-height: 24px;
+
+    margin-bottom: 18px;
+
+    font-size: 0.92rem;
+
+    font-weight: 500;
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 992px) {
+
+    .registro-layout {
+
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .registro-card {
+
+        padding: 30px 22px;
+
+    }
+
+    
+    .registro-info {
+
+        text-align: center;
+
+    }
+
+
+    .beneficio-registro {
+
+        text-align: left;
+
+    }
+
+}

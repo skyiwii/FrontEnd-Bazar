@@ -11,7 +11,13 @@
     <link rel="icon" href="../media/logo.png" type="image/png">
 
     <!-- Bootstrap -->
+<<<<<<< HEAD
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+=======
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+>>>>>>> Progreso-Alfonso
 
     <!-- CSS -->
     <link rel="stylesheet" href="../css/general.css">
@@ -24,11 +30,23 @@
     <!-- NAVBAR -->
     <header>
 
+<<<<<<< HEAD
         <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm navbar-custom">
 
             <div class="container">
 
                 <a class="navbar-brand d-flex align-items-center fw-bold" href="../index.html">
+=======
+        <nav
+            class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm navbar-custom">
+
+            <div class="container">
+
+                <!-- LOGO -->
+                <a
+                    class="navbar-brand d-flex align-items-center fw-bold"
+                    href="../index.html">
+>>>>>>> Progreso-Alfonso
 
                     <img
                         src="../media/logo.png"
@@ -39,6 +57,51 @@
                     VURA
 
                 </a>
+<<<<<<< HEAD
+=======
+
+                <!-- BOTÓN MÓVIL -->
+                <button
+                    id="btn-menu"
+                    class="navbar-toggler"
+                    type="button"
+                    aria-label="Abrir menú"
+                    aria-expanded="false"
+                    aria-controls="navbarNav">
+
+                    <span class="navbar-toggler-icon"></span>
+
+                </button>
+
+                <!-- MENÚ -->
+                <div
+                    class="navbar-collapse"
+                    id="navbarNav"
+                    aria-hidden="true">
+
+                    <ul
+                        class="navbar-nav ms-auto text-uppercase small align-items-lg-center">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Inicio</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="productos.html">Productos</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="nosotros.html">Nosotros</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">Contacto</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Blogs</a>
+                        </li>
+>>>>>>> Progreso-Alfonso
 
                 <button
                     class="navbar-toggler"
@@ -47,12 +110,20 @@
                     data-bs-target="#navbarNav"
                     aria-label="Abrir navegación">
 
+<<<<<<< HEAD
                     <span class="navbar-toggler-icon"></span>
 
                 </button>
+=======
+                         <span
+                            id="nav-auth"
+                            class="d-flex align-items-lg-center">
+                        </span>
+>>>>>>> Progreso-Alfonso
 
                 <div class="collapse navbar-collapse" id="navbarNav">
 
+<<<<<<< HEAD
                     <ul class="navbar-nav ms-auto text-uppercase small">
 
                         <li class="nav-item">
@@ -77,6 +148,22 @@
 
                     </ul>
 
+=======
+
+                        <!-- BOTÓN DARK MODE -->
+                        <li class="nav-item ms-lg-3">
+                            <button
+                                id="btn-darkmode"
+                                class="btn btn-sm btn-outline-dark"
+                                type="button"
+                                aria-label="Cambiar modo oscuro">
+                                🌙
+                            </button>
+                        </li>
+
+                    </ul>
+
+>>>>>>> Progreso-Alfonso
                 </div>
 
             </div>
@@ -92,7 +179,13 @@
         <!-- HERO -->
         <section class="blog-hero seccion-animada">
 
+<<<<<<< HEAD
             <h1>Bienestar Natural y Vida Consciente</h1>
+=======
+            <h1>
+                Bienestar Natural y Vida Consciente
+            </h1>
+>>>>>>> Progreso-Alfonso
 
             <p>
                 Descubre recetas, rituales naturales y consejos simples
@@ -109,10 +202,17 @@
 
                 <input
                     type="search"
+<<<<<<< HEAD
                     name="buscar"
                     placeholder="Buscar recetas, bienestar o ingredientes..."
                     aria-label="Buscar artículos"
                     required>
+=======
+                    id="input-busqueda-blog"
+                    name="buscar"
+                    placeholder="Buscar recetas, bienestar o ingredientes..."
+                    aria-label="Buscar artículos">
+>>>>>>> Progreso-Alfonso
 
                 <button type="submit">
                     Buscar
@@ -120,6 +220,7 @@
 
             </form>
 
+<<<<<<< HEAD
             <!-- TAGS -->
             <div class="blog-tags">
 
@@ -129,12 +230,35 @@
                 <a href="#">#Bienestar</a>
                 <a href="#">#MielNatural</a>
                 <a href="#">#Herbolaria</a>
+=======
+            <!-- TAGS / FILTROS -->
+            <div class="blog-tags">
+
+                <span>Filtrar:</span>
+
+                <a href="#" data-categoria="Todos" class="tag-activo">
+                    Todos
+                </a>
+
+                <a href="#" data-categoria="Recetas">
+                    #Recetas
+                </a>
+
+                <a href="#" data-categoria="Cuidado Natural">
+                    #Cuidado Natural
+                </a>
+
+                <a href="#" data-categoria="Herbolaria">
+                    #Herbolaria
+                </a>
+>>>>>>> Progreso-Alfonso
 
             </div>
 
         </section>
 
 
+<<<<<<< HEAD
         <!-- GRID POSTS -->
         <section class="grilla-articulos">
 
@@ -231,10 +355,17 @@
 
             </article>
 
+=======
+        <!-- GRID POSTS — llenado por blogs.js -->
+        <section
+            id="grilla-blogs"
+            class="grilla-articulos">
+>>>>>>> Progreso-Alfonso
         </section>
 
 
         <!-- PAGINATION -->
+<<<<<<< HEAD
         <nav class="paginacion" aria-label="Paginación blog">
 
             <a href="#" aria-label="Página anterior">
@@ -256,6 +387,17 @@
             <a href="#" aria-label="Página siguiente">
                 »
             </a>
+=======
+        <nav
+            class="paginacion"
+            aria-label="Paginación blog">
+
+            <a href="#" aria-label="Página anterior">«</a>
+            <a href="#" class="active">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#" aria-label="Página siguiente">»</a>
+>>>>>>> Progreso-Alfonso
 
         </nav>
 
@@ -267,6 +409,7 @@
 
         <div class="container text-center py-4">
 
+<<<<<<< HEAD
             <p class="mb-2">
                 &copy; 2024 Vura Bazar Natural
             </p>
@@ -285,6 +428,15 @@
                     WhatsApp
                 </a>
 
+=======
+            <p class="mb-2">&copy; 2024 Vura Bazar Natural</p>
+
+            <p class="small">Hecho en Chile</p>
+
+            <div class="mt-3">
+                <a href="#" class="me-3 footer-link">Instagram</a>
+                <a href="#" class="footer-link">WhatsApp</a>
+>>>>>>> Progreso-Alfonso
             </div>
 
         </div>
@@ -292,8 +444,32 @@
     </footer>
 
 
+<<<<<<< HEAD
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+=======
+    <!-- DATOS BLOGS -->
+    <script src="../js/blogs/blogs-data.js"></script>
+
+    <!-- RENDER GRILLA -->
+    <script src="../js/blogs/blogs.js"></script>
+
+    <!-- HAMBURGUESA Y HEADER -->
+    <script src="../js/general.js"></script>
+
+    <!-- MODO OSCURO -->
+    <script src="../js/modo-oscuro.js"></script>
+
+    <script src="../js/auth/auth.js"></script>
+    <script src="../js/auth/session.js"></script>
+    <script src="../js/auth/navbar-auth.js"></script>
+
+
+    <!-- Bootstrap -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+>>>>>>> Progreso-Alfonso
 
 </body>
 

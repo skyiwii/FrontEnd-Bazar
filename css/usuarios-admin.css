@@ -1,0 +1,312 @@
+/* =========================================
+   MAIN
+========================================= */
+
+.usuarios-admin-main {
+
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            180deg,
+            #f7f4ef,
+            #ece7df
+        );
+
+}
+
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.usuarios-hero {
+
+    padding:
+        150px 20px 70px;
+
+    text-align: center;
+
+}
+
+
+.admin-tag {
+
+    display: inline-block;
+
+    padding:
+        10px 22px;
+
+    border-radius: 999px;
+
+    background:
+        rgba(0,0,0,0.06);
+
+    margin-bottom: 25px;
+
+    font-size: 0.8rem;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+}
+
+
+.usuarios-hero h1 {
+
+    font-size:
+        clamp(2.5rem, 6vw, 4rem);
+
+    margin-bottom: 20px;
+
+}
+
+
+.usuarios-hero p {
+
+    max-width: 700px;
+
+    margin: auto;
+
+    line-height: 1.8;
+
+}
+
+
+
+/* =========================================
+   PANEL
+========================================= */
+
+.usuarios-panel {
+
+    padding:
+        0 20px 100px;
+
+}
+
+
+.usuarios-toolbar {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 30px;
+
+    margin-bottom: 30px;
+
+}
+
+
+.usuarios-toolbar input {
+
+    max-width: 320px;
+
+    border-radius: 14px;
+
+    padding:
+        12px 16px;
+
+}
+
+
+.contador-usuarios {
+
+    margin-bottom: 25px;
+
+    font-weight: 600;
+
+    color:
+        var(--color-texto);
+
+}
+
+
+
+/* =========================================
+   GRID
+========================================= */
+
+.usuarios-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(280px, 1fr));
+
+    gap: 30px;
+
+}
+
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.usuario-card {
+
+    padding: 30px;
+
+    border-radius: 24px;
+
+    background: white;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.08);
+
+    transition:
+        transform 0.3s ease;
+
+}
+
+
+.usuario-card:hover {
+
+    transform:
+        translateY(-5px);
+
+}
+
+
+.usuario-nombre {
+
+    font-size: 1.4rem;
+
+    margin-bottom: 10px;
+
+}
+
+
+.usuario-correo {
+
+    color:
+        var(--color-texto-suave);
+
+    margin-bottom: 18px;
+
+    word-break: break-word;
+
+}
+
+
+.usuario-rol {
+
+    display: inline-block;
+
+    padding:
+        8px 16px;
+
+    border-radius: 999px;
+
+    margin-bottom: 20px;
+
+    font-size: 0.8rem;
+
+    font-weight: 600;
+
+    background:
+        rgba(0,0,0,0.06);
+
+}
+
+
+.usuario-favoritos {
+
+    margin-bottom: 25px;
+
+    font-weight: 500;
+
+}
+
+
+.usuario-actions {
+
+    display: flex;
+
+    gap: 12px;
+
+}
+
+
+.usuario-actions .btn {
+
+    flex: 1;
+
+    border-radius: 12px;
+
+}
+
+
+
+/* =========================================
+   DARK MODE
+========================================= */
+
+.dark-mode .usuarios-admin-main {
+
+    background:
+        linear-gradient(
+            180deg,
+            #111111,
+            #1b1b1b
+        );
+
+}
+
+
+.dark-mode .usuario-card,
+.dark-mode .usuarios-toolbar {
+
+    background:
+        #1f1f1f;
+
+}
+
+
+.dark-mode .usuario-nombre,
+.dark-mode .usuarios-hero h1 {
+
+    color: white;
+
+}
+
+
+.dark-mode .usuario-correo {
+
+    color:
+        rgba(255,255,255,0.7);
+
+}
+
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .usuarios-toolbar {
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+    }
+
+
+    .usuarios-toolbar input {
+
+        max-width: 100%;
+
+    }
+
+}

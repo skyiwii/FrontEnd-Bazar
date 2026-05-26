@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Vura - Panel Administrador</title>
+
+    <meta
+        name="description"
+        content="Panel de administración Vura">
+
+    <link
+        rel="icon"
+        href="../../media/logo.png"
+        type="image/png">
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <link
+        rel="stylesheet"
+        href="../../css/general.css">
+
+    <link
+        rel="stylesheet"
+        href="../../css/dashboard-admin.css">
+
+</head>
+
+<body>
+
+<header>
+
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm navbar-custom">
+
+        <div class="container">
+
+            <a
+                class="navbar-brand d-flex align-items-center fw-bold"
+                href="../../index.html">
+
+                <img
+                    src="../../media/logo.png"
+                    width="40"
+                    class="me-2"
+                    alt="Logo Vura">
+
+                VURA
+
+            </a>
+
+            <button
+                id="btn-menu"
+                class="navbar-toggler"
+                type="button"
+                aria-label="Abrir menú">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <div
+                class="navbar-collapse"
+                id="navbarNav">
+
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link"
+                            href="../../index.html">
+
+                            Inicio
+
+                        </a>
+
+                    </li>
+
+                    <li class="nav-item ms-lg-3">
+
+                        <button
+                            id="btn-logout"
+                            class="btn btn-dark btn-sm">
+
+                            Cerrar Sesión
+
+                        </button>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+<main class="admin-main">
+
+    <section class="admin-hero">
+
+        <div class="admin-overlay"></div>
+
+        <div class="container position-relative">
+
+            <div class="admin-hero-content">
+
+                <span class="admin-tag">
+                    Intranet Administrativa
+                </span>
+
+                <h1>
+                    Panel de Administración
+                </h1>
+
+                <p>
+                    Gestiona productos, categorías, usuarios registrados
+                    y formularios de contacto de la plataforma Vura.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="admin-panel">
+
+        <div class="container">
+
+            <div class="admin-grid">
+
+                <article class="admin-card">
+
+                    <div class="admin-icon">
+                        📦
+                    </div>
+
+                    <h3>
+                        Productos
+                    </h3>
+
+                    <p>
+                        Crear, editar y eliminar productos del catálogo principal.
+                    </p>
+
+                    <a
+                        href="./productos-admin.html"
+                        class="btn btn-dark w-100">
+
+                        Gestionar Productos
+
+                    </a>
+
+                </article>
+
+
+                <article class="admin-card">
+
+                    <div class="admin-icon">
+                        🏷️
+                    </div>
+
+                    <h3>
+                        Categorías
+                    </h3>
+
+                    <p>
+                        Organiza el catálogo mediante categorías y zonas naturales.
+                    </p>
+
+                    <a
+                        href="./categorias-admin.html"
+                        class="btn btn-dark w-100">
+
+                        Gestionar Categorías
+
+                    </a>
+
+                </article>
+
+
+                <article class="admin-card">
+
+                    <div class="admin-icon">
+                        👥
+                    </div>
+
+                    <h3>
+                        Usuarios
+                    </h3>
+
+                    <p>
+                        Visualiza usuarios registrados dentro del sistema Vura.
+                    </p>
+
+                    <a
+                        href="./usuarios-admin.html"
+                        class="btn btn-dark w-100">
+
+                        Ver Usuarios
+
+                    </a>
+
+                </article>
+
+
+                <article class="admin-card">
+
+                    <div class="admin-icon">
+                        ✉️
+                    </div>
+
+                    <h3>
+                        Contacto
+                    </h3>
+
+                    <p>
+                        Revisa formularios enviados desde contacto.html y el widget principal.
+                    </p>
+
+                    <a
+                        href="./contactos-admin.html"
+                        class="btn btn-dark w-100">
+
+                        Ver Mensajes
+
+                    </a>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer class="footer-custom">
+
+    <div class="container text-center py-4">
+
+        <p class="mb-2">
+            &copy; 2024 Vura Bazar Natural
+        </p>
+
+        <p class="small">
+            Hecho en Chile
+        </p>
+
+    </div>
+
+</footer>
+
+
+<script src="../../js/auth/auth.js"></script>
+<script src="../../js/auth/session.js"></script>
+<script src="../../js/auth/guards.js"></script>
+
+<script src="../../js/intranet/dashboard-admin.js"></script>
+
+<script src="../../js/general.js"></script>
+<script src="../../js/modo-oscuro.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
