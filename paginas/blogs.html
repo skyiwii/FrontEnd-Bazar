@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Vura - Bienestar y Blog</title>
+
     <link rel="icon" href="../media/logo.png" type="image/png">
 
     <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
     <!-- CSS -->
     <link rel="stylesheet" href="../css/general.css">
     <link rel="stylesheet" href="../css/blogs.css">
@@ -17,133 +23,227 @@
 
 <body>
 
-<!-- NAVBAR IGUAL AL INDEX -->
-<header>
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm navbar-custom">
-        <div class="container">
+    <!-- NAVBAR -->
+    <header>
 
-            <a class="navbar-brand d-flex align-items-center fw-bold" href="../index.html">
-                <img src="../media/logo.png" width="40" class="me-2">
-                VURA
-            </a>
+        <nav
+            class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm navbar-custom">
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <div class="container">
 
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto text-uppercase small">
+                <!-- LOGO -->
+                <a
+                    class="navbar-brand d-flex align-items-center fw-bold"
+                    href="../index.html">
 
-                    <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="productos.html">Productos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="#">Blogs</a></li>
+                    <img
+                        src="../media/logo.png"
+                        width="40"
+                        class="me-2"
+                        alt="Logo Vura">
 
-                </ul>
-            </div>
+                    VURA
 
-        </div>
-    </nav>
-</header>
+                </a>
 
+                <!-- BOTÓN MÓVIL -->
+                <button
+                    id="btn-menu"
+                    class="navbar-toggler"
+                    type="button"
+                    aria-label="Abrir menú"
+                    aria-expanded="false"
+                    aria-controls="navbarNav">
 
-<!-- CONTENIDO -->
-<main class="container blog-layout">
+                    <span class="navbar-toggler-icon"></span>
 
-    <!-- HERO -->
-    <section class="blog-hero text-center">
-        <h1>Bienestar y Recetas</h1>
-        <p>Secretos naturales y consejos para una vida en equilibrio con la tierra.</p>
-    </section>
+                </button>
 
+                <!-- MENÚ -->
+                <div
+                    class="navbar-collapse"
+                    id="navbarNav"
+                    aria-hidden="true">
 
-    <!-- BUSCADOR -->
-    <section class="blog-search">
-        <form>
-            <input type="search" placeholder="¿Qué receta o consejo buscas?">
-            <button type="submit">Buscar</button>
-        </form>
+                    <ul
+                        class="navbar-nav ms-auto text-uppercase small align-items-lg-center">
 
-        <div class="blog-tags">
-            <span>Sugerencias:</span>
-            <a href="#">#Recetas</a>
-            <a href="#">#CuidadoPiel</a>
-            <a href="#">#Miel</a>
-        </div>
-    </section>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Inicio</a>
+                        </li>
 
+                        <li class="nav-item">
+                            <a class="nav-link" href="productos.html">Productos</a>
+                        </li>
 
-    <!-- GRID -->
-    <section class="grilla-articulos">
+                        <li class="nav-item">
+                            <a class="nav-link" href="nosotros.html">Nosotros</a>
+                        </li>
 
-        <article class="post-card">
-            <img src="../media/queques-miel.jpg">
-            <div class="contenido-post">
-                <span class="etiqueta">Recetas</span>
-                <h3>Queques de avena y Miel de Ulmo</h3>
-                <p>Descubre cómo reemplazar el azúcar por miel natural...</p>
-                <a href="../blogs/post1.html" class="btn btn-dark">Leer más</a>
-            </div>
-        </article>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">Contacto</a>
+                        </li>
 
-        <article class="post-card">
-            <img src="../media/rosa-mosqueta.jpg">
-            <div class="contenido-post">
-                <span class="etiqueta">Cuidado</span>
-                <h3>Rutina nocturna con Rosa Mosqueta</h3>
-                <p>Regenera tu piel con ingredientes naturales...</p>
-                <a href="../blogs/post2.html" class="btn btn-dark">Leer más</a>
-            </div>
-        </article>
-
-        <article class="post-card">
-            <img src="../media/tres-infusiones.jpg">
-            <div class="contenido-post">
-                <span class="etiqueta">Herbolaria</span>
-                <h3>3 infusiones para defensas</h3>
-                <p>El poder del boldo, poleo y menta...</p>
-                <a href="../blogs/post3.html" class="btn btn-dark">Leer más</a>
-            </div>
-        </article>
-
-    </section>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Blogs</a>
+                        </li>
 
 
-    <!-- PAGINACIÓN -->
-    <nav class="paginacion">
-        <a href="#">«</a>
-        <a href="#" class="active">1</a>
-        <a href="#">2</a>
-        <a href="#">3</a>
-        <a href="#">»</a>
-    </nav>
-
-</main>
+                         <span
+                            id="nav-auth"
+                            class="d-flex align-items-lg-center">
+                        </span>
 
 
-        <!--  Footer -->
 
-        <footer class="footer-custom mt-5">
+                        <!-- BOTÓN DARK MODE -->
+                        <li class="nav-item ms-lg-3">
+                            <button
+                                id="btn-darkmode"
+                                class="btn btn-sm btn-outline-dark"
+                                type="button"
+                                aria-label="Cambiar modo oscuro">
+                                🌙
+                            </button>
+                        </li>
 
-            <div class="container text-center py-4">
+                    </ul>
 
-                <p class="mb-2">&copy; 2024 Vura Bazar Natural</p>
-                <p class="small">Hecho en Chile</p>
-
-                <div class="mt-3">
-                    <a href="#" class="me-3 footer-link">Instagram</a>
-                    <a href="#" class="footer-link">WhatsApp</a>
                 </div>
 
             </div>
 
-        </footer>
+        </nav>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    </header>
+
+
+    <!-- MAIN -->
+    <main class="container blog-layout">
+
+        <!-- HERO -->
+        <section class="blog-hero seccion-animada">
+
+            <h1>
+                Bienestar Natural y Vida Consciente
+            </h1>
+
+            <p>
+                Descubre recetas, rituales naturales y consejos simples
+                para conectar con una vida más equilibrada.
+            </p>
+
+        </section>
+
+
+        <!-- SEARCH -->
+        <section class="blog-search seccion-animada">
+
+            <form action="#" method="GET">
+
+                <input
+                    type="search"
+                    id="input-busqueda-blog"
+                    name="buscar"
+                    placeholder="Buscar recetas, bienestar o ingredientes..."
+                    aria-label="Buscar artículos">
+
+                <button type="submit">
+                    Buscar
+                </button>
+
+            </form>
+
+            <!-- TAGS / FILTROS -->
+            <div class="blog-tags">
+
+                <span>Filtrar:</span>
+
+                <a href="#" data-categoria="Todos" class="tag-activo">
+                    Todos
+                </a>
+
+                <a href="#" data-categoria="Recetas">
+                    #Recetas
+                </a>
+
+                <a href="#" data-categoria="Cuidado Natural">
+                    #Cuidado Natural
+                </a>
+
+                <a href="#" data-categoria="Herbolaria">
+                    #Herbolaria
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- GRID POSTS — llenado por blogs.js -->
+        <section
+            id="grilla-blogs"
+            class="grilla-articulos">
+        </section>
+
+
+        <!-- PAGINATION -->
+        <nav
+            class="paginacion"
+            aria-label="Paginación blog">
+
+            <a href="#" aria-label="Página anterior">«</a>
+            <a href="#" class="active">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#" aria-label="Página siguiente">»</a>
+
+        </nav>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer-custom mt-5">
+
+        <div class="container text-center py-4">
+
+            <p class="mb-2">&copy; 2024 Vura Bazar Natural</p>
+
+            <p class="small">Hecho en Chile</p>
+
+            <div class="mt-3">
+                <a href="#" class="me-3 footer-link">Instagram</a>
+                <a href="#" class="footer-link">WhatsApp</a>
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- DATOS BLOGS -->
+    <script src="../js/blogs/blogs-data.js"></script>
+
+    <!-- RENDER GRILLA -->
+    <script src="../js/blogs/blogs.js"></script>
+
+    <!-- HAMBURGUESA Y HEADER -->
+    <script src="../js/general.js"></script>
+
+    <!-- MODO OSCURO -->
+    <script src="../js/modo-oscuro.js"></script>
+
+    <script src="../js/auth/auth.js"></script>
+    <script src="../js/auth/session.js"></script>
+    <script src="../js/auth/navbar-auth.js"></script>
+
+
+    <!-- Bootstrap -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
 
 </body>
 
 </html>
-
-
