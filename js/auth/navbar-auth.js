@@ -2,6 +2,16 @@
 // CONTENEDOR NAV AUTH
 // ======================================
 
+
+const estaEnPaginas =
+    window.location.pathname.includes("/paginas/");
+
+const rutaPaginas =
+    estaEnPaginas ? "./" : "./paginas/";
+
+const rutaIntranet =
+    estaEnPaginas ? "./intranet/" : "./paginas/intranet/";
+
 const navAuth =
     document.getElementById(
         "nav-auth"
@@ -38,7 +48,7 @@ function renderNavbarAuth() {
 
                 <a
                     class="nav-link"
-                    href="./paginas/login.html">
+                    href="${rutaPaginas}login.html">
 
                     Ingresar
 
@@ -50,7 +60,7 @@ function renderNavbarAuth() {
 
                 <a
                     class="nav-link"
-                    href="./paginas/registro.html">
+                    href="${rutaPaginas}registro.html">
 
                     Registro
 
@@ -77,7 +87,7 @@ function renderNavbarAuth() {
 
                 <a
                     class="nav-link"
-                    href="./paginas/intranet/dashboard-admin.html">
+                    href="${rutaIntranet}dashboard-admin.html">
 
                     Panel Admin
 
@@ -114,7 +124,7 @@ function renderNavbarAuth() {
 
                 <a
                     class="nav-link"
-                    href="./paginas/intranet/dashboard-cliente.html">
+                    href="${rutaIntranet}dashboard-cliente.html">
 
                     ${usuario.nombre}
 
